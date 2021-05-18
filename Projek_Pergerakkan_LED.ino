@@ -61,9 +61,6 @@ void setup() {
     ----------------------------------------------------*/
   Serial.begin(115200);
 
-  //srChannel.set(pinBuzz, LOW);
-  //srChannel.set(pinRelay, LOW);
-  
   /*---------------------------------------------
     Set seluruh kanal shift register menjadi OFF
     ---------------------------------------------*/
@@ -149,9 +146,7 @@ void runningLED(animLED al, int tunda) {
       srChannel.set(3, HIGH);
       srChannel.set(5, HIGH);
       delay(tunda);
-      //srChannel.set(pinBuzz, LOW);
 
-      //srChannel.set(pinBuzz, HIGH);
       srChannel.set(4, HIGH);
       delay(tunda);
       break;
