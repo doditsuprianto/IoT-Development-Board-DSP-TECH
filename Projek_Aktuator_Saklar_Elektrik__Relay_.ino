@@ -103,6 +103,10 @@ void loop() {
   statusOLED();
 }
 
+/*--------------------------------------
+  Menampilkan status Relay AKTIF /
+  NON AKTIF pada layar OLED
+  --------------------------------------*/
 void statusOLED() {
   display.clearDisplay();
   display.setTextSize(1);
