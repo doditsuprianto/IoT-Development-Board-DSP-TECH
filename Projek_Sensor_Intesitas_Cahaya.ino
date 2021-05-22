@@ -171,20 +171,7 @@ void updateOLED() {
   // lebar = sesuai nilai mapping gaugeOLED, maks 127 piksel  
   int gaugeOLED = map(validGauge, 0, 1000, 0, 127);
   display.fillRect(0, 14, gaugeOLED, 10, SSD1306_INVERSE);
-  /*
-    display.setCursor(0, 14);   display.print("Temperature");
-    display.setCursor(75, 14);  display.print(String(suhu));
-    display.drawCircle(100, 13, 2, SSD1306_WHITE);
-    display.setCursor(105, 14); display.print("C");
-
-    display.setCursor(0, 28);   display.print("Humidity");
-    display.setCursor(75, 28);  display.print(String(hum));
-    display.setCursor(100, 28); display.print("H");
-
-    display.setCursor(0, 42);   display.print("Distance");
-    display.setCursor(75, 42);  display.print(String(SensorJarakUltraSonic()));
-    display.setCursor(100, 42); display.print("CM");
-  */
+  
   display.display();
 }
 
