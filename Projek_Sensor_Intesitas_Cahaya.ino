@@ -7,8 +7,6 @@
   Library:
   https://github.com/Simsso/ShiftRegister74HC595
   https://github.com/kiryanenko/SimpleTimer
-  https://github.com/adafruit/Adafruit_SSD1306
-  https://github.com/adafruit/Adafruit-GFX-Library
   -----------------------------------------------*/
 
 /*-------------------------------------
@@ -171,10 +169,22 @@ void updateOLED() {
 
   // mapping LUX menjadi gauge ke layar OLED
   // x = 0, y = 0, tinggi = 10 piksel dan
-  // lebar = sesuai nilai mapping gaugeOLED, maks 127 piksel  
+  // lebar = sesuai nilai mapping gaugeOLED, maks 127 piksel
   int gaugeOLED = map(validGauge, 0, 1000, 0, 127);
   display.fillRect(0, 14, gaugeOLED, 10, SSD1306_INVERSE);
+
+  // membuat klasifikasi intensitas cahaya
+  // menjadi gelap, redup, terang dan sangat terang
+  display.setCursor(0, 28);  display.print("Grade LDR");
   
+  if (validGauge >= 0 && validGauge < 50) {    
+    display.setCursor(75, 28); display.print("GELAP");
+  } else if (validGauge >= 50 && validGauge < 200) {    
+    display.setCursor(75, 28); display.print("SEDANG");
+  } else if (validGauge >= 200) {    
+    display.setCursor(75, 28); display.print("TERANG");
+  }
+
   display.display();
 }
 
