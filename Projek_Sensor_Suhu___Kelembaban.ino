@@ -268,11 +268,7 @@ void updateOLED() {
 
   // Menggambar kotak bar
   display.fillRect(0, 50, gaugeOLED, 5, SSD1306_INVERSE);
-  /*
-    display.setCursor(0, 42);   display.print("Distance");
-    display.setCursor(75, 42);  display.print(String(SensorJarakUltraSonic()));
-    display.setCursor(100, 42); display.print("CM");
-  */
+
   display.display();
 }
 
