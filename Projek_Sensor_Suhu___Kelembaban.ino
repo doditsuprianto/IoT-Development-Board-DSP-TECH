@@ -8,6 +8,8 @@
   https://github.com/Simsso/ShiftRegister74HC595
   https://github.com/kiryanenko/SimpleTimer
   https://github.com/winlinvip/SimpleDHT
+  https://github.com/adafruit/Adafruit_SSD1306
+  https://github.com/adafruit/Adafruit-GFX-Library
   -----------------------------------------------*/
 
 /*-------------------------------------
