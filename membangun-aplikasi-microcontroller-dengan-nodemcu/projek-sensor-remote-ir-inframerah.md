@@ -6,7 +6,7 @@ description: >-
 
 # Projek Sensor Remote IR \(Inframerah\)
 
-### Dasar Teori
+### Dasar Teori 11
 
 Komunikasi IR atau inframerah adalah salah satu metode komunikasi nirkabel yang paling umum karena mudah digunakan dan memiliki harga yang terjangkau. Cahaya inframerah, dengan panjang gelombang lebih panjang dari cahaya tampak, tidak berada dalam jangkauan penglihatan manusia. Itulah mengapa IR merupakan opsi yang bagus untuk komunikasi nirkabel. 
 
