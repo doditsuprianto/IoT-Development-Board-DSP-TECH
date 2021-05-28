@@ -6,9 +6,9 @@ description: >-
 
 # Projek Sensor Remote IR \(Inframerah\)
 
-### Dasar Teori 11
+## Dasar Teori
 
-Komunikasi IR atau inframerah adalah salah satu metode komunikasi nirkabel yang paling umum karena mudah digunakan dan memiliki harga yang terjangkau. Cahaya inframerah, dengan panjang gelombang lebih panjang dari cahaya tampak, tidak berada dalam jangkauan penglihatan manusia. Itulah mengapa IR merupakan opsi yang bagus untuk komunikasi nirkabel. 
+Komunikasi IR atau inframerah adalah salah satu metode komunikasi nirkabel yang paling umum karena mudah digunakan dan memiliki harga yang terjangkau. Cahaya inframerah, dengan panjang gelombang lebih panjang dari cahaya tampak, tidak berada dalam jangkauan penglihatan manusia. Itulah mengapa IR merupakan opsi yang bagus untuk komunikasi nirkabel.
 
 Saat Anda menekan tombol pada kontrol TV, LED pada kontrol menyala dan mati secara terus menerus dan menyebabkan sinyal infra merah termodulasi dikirim dari kontrol ke TV. Perintah akan dijalankan setelah sinyal didemodulasi. Sedangkan modul penerima IR digunakan untuk menerima sinyal IR. Modul ini bekerja pada frekuensi 3, 8 KHz. Ketika sensor tidak terkena cahaya apapun pada frekuensi kerjanya, keluaran Vout memiliki nilai yang sama dengan VS \(catu daya\). Dengan mengekspos cahaya inframerah 38 kHz, keluaran ini akan menjadi nol.
 
@@ -38,7 +38,7 @@ Setiap remote memiliki kode tombol berbeda-beda, oleh karena itu diperlukan pros
 
 Dengan remote IR Anda dapat mengendalikan berbagai jenis aktuator, misalnya menggerakan motor robot mobil, meangkatifkan relay, membuka slot pintu, menghidupkan LED dan lain-lain sesuai kebutuhan projek.
 
-### Tujuan
+## Tujuan
 
 Projek bertujuan untuk memprogram MCU agar remote IR dapat mengendalikan perangkat secara jarak jauh. Dengan langkah-langkah sebagai berikut:
 
@@ -49,11 +49,11 @@ Projek bertujuan untuk memprogram MCU agar remote IR dapat mengendalikan perangk
   * Menghidupkan sejumlah LED sesuai tombol dengan tombol angka remote yang ditekan.
   * Menampilkan ketiga status di atas pada layar OLED
 
-### Rancangan
+## Rancangan
 
 ![Rancangan dan pengkabelan komponen](../.gitbook/assets/projek-sensor-remote-ir-inframerah-_bb.png)
 
-### Kode Program
+## Kode Program
 
 Kode program membutuhkan library tambahan IRremoteESP8266 yang dapat di download di [https://github.com/crankyoldgit/IRremoteESP8266](https://github.com/crankyoldgit/IRremoteESP8266). Sedangkan proses instalasi library dapat di lihat di halaman [https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program).
 
@@ -276,7 +276,7 @@ void BacaKodeRemoteIR() {
     if (ngatasiDebounce.length() == 8) {
       KodeTombolRemote = hasil.value;
       Serial.println("Kode remote: " + String(KodeTombolRemote));
-      
+
       // Mengendalikan aktuator dari remote IR
       AktuatorByRemote();
     } else {
@@ -468,7 +468,7 @@ Berikut contoh tampilannya:
 
 ![Pemetaan kode tombol remote IR](../.gitbook/assets/image_2021-05-26_152222.png)
 
-### Video Projek
+## Video Projek
 
 ![Status aktuator yang dikendalikan remote IR pada Layar OLED](../.gitbook/assets/img_20210526_134731821.jpg)
 
@@ -476,7 +476,7 @@ Berikut contoh tampilannya:
 
 ![Kendali kipas dengan status NON AKTIF](../.gitbook/assets/img_20210526_135103430.jpg)
 
-### Tugas
+## Tugas
 
 * Buat projek yang sama dengan sebelumnya tetapi menggunakan model remote berbeda. Misalnya menggunakan remote UseeTV milik dari TVBox Indie Home, seperti tampak di bawah ini
 

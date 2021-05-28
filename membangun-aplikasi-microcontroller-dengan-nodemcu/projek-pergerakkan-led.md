@@ -25,7 +25,7 @@ Ingat pada IC ini, kita beroperasi pada listrik searah \(DC\) dan menggunakan si
 
 #### Detail pinout IC 74HC595:
 
-![Pin IC Shift Register 74HC595](../.gitbook/assets/1%20%288%29.png)
+![Pin IC Shift Register 74HC595](../.gitbook/assets/2%20%283%29%20%281%29.png)
 
 #### Penjelasan pin IC 74HC595: 
 

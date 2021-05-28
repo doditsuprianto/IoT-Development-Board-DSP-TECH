@@ -20,7 +20,7 @@ Web: [https://rinimyhanny.wordpress.com/](https://rinimyhanny.wordpress.com/)
 
 Email: riniagustina@unikama.ac.id
 
-![](.gitbook/assets/2%20%282%29.jpeg)
+![](.gitbook/assets/2%20%281%29%20%281%29.jpeg)
 
 #### **Tiffany Azhar Izzuddin**
 

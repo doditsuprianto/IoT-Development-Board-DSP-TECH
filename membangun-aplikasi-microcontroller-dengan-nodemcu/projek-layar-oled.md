@@ -14,7 +14,7 @@ OLED \(Organic Light-Emitting Diode\) atau diode cahaya organik adalah sebuah se
 
 Pada IoT Development Board kita menggunakan OLED 0.96” dengan ukuran 128x64 piksel. Posisi koordinat x dan y dihitung dari pojok kiri atas. Penentuan lokasi x, y dimulai dari index ke-0. Sehingga lebar OLED dimulai dari 0 - 127 pixel, sedangkan tingginya dimulai dari 0 – 63 piksel. Gambar berikut merupakan referensi ukuran dan posisi koordinat OLED 0.96”
 
-![Referensi Ukuran OLED 0.96&#x201D;](../.gitbook/assets/1-width-and-height-oled%20%281%29.png)
+![Referensi Ukuran OLED 0.96&#x201D;](../.gitbook/assets/2%20%281%29%20%282%29.png)
 
 ### Tujuan
 
