@@ -149,9 +149,6 @@ void loop() {
     -----------------------------------------------*/
   BacaKodeRemoteIR();
 
-  // Mengendalikan aktuator dari remote IR
-  //AktuatorByRemote();
-
   // Update layar OLED
   updateOLED();
 }
