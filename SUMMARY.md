@@ -1,6 +1,6 @@
 # Table of contents
 
-* [1. IoT DEVELOPMENT BOARD DSP-TECH](README.md)
+* [IoT DEVELOPMENT BOARD DSP-TECH](README.md)
 * [2. Kata Pengantar](2-kata-pengantar.md)
 * [Pengantar Internet of Things](pengantar-internet-of-things.md)
 * [Arsitektur Internet of Things](arsitektur-internet-of-things.md)

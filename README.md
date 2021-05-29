@@ -2,7 +2,7 @@
 description: “Best Practice” Pengembangan Aplikasi Internet of Things
 ---
 
-# 1. IoT DEVELOPMENT BOARD DSP-TECH
+# IoT DEVELOPMENT BOARD DSP-TECH
 
 ![IoT Development Board](.gitbook/assets/cover%20%281%29.png)
 
