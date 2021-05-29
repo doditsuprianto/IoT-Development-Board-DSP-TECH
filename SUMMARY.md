@@ -29,6 +29,8 @@
   * [Message Broker](membangun-aplikasi-iot-create-from-scratch/message-broker.md)
   * [Smart Device](membangun-aplikasi-iot-create-from-scratch/smart-device.md)
   * [IoT Dashboard](membangun-aplikasi-iot-create-from-scratch/iot-dashboard.md)
+* [Implementasi IoT Pada EC2 AWS Cloud](implementasi-iot-pada-ec2-aws-cloud/README.md)
+  * [Implementasi Aplikasi IoT](implementasi-iot-pada-ec2-aws-cloud/implementasi-aplikasi-iot.md)
 * [Referensi](referensi.md)
 * [Biografi Penulis](biografi-penulis.md)
 
