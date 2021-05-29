@@ -116,10 +116,10 @@ Kesimpulannya, IoT menyentuh setiap industri, termasuk bisnis di bidang kesehata
 
 ####  Beberapa kelemahan IoT meliputi:
 
-* * Dengan meningkatnya jumlah perangkat yang terhubung dan lebih banyaknya informasi yang dibagikan antar perangkat maka potensi pencurian informasi rahasia oleh peretas juga meningkat.
-  * Perusahaan pada akhirnya berurusan dengan sejumlah besar - mungkin bahkan jutaan - perangkat IoT, mengumpulkan dan mengelola data dari semua perangkat tersebut akan menjadi tantangan.
-  * Jika terdapat _bug_ dalam sistem maka kemungkinan setiap perangkat yang terhubung akan rusak.
-  * Karena tidak ada standar internasional mengenai kompatibilitas IoT maka sulit bagi perangkat dari produsen berbeda untuk berkomunikasi satu sama lain.
+* Dengan meningkatnya jumlah perangkat yang terhubung dan lebih banyaknya informasi yang dibagikan antar perangkat maka potensi pencurian informasi rahasia oleh peretas juga meningkat.
+* Perusahaan pada akhirnya berurusan dengan sejumlah besar - mungkin bahkan jutaan - perangkat IoT, mengumpulkan dan mengelola data dari semua perangkat tersebut akan menjadi tantangan.
+* Jika terdapat _bug_ dalam sistem maka kemungkinan setiap perangkat yang terhubung akan rusak.
+* Karena tidak ada standar internasional mengenai kompatibilitas IoT maka sulit bagi perangkat dari produsen berbeda untuk berkomunikasi satu sama lain.
 
 ### **Isu Berkaitan Dengan IoT**
 
