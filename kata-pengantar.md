@@ -1,4 +1,4 @@
-# Kata Pengantar
+# 2. Kata Pengantar
 
 _“Segala puji bagi Allah, kita memuji-Nya dan meminta pertolongan, pengampunan, dan petunjuk-Nya. Kita berlindung kepada Allah dari kejahatan diri kita dan keburukan amal kita. Barang siapa mendapat dari petunjuk Allah maka tidak akan ada yang menyesatkannya, dan barang siapa yang sesat maka tidak ada pemberi petunjuknya baginya. Aku bersaksi bahwa tidak ada Tuhan selain Allah dan bahwa Muhammad adalah hamba dan Rasul-Nya. Ya Allah, semoga doa dan keselamatan tercurah pada Muhammad dan keluarganya, dan sahabat dan siapa saja yang mendapat petunjuk hingga hari kiamat”_
 
