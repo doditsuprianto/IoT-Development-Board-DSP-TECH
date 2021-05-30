@@ -49,7 +49,10 @@ Perhatikan pada menu **Sketch &gt; Include Library &gt; Manage Libraries**... se
 
 ![](../.gitbook/assets/4%20%285%29.png)
 
-Detail instalasi dapat dilihat pada bagian sebelumnya [https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program). 
+Detail instalasi dapat dilihat pada bagian sebelumnya 
+
+* [https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program)
+* [https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program).
 
 Fungsi SimpleTimer adalah semacam fungsi thread di dalam komputer. Dia akan membuat session tersendiri untuk suatu tugas tertentu. 
 
