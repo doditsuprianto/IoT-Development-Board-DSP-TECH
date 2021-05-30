@@ -435,3 +435,14 @@ void MematikanSemuaLED() {
 
 ### Tugas
 
+Buatlah program untuk mengendalikan kecepatan putar FAN secara otomatis berdasarkan jarak antara benda penghalang terhadap sensor ultrasonic HC-SR04. Dimana fitur yang diinginkan adalah:
+
+* Tampilkan jarak antara benda penghalang dengan sensor ultrasonic dalam satuan centimeter apa adanya ke layar OLED. 
+* Jika benda penghalang kurang dari sama dengan 30cm maka FAN akan berputar lebih cepat. Kecepatan maksimum tercapai saat benda mendekati 0cm. 
+* Sebaliknya ketika benda penghalang lebih dari 30cm maka FAN tidak berputar, namun jarak cm tetap ditampilkan di layar OLED.
+* Bila jarak penghalang dengan sensor ultrasonic antara 0-30cm maka LED akan hidup.  Jumlah LED yang hidup tergantung jauh dekatnya penghalang dengan sensor ultrasonic. Bila jarak penghalang mendekati 0cm maka semua LED akan hidup.
+
+> Gunakan fungsi map dengan transformasi nilai terbalik. Misalnya, **map\(jarakCM, 30, 0, 0, 1023\)**
+
+
+
