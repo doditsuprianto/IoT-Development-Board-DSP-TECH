@@ -28,7 +28,7 @@ ESP8266 berbasis NodeMCU memiliki fungsionalitas antarmuka PWM melalui pemrogram
 
 ![Pin NodeMCU PWM](../.gitbook/assets/4%20%284%29.png)
 
-#### Fungsi Arduino untuk NodeMCU PWM
+#### Fungsi untuk NodeMCU PWM
 
 * **analogWrite \(pin, dutycycle\)**: Mengaktifkan software PWM pada pin yang ditentukan. siklus tugas dalam kisaran dari 0 hingga PWMRANGE, yaitu 1023 secara default.
 * **analogWrite \(pin, 0\)**: Menonaktifkan PWM pada pin yang ditentukan.
