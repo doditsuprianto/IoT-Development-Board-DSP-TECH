@@ -41,7 +41,7 @@ Mari kita tulis sketsa Arduino untuk menyetel PWM pada pin ke-6 NodeMCU dan memv
 
 ![Kontrol Kecerahan LED menggunakan NodeMCU PWM](../.gitbook/assets/5%20%285%29.png)
 
-#### Sketsa Arduino untuk PWM
+#### Sketsa PWM
 
 ```cpp
 uint8_t LEDpin = D6;
