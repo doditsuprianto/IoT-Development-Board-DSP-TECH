@@ -1,3 +1,7 @@
+---
+description: 'Layout pengkabelan devboard, Asosiasi alamat pin antara NodeMCU dan devboard'
+---
+
 # IoT Development Board \[DSP-TECH\]
 
 ### **Rancangan Jalur Pengkabelan**
