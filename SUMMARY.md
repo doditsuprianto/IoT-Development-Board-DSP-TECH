@@ -36,7 +36,7 @@
     * [Mengenal Interface pada Node-Red](implementasi-iot-pada-ec2-cloud-aws/node-red-pada-ec2-aws/mengenal-interface-pada-node-red.md)
     * [Memanfaatkan widget interface Node-Red](implementasi-iot-pada-ec2-cloud-aws/node-red-pada-ec2-aws/memanfaatkan-widget-interface-node-red.md)
   * [Message Broker MQTT pada EC2 AWS](implementasi-iot-pada-ec2-cloud-aws/message-broker-mqtt-pada-ec2-aws/README.md)
-    * [Instalasi dan Konfigurasi Message Broker MQTT](implementasi-iot-pada-ec2-cloud-aws/message-broker-mqtt-pada-ec2-aws/instalasi-dan-konfigurasi-message-broker-mqtt.md)
+    * [Installasi dan Konfigurasi Message Broker MQTT](implementasi-iot-pada-ec2-cloud-aws/message-broker-mqtt-pada-ec2-aws/instalasi-dan-konfigurasi-message-broker-mqtt.md)
     * [Pengujian Message Broker](implementasi-iot-pada-ec2-cloud-aws/message-broker-mqtt-pada-ec2-aws/pengujian-message-broker/README.md)
       * [Basis Console](implementasi-iot-pada-ec2-cloud-aws/message-broker-mqtt-pada-ec2-aws/pengujian-message-broker/basis-console.md)
       * [Basis Windows, MQTTBOX / MQTT Explorer](implementasi-iot-pada-ec2-cloud-aws/message-broker-mqtt-pada-ec2-aws/pengujian-message-broker/basis-windows-mqttbox-mqtt-explorer.md)
