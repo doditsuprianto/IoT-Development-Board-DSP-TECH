@@ -55,7 +55,10 @@ Projek bertujuan untuk memprogram MCU agar remote IR dapat mengendalikan perangk
 
 ## Kode Program
 
-Kode program membutuhkan library tambahan IRremoteESP8266 yang dapat di download di [https://github.com/crankyoldgit/IRremoteESP8266](https://github.com/crankyoldgit/IRremoteESP8266). Sedangkan proses instalasi library dapat di lihat di halaman [https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program).
+Kode program membutuhkan library tambahan IRremoteESP8266 yang dapat di download di [https://github.com/crankyoldgit/IRremoteESP8266](https://github.com/crankyoldgit/IRremoteESP8266). Sedangkan proses instalasi library dapat di lihat di halaman 
+
+* [https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program)
+* [https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program)
 
 Bila library IRremoteESP8266 diinstal secara online maka dari menu **Sketch &gt; Include Library &gt; Manage Libraries** akan tampak seperti berikut
 
@@ -469,6 +472,8 @@ Berikut contoh tampilannya:
 ![Pemetaan kode tombol remote IR](../.gitbook/assets/image_2021-05-26_152222.png)
 
 ## Video Projek
+
+{% embed url="https://youtu.be/1h844w0NoAs" %}
 
 ![Status aktuator yang dikendalikan remote IR pada Layar OLED](../.gitbook/assets/img_20210526_134731821.jpg)
 
