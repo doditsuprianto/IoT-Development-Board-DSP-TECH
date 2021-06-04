@@ -41,7 +41,7 @@ Mari kita tulis sketsa Arduino untuk menyetel PWM pada pin ke-6 NodeMCU dan memv
 
 ![Kontrol Kecerahan LED menggunakan NodeMCU PWM](../.gitbook/assets/5%20%285%29.png)
 
-#### Sketsa PWM
+#### Penggunaan Dasar PWM
 
 ```cpp
 uint8_t LEDpin = D6;
@@ -72,7 +72,13 @@ void loop(){
 
 ### Tujuan
 
+Projek bertujuan untuk mengendalikan kecepatan putar FAN dengan metode PWM. Perintah yang digunakan adalah analogWrite, sedangkan parameter penentu lainnya seperti frekwensi dan range diset default.
+
+Nilai analogWrite adalah antara 0 sampai 1023 \(tingkat presisi 8 bit, 2^8=1024\) yang ditransformasikan menjadi nilai 1 sampai 9. Hal ini bertujuan agar kecepatan putar FAN dapat dikendalikan oleh remote IR melalui keypad nomor 1 sampai 9, sedangkan keypad nomor 0 berfungsi untuk mengatur putaran FAN menjadi 0.
+
 ### Rancangan
+
+
 
 ### Kode Program
 
