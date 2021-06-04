@@ -431,6 +431,8 @@ void MematikanSemuaLED() {
 }
 ```
 
+**Source Code**: [https://github.com/doditsuprianto/IoT-Development-Board-DSP-TECH/blob/main/Projek\_Aktuator\_FAN\_\_Kipas\_\_Mode\_PWM.ino](https://github.com/doditsuprianto/IoT-Development-Board-DSP-TECH/blob/main/Projek_Aktuator_FAN__Kipas__Mode_PWM.ino)
+
 ### Video Projek
 
 {% embed url="https://youtu.be/0i2VEY45\_Xc" %}
