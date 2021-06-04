@@ -1,3 +1,9 @@
+---
+description: >-
+  Menerapkan fungsi analogWrite untuk mengendalikan aktuator dengan mode PWM
+  (Pulse Width Modulation)
+---
+
 # Projek Aktuator FAN \(Kipas\) Mode PWM
 
 ### Dasar Teori
@@ -78,7 +84,7 @@ Nilai analogWrite adalah antara 0 sampai 1023 \(tingkat presisi 8 bit, 2^8=1024\
 
 ### Rancangan
 
-
+![](../.gitbook/assets/projek-sensor-remote-ir-inframerah-_bb%20%281%29.png)
 
 ### Kode Program
 

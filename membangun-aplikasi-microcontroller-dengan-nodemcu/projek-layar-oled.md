@@ -37,9 +37,12 @@ Program membutuhkan dua library tambahan untuk mengoperasikan OLED, yaitu:
 * Library Adafruit-GFX-Library yang dapat didownload di [https://github.com/adafruit/Adafruit-GFX-Library](https://github.com/adafruit/Adafruit-GFX-Library) 
 * Library Adafruit\_SSD1306 yang dapat didownload di [https://github.com/adafruit/Adafruit\_SSD1306](https://github.com/adafruit/Adafruit_SSD1306) 
 
-Adapun teknik instalasi library serupa dengan projek pertama. Silahkan cek di halaman [https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program). 
+Adapun teknik instalasi library serupa dengan projek pertama. Silahkan cek di halaman:
 
-Berikut daftar library bila instalasi library dilakukan secara online, buka menu **Sketch &gt; Include Library &gt; Manage Libraries**:
+* [https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program)
+* [https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://doditsuprianto.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program).
+
+  Berikut daftar library bila instalasi library dilakukan secara online, buka menu **Sketch &gt; Include Library &gt; Manage Libraries**:
 
 ![Library Adafruit GFX Library](../.gitbook/assets/5.png)
 

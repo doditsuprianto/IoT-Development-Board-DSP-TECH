@@ -1,3 +1,7 @@
+---
+description: Kebutuhan software pendukung pengembangan aplikasi embedded system
+---
+
 # Menyiapkan Lingkungan Pengembangan IoT Development Board
 
 Sebelum mengembangkan aplikasi pada sisi “things” IoT \(embedded system\) maka kita harus menginstal terlebih dahulu beberapa software pendukung, antara lain:

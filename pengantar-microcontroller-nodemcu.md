@@ -1,3 +1,7 @@
+---
+description: 'Pengenalan input/output, antarmuka komunikasi, bagian-bagian komponen NodeMCU'
+---
+
 # Pengantar Microcontroller NodeMCU
 
 Pada konsep IoT \(internet of things\) NodeMCU bertindak sebagai perangkat/device smart things. Devices atau “things” umumnya berkaitan dengan pengambilan data yang bersumber dari lingkungan secara real-time. Tugas ini umumnya diemban oleh perangkat MCU \(Microcontroller Unit - meskipun tidak selalu demikian\) yang bertindak sebagai pengendali dan pemroses data. Untuk mendapatkan data dari lingkungan luar MCU dibantu oleh sensor. Sebaliknya, MCU juga dapat mengendalikan perangkat lain yang diistilahkan sebagai aktuator.
