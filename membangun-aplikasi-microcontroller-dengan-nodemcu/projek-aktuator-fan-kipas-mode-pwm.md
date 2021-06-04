@@ -82,6 +82,8 @@ Projek bertujuan untuk mengendalikan kecepatan putar FAN dengan metode PWM. Peri
 
 Nilai analogWrite adalah antara 0 sampai 1023 \(tingkat presisi 8 bit, 2^8=1024\) yang ditransformasikan menjadi nilai 1 sampai 9. Hal ini bertujuan agar kecepatan putar FAN dapat dikendalikan oleh remote IR melalui keypad nomor 1 sampai 9, sedangkan keypad nomor 0 berfungsi untuk mengatur putaran FAN menjadi 0.
 
+![Keypad yang difungsikan pada Projek](../.gitbook/assets/image_2021-06-04_144156.png)
+
 ### Rancangan
 
 ![](../.gitbook/assets/projek-sensor-remote-ir-inframerah-_bb%20%281%29.png)
