@@ -16,6 +16,7 @@
   * [Projek Sensor Jarak Penghalang Ultrasonic](membangun-aplikasi-microcontroller-dengan-nodemcu/projek-sensor-jarak-penghalang-ultrasonic.md)
   * [Projek Sensor Remote IR \(Inframerah\)](membangun-aplikasi-microcontroller-dengan-nodemcu/projek-sensor-remote-ir-inframerah.md)
   * [Projek Aktuator FAN \(Kipas\) Mode PWM](membangun-aplikasi-microcontroller-dengan-nodemcu/projek-aktuator-fan-kipas-mode-pwm.md)
+* [Komunikasi MCU dan Browser Internet \(Primitive Way\)](komunikasi-mcu-dan-browser-internet-primitive-way.md)
 * [Kendali Jarak Jauh Menggunakan Protokol SOCKET TCP/IP](kendali-jarak-jauh-menggunakan-protokol-socket-tcp-ip/README.md)
   * [Projek Aplikasi Microcontroller NodeMCU & PHP \(Internet Browser\)](kendali-jarak-jauh-menggunakan-protokol-socket-tcp-ip/projek-aplikasi-microcontroller-nodemcu-and-php-internet-browser.md)
   * [Projek Aplikasi Microcontroller NodeMCU & C\# Desktop](kendali-jarak-jauh-menggunakan-protokol-socket-tcp-ip/projek-aplikasi-microcontroller-nodemcu-and-c-desktop.md)
