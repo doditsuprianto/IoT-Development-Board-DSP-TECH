@@ -24,7 +24,7 @@ Ubah name menjadi `make request` dan hapus properti `msg.payload` serta `msg.top
 
 * Tambahkan juga node `http request` pada worksheet, sesuaikan properties pada nilai `URL dan name`. Isikan `URL` dengan `https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json` dan sedangkan `name` diisi dengan `movie request`. Untuk lebih jelasnya dapat dilihat pada gambar berikut ini
 
-![Edit http request node](../../.gitbook/assets/08.png)
+![Edit http request node](../../.gitbook/assets/08%20%281%29.png)
 
 * Hubungkan node `make reqeust (inject)` dan `movie request (http request)` dengan cara klik dan drag antar ujung node, hasilnya dapat dilihat pada gambar berikut ini
 
