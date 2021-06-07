@@ -39,7 +39,7 @@ Langkah yang dapat dilakukan adalah sebagai berikut
 
 * Silakan cek dengan melihat pada Node-RED via browser, seharusnya sudah bertambah komponen-komponen dashboard pada pallete yang terdapat di sebelah kanan. ![](images/04.png)
 
-![](../../.gitbook/assets/05%20%281%29.png)
+![](../../.gitbook/assets/05%20%282%29.png)
 
 ### Membuat Dashboard Node-RED
 
@@ -47,13 +47,13 @@ Pada praktikum yang kedua akan dibuat sebuah tampilan seolah-olah menyalakan lam
 
 * Terlebih dahulu pilih menu `dashboard`, yang terdapat di pojok kanan bawah. dashbaord ini adalah untuk mengkonfigurasi website yang akan kita buat misalkan dari sistem menu/hirarki menu ataupun title website. Perhatikan gambar di bawah ini dan setelah ditambahkan
 
-![Dashboard](../../.gitbook/assets/05.png)
+![Dashboard](../../.gitbook/assets/05%20%281%29.png)
 
 ![Tab dashboard](../../.gitbook/assets/06%20%281%29.png)
 
 * Pada bagian `Tabs & Links` klik tombol `tab` sehingga akan ditambahkan tab baru di bawahnya, pada tab baru yang terbentuk yaitu `Tab 1` klik tombol `edit` sehingga akan muncul jendela `Edit dashboard tab node` seperti berikut
 
-![Edit dashboard tab node](../../.gitbook/assets/07%20%281%29.png)
+![Edit dashboard tab node](../../.gitbook/assets/07%20%282%29.png)
 
 Pada bagian `Name` isikan `Home` dan `Icon` diganti dengan `fa-home` dan klik tombol `Update` untuk mengakhiri.
 

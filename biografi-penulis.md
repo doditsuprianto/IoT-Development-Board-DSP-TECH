@@ -16,7 +16,7 @@ Email: doditsuprianto@gmail.com
 Profesi: Freelance engineer and lecturer   
 ****Afiliasi: Politeknik Negeri Malang   
 Web: [http://sinaungoding.com](http://sinaungoding.com)   
-Twitter: @mas\_nopri
+Twitter: [@mas\_nopri](https://twitter.com/mas_nopri)
 
 ![](.gitbook/assets/1%20%281%29.jpeg)
 

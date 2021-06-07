@@ -32,7 +32,7 @@ Ubah name menjadi `make request` dan hapus properti `msg.payload` serta `msg.top
 
 * Tambahkan node `debug` yang terdapat pada kategori `common`, jangan lupa diubah name dengan nama msg. Terakhir hubungkan node tersebut dengan node `movie request`. Hasil akhirnya adalah sebagai berikut
 
-![Edit debug node](../../.gitbook/assets/10%20%284%29.png)
+![Edit debug node](../../.gitbook/assets/10%20%285%29.png)
 
 ![Flow lengkap](../../.gitbook/assets/11%20%281%29.png)
 
