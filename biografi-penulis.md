@@ -4,7 +4,7 @@
 
 ### **Dodit Suprianto**
 
-Profesi sebagai pengajar di Politeknik Negeri Malang, jurusan Teknologi Informasi, konsultan IT dan penulis buku komputer. Minat penelitian pada bidang IoT dan Machine Learning.
+Pengajar di Politeknik Negeri Malang jurusan Teknologi Informasi, konsultan IT dan penulis buku komputer. Minat penelitian pada bidang IoT dan Deep Learning.
 
 Web: [http://doditsuprianto.blogspot.com/](http://doditsuprianto.blogspot.com/)  
 Email: doditsuprianto@gmail.com
@@ -26,6 +26,4 @@ Dosen pada program studi Sistem Informasi di Universitas Kanjuruhan Malang. Lulu
 
 Web: [https://rinimyhanny.wordpress.com/](https://rinimyhanny.wordpress.com/)  
 Email: riniagustina@unikama.ac.id
-
-Lulus dari pondok pesantren Al-Umm Malang, dan sekarang berstatus sebagai mahasiswi, menyukai IoT, anime, drakor dan seputar teknologi informasi.
 
