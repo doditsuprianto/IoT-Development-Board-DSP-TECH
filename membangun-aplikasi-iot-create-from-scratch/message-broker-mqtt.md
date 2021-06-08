@@ -55,7 +55,7 @@ Ada 2 aplikasi MQTT Client Tools yang direkomendasikan, yaitu:
 * **MQTTBox**, silahkan download [MQTTBox di sini](https://drive.google.com/file/d/1JysiDtmRBNcoarwzurwLZcEnK6EBL42D/view?usp=sharing)
 * **MQTT Explorer**, silahkan download MQTT Explorer di [http://mqtt-explorer.com](http://mqtt-explorer.com) atau [download di sini](https://drive.google.com/file/d/1i3yJb8TOqqeSdqwzH8wo_vV8nm7oLolF/view?usp=sharing).
 
-#### MQTT Explorer
+#### Instalasi & Konfigurasi MQTT Explorer
 
 Saya asumsikan bahwa file diperleh dari [http://mqtt-explorer.com](http://mqtt-explorer.com) maka tahap instalasinya adalah sebagai berikut
 
@@ -65,7 +65,64 @@ Saya asumsikan bahwa file diperleh dari [http://mqtt-explorer.com](http://mqtt-e
 
 ![Proses Instalasi MQTT Explorer](../.gitbook/assets/10%20%284%29.png)
 
-![Sampai di sini instalasi MQTT Explorer sukses](../.gitbook/assets/11%20%281%29.png)
+Buat koneksi baru antara MQTT Explorer dan Message Broker Mosquitto dengan kofigurasi berikut:
 
+* Name : MQTT Local Host
+* Protocol: mqtt://
+* Host: localhost
+* Port: 1883 \(default\)
+* Username: &lt;kosong&gt;
+* Password: &lt;kosong&gt;
 
+Kemudian klik tombol CONNECT untuk memastikan koneksi dengan mosquito terjalin. Jika tidak ada masalah lanjutkan dengan klik tombol SAVE.
+
+![Konfigurasi MQTT Explorer dengan Mosquitto Lokal Server](../.gitbook/assets/11%20%284%29.png)
+
+![MQTT Explorer  Terhubung Dengan Mosquitto](../.gitbook/assets/12%20%283%29.png)
+
+#### Instalasi & Konfigurasi MQTTBox
+
+Instalasi dan konfigurasi MQTTBox serupa dengan cara sebelumnya
+
+![Klik 2x pada file MQTTBox-win](../.gitbook/assets/13a.png)
+
+![Proses Instalasi](../.gitbook/assets/13%20%283%29.png)
+
+![Membuat Koneksi ke Mosquitto, Klik tombol &quot;Create MQTT Client&quot;](../.gitbook/assets/14aa.png)
+
+Isikan konfigurasi MQTTBox, kemudian klik tombol **Save**.
+
+* MQTT Client Name: MQTT Broker Workshop
+* Protocol: mqtt/tcp
+* Host: localhost:1883
+* Username: &lt;kosong&gt; default
+* Password: &lt;kosong&gt; default
+
+![](../.gitbook/assets/14%20%281%29.png)
+
+Jika tidak terjadi masalah koneksi dengan mosquitto berarti semua berjalan normal. 
+
+### Konfigurasi Minimal Untuk Remote Message Broker
+
+Pada bagian ini kita akan mengkonfigurasi message broker mosquitto dengan tambahan keamanan user dan password. Serta konfigurasi agar message broker mosquitto dapat diakses remote oleh perangkat jarak jauh pada jaringan lokal.
+
+Buka aplikasi editor Notepad++ sebagai Administrator untuk membuat user dan password untuk di hashing.
+
+![Membuka aplikasi Notepad++ sebagai Administrator](../.gitbook/assets/14b.png)
+
+Buat teks berisi user:password misalnya **AdminMQTT:pwd123**, kemudian simpan file tanpa disertai tipe file dengan nama **password**. Dalam kasus komputer saya, letakkan file di **C:\Program Files\mosquitto**
+
+![Buat user:password](../.gitbook/assets/15%20%281%29.png)
+
+![Simpan file password](../.gitbook/assets/16%20%281%29.png)
+
+Lakukan hashing terhadap file password tersebut dengan perintah pada command **mosquitto\_passwd -U password**. Parameter "password" yang terakhir adalah nama file yang dibuat sebelumnya.
+
+![Hashing password dari file password](../.gitbook/assets/17%20%281%29.png)
+
+Untuk membuktikann apak password telah di-hashing, silahkan buka kembali file **password** yang berada di C:\Program Files\mosquitto dengan editor Notepad++.
+
+![Membuka file password](../.gitbook/assets/18%20%281%29.png)
+
+![Hasil Hashing password Mosquitto](../.gitbook/assets/19%20%281%29.png)
 
