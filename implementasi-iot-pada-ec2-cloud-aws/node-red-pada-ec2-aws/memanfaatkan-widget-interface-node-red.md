@@ -10,7 +10,7 @@ Untuk menggunakan atau membuat tampilan dashhboard menggunakan Node-RED juga san
 
 Untuk menggunakan dashboard Node-RED, kita harus install terlebih dahulu modulnya terlebih dahulu. Dapat dilakukan menggunakan 2 cara untuk installasinya, sebagai berikut
 
-* Menggunakan perintah `npm`.
+#### Menggunakan perintah `npm`.
 
 Langkah-langkah yang dapat dilakukan adalah sebagai berikut
 
@@ -20,7 +20,7 @@ Langkah-langkah yang dapat dilakukan adalah sebagai berikut
 
 2. Selanjutnya jalankan perintah `npm i node-red-dashboard`.
 
-* Menggunakan menu `Manage pallete` pada Node-RED, mengakses Node-RED via browser.
+#### Menggunakan menu Manage pallete pada Node-RED
 
 Langkah yang dapat dilakukan adalah sebagai berikut
 
