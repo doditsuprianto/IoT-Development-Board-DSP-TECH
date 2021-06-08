@@ -27,10 +27,6 @@ description: “Best Practice” Pengembangan Aplikasi Internet of Things
 * [https://doditsuprianto.gitbook.io/internet-of-things/](https://doditsuprianto.gitbook.io/internet-of-things/) 
 * [https://github.com/doditsuprianto/IoT-Development-Board-DSP-TECH](https://github.com/doditsuprianto/IoT-Development-Board-DSP-TECH)
 
-**Link IoT Development Board dapat diperoleh di:**
-
-* [https://www.tokopedia.com/doditsuprianto/iot-development-board-dsp-tech](https://www.tokopedia.com/doditsuprianto/iot-development-board-dsp-tech)
-
 **Link untuk sitasi:**
 
 * DOI: [10.13140/RG.2.2.21493.91368](https://www.researchgate.net/publication/351776333_Best_Practice_Pengembangan_Aplikasi_Internet_of_Things?channel=doi&linkId=60a9137092851ca9dcdabaf4&showFulltext=true)
