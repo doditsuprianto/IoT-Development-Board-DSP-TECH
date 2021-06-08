@@ -28,7 +28,7 @@ Ubah name menjadi `make request` dan hapus properti `msg.payload` serta `msg.top
 
 * Hubungkan node `make reqeust (inject)` dan `movie request (http request)` dengan cara klik dan drag antar ujung node, hasilnya dapat dilihat pada gambar berikut ini
 
-![Drag antar node](../../.gitbook/assets/09%20%281%29.png)
+![Drag antar node](../../.gitbook/assets/09%20%282%29.png)
 
 * Tambahkan node `debug` yang terdapat pada kategori `common`, jangan lupa diubah name dengan nama msg. Terakhir hubungkan node tersebut dengan node `movie request`. Hasil akhirnya adalah sebagai berikut
 

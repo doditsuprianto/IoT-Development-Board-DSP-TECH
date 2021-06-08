@@ -50,5 +50,5 @@ Sehingga flow lengkap dari langkah awal sampai akhir adalah sebagai berikut
 
 Setelah dilakukan deploy, kemudian klik `tab debug atau icon kutu` seharusnya adalah sebagai berikut. Adapun untuk nilainya pasti berbeda
 
-![Hasil pada debug](../../.gitbook/assets/09.png)
+![Hasil pada debug](../../.gitbook/assets/09%20%281%29.png)
 
