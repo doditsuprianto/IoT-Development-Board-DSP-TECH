@@ -185,9 +185,9 @@ Menghentikan dan me-restart ulang service message broker dengan command sebagai 
 
 ![Stop dan start service message broker mosquitto](../.gitbook/assets/24.png)
 
-#### Membuka Akses mosquitto.exe Pada Firewall Windows Defender
+#### Firewall Rule Aplikasi mosquitto.exe
 
-Tujuan konfigurasi firewall agar layanan message broker mosquitto tidak diblokir oleh firewall windows defender.
+Tujuan konfigurasi firewall dengan rule aplikasi agar layanan message broker mosquitto tidak diblokir oleh firewall windows defender.
 
 ![Buka service firewall dengan menuliskan firewall.cpl](../.gitbook/assets/26.png)
 
@@ -201,9 +201,62 @@ Tujuan konfigurasi firewall agar layanan message broker mosquitto tidak diblokir
 
 ![Setelah masuk daftar pilih tombol OK](../.gitbook/assets/31.png)
 
-Bua rule PORT inbound dan outbound pada firewall. Dimana port tersebut merupakan port default dari service message borker MQTT.
+#### Firewall Rule Port
 
-#### 
+Konfigurasi firewall dengan rule port bertujuan agar firewall windows defender memberi izin message broker mosquitto dengan port 1883 dapat diakses dari luar.
 
- 
+Terdapat dua jenis rule port yang harus dikofigurasi, yaitu:
+
+* Port - Inbound Rule
+* Port - Outbound Rule
+
+**Konfigurasi Port Inbound Rule**
+
+![Buka layana firewall](../.gitbook/assets/32.png)
+
+![Pilih Inbound Rules dan New Rules](../.gitbook/assets/33.png)
+
+![Pilih Port kemudian klik tombol Next](../.gitbook/assets/34%20%281%29.png)
+
+![Pilih Specific local Port dan isikan 1883](../.gitbook/assets/35.png)
+
+![Pilih Allow the connection](../.gitbook/assets/36%20%281%29.png)
+
+![Beri tanda centang pada semua pilihan](../.gitbook/assets/37%20%281%29.png)
+
+![Beri nama rule dan sertakan deksripsi rule](../.gitbook/assets/38.png)
+
+**Konfigurasi Port Outbound Rule**
+
+Dengan cara serupa dengan inbound rule, ikuti langkah-langkah berikut untuk membentuk port outbound rule
+
+![Konfigurasi port outbound rule](../.gitbook/assets/39%20%281%29.png)
+
+![Pilih Port](../.gitbook/assets/40.png)
+
+![Menentukan port 1883](../.gitbook/assets/41.png)
+
+![Mengizinkan semua koneksi untuk port 1883](../.gitbook/assets/42.png)
+
+![Mengaplikasikan izin port 1883 untuk domain, private, dan public](../.gitbook/assets/43.png)
+
+![Memberi nama rule dan deskripsi rule](../.gitbook/assets/44.png)
+
+### Mengakses Message Broker Secara Remote
+
+Setelah semua konfigurasi dijalankan, saatnya kita menguji coba message broker secara remote. Sebagai bahan percobaan akan kita gunakan aplikasi Android MQTT Client bernama **MyMQTT**. Silahkan download aplikasi tersebut  melalui Google Play Store.
+
+![](../.gitbook/assets/1-whatsapp-image-2021-06-08-at-7.34.31-pm.jpeg)
+
+Sesuaikan konfigurasi koneksi pada MyMQTT, dimana alamat IP Message Broker adalah **192.168.0.101**. Hal ini tentu harus disesuaikan dengan alamat IP Anda masing-masing. 
+
+Sesuaikan dengan nama user dan password message broker dengan setting sebelumnya, dimana user adalah **AdminMQTT** dan password adalah **pwd123**.
+
+![Pilih menu Settings](../.gitbook/assets/4a-whatsapp-image-2021-06-08-at-7.34.31-pm.jpg)
+
+![Konfigurasi Koneksi](../.gitbook/assets/3-whatsapp-image-2021-06-08-at-7.34.31-pm.jpeg)
+
+![](../.gitbook/assets/4-whatsapp-image-2021-06-08-at-7.34.31-pm.jpeg)
+
+![](../.gitbook/assets/5-whatsapp-image-2021-06-08-at-7.34.30-pm.jpeg)
 
