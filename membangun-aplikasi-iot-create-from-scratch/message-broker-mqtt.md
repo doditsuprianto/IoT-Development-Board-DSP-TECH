@@ -126,3 +126,19 @@ Untuk membuktikann apak password telah di-hashing, silahkan buka kembali file **
 
 ![Hasil Hashing password Mosquitto](../.gitbook/assets/19%20%281%29.png)
 
+Sekarang kita akan mengkonfigurasi file **mosquitto.conf** yang berada di C:\Program Files\mosquitto dengan aplikasi editor Notepad++.
+
+![Buka file konfigurasi mosquitto.conf](../.gitbook/assets/22%20%281%29.png)
+
+Cek alamat IP pada komputer lokal Anda dengan perintah ipconfig pada window command.
+
+
+
+Lakukan perubahan terhadap 4 parameter berikut:
+
+* listener 1883 192.168.0.101 
+* listener 1883 localhost 
+* protocol mqtt 
+* allow\_anonymous false 
+* password\_file C:\Program Files\mosquitto\password
+
