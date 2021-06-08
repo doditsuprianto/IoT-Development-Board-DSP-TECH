@@ -6,21 +6,44 @@ description: >-
 
 # Mengkomunikasikan Antara IoT Development Board Dengan Message Broker Mosquitto
 
-Kelanjutan dari materi sebelumnya tentang [message broker](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-iot-create-from-scratch/instalasi-and-konfigurasi-message-broker-mqtt-mosquitto) adalah bagaimana membangun aplikasi di sisi embedded system \(IoT Development Board\) agar dapat berkomunikasi satu sama lain antara IoT Development Board dan Message Broker MQTT Mosquitto.
+### Rancangan Arsitektur Komunikasi IoT Development Board dan Message Broker MQTT Mosquitto
+
+Kelanjutan dari materi sebelumnya tentang [message broker](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-iot-create-from-scratch/instalasi-and-konfigurasi-message-broker-mqtt-mosquitto) adalah bagaimana membangun aplikasi di sisi embedded system \(IoT Development Board\) agar dapat berkomunikasi satu sama lain, antara IoT Development Board dan Message Broker MQTT Mosquitto.
 
 Bagaimana mekanisme subscriber, publisher dan topic diimplementasikan pada IoT Development Board.
 
-Materi yang akan dibahas ini mengasumsikan bahwa pembaca telah menguasai dan telah mencoba beberapa projek microcontroller yang terdapat dalam bab "[Membangun Aplikasi Microcontroller dengan NodeMCU](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu)" sehingga kami tidak perlu membahas berulang-ulang untuk hal yang sama atau serupa.
+Materi yang akan dibahas mengasumsikan bahwa pembaca telah menguasai dan telah mencoba beberapa projek microcontroller yang terdapat di dalam bab "[Membangun Aplikasi Microcontroller dengan NodeMCU](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu)", sehingga kami tidak perlu membahas berulang-ulang untuk hal yang sama atau serupa.
 
-Ditinjau dari sisi IoT Development Board dapat dianalogikan bahwa:
+Ditinjau dari sisi IoT Development Board \(embedded system\) dapat dianalogikan bahwa:
 
 * Publisher merupakan sensor \(meskipun tidak selalu sensor\)
 * Subscriber merupakan actuator \(meskipun tidak selalu actuator\)
-* Laptop bisa bertindak sebagai publisher maupun subscriber tergantung kebutuhan. Namun untuk saat ini tidak kita belum membahasnya.
+* Laptop bisa bertindak sebagai subscriber ketika ia akan menampilkan data time series sensor-sensor, baik berupa angka atau chart. 
+* Laptop juga bisa bertindak sebagai publisher ketika ia hendak mengendalikan actuator-actuator yang terdapat di dalam IoT Development Board, seperti relay, fan atau LED.
 
 Rancangan arsitektur pada IoT Development Board yang akan dibangun tampak sebagai berikut:
 
 ![Rancangan Komunikasi IoT Development Board dan Mosquitto](../.gitbook/assets/rancangan-1.png)
+
+> Namun untuk saat ini tidak kita belum membahas aplikasi di sisi laptop yang menggunakan aplikasi web dan java script.
+
+### Kebutuhan Library
+
+Beberapa library  baru dan belum pernah digunakan pada projek-projek sebelumnya adalah sebagai berikut:
+
+* **ArduinoJson.h**, dapat di-dowload di [https://github.com/bblanchon/ArduinoJson](https://github.com/bblanchon/ArduinoJson). Library ini bertujuan untuk memudahkan serialisasi \(encode\) dan deserialisasi \(decode\) format data.
+
+![](../.gitbook/assets/3%20%2811%29.png)
+
+* **PubSubClient.h**, dapat di-download di [https://github.com/knolleary/pubsubclient](https://github.com/knolleary/pubsubclient). Library ini bertujuan untuk memudahkan kita saat mengirim dan atau menerima data dari atau menuju message borker MQTT dengan mekanisme publish atau subscribe.
+
+![](../.gitbook/assets/4%20%288%29.png)
+
+* **ESP8266WiFi.h**, merupakan library internal NodeMCU ESP8266-12E, sehingga Anda tidak perlu menginstal library tersebut dari luar. Silahkan cek di menu **Sketch &gt; Include Library &gt; ESP8266WiFi.**
+
+![](../.gitbook/assets/5%20%287%29.png)
+
+> Bagaimana teknik penambahan library baru ke dalam projek? silahkan baca kembali bagian [https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program)
 
 ```cpp
 /*-----------------------------------------------
@@ -58,7 +81,6 @@ Rancangan arsitektur pada IoT Development Board yang akan dibangun tampak sebaga
 #include <IRrecv.h>
 #include <IRutils.h>
 #include <SimpleTimer.h>            // library timer (milles) / thread
-#include "logo.h"
 
 /*-------------------------------------
    Buffering memory untuk
@@ -189,11 +211,6 @@ void setup() {
     Inisialisasi layar OLED
     -------------------------*/
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-  display.clearDisplay();
-  display.drawBitmap(0, 0, dsptech, 128, 64, WHITE);
-  display.display();
-  delay(2000);
-
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.clearDisplay();
