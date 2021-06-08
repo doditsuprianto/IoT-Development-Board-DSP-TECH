@@ -102,7 +102,7 @@ Isikan konfigurasi MQTTBox, kemudian klik tombol **Save**.
 
 Jika tidak terjadi masalah koneksi dengan mosquitto berarti semua berjalan normal. 
 
-### Konfigurasi Minimal Untuk Remote Message Broker
+### Konfigurasi User & Password Akses Message Broker Mosquitto
 
 Pada bagian ini kita akan mengkonfigurasi message broker mosquitto dengan tambahan keamanan user dan password. Serta konfigurasi agar message broker mosquitto dapat diakses remote oleh perangkat jarak jauh pada jaringan lokal.
 
@@ -130,15 +130,50 @@ Sekarang kita akan mengkonfigurasi file **mosquitto.conf** yang berada di C:\Pro
 
 ![Buka file konfigurasi mosquitto.conf](../.gitbook/assets/22%20%281%29.png)
 
-Cek alamat IP pada komputer lokal Anda dengan perintah ipconfig pada window command.
+Cek alamat IP pada komputer lokal Anda dengan perintah **ipconfig** pada window command yang akan bertindak sebagai IP Listener Message Broker Mosquitto. Dalam kasus laptop saya adalah 192.168.0.101.
 
+![Melihat alamat IP Mosquitto](../.gitbook/assets/22a.png)
 
-
-Lakukan perubahan terhadap 4 parameter berikut:
+Selanjutnya lakukan perubahan terhadap 4 parameter berikut pada **mosquitto.conf**:
 
 * listener 1883 192.168.0.101 
 * listener 1883 localhost 
 * protocol mqtt 
 * allow\_anonymous false 
 * password\_file C:\Program Files\mosquitto\password
+
+![Salah satu contoh perubahan paramater konfigurasi mosquitto](../.gitbook/assets/23.png)
+
+Setelah hasil perubahan konfigurasi mosquitto, kita perlu menghentikan dan me-restart ulang service message broker dengan perintah pada window command sebagai berikut:
+
+* net stop mosquitto 
+* net start mosquitto
+
+![Stop dan start service message broker mosquitto](../.gitbook/assets/24.png)
+
+### Konfigurasi Akses Service Message Broker Mosquitto Secara Remote
+
+Bila dalam suatu kasus, komunikasi antara client dan message broker mosquitto berada pada mesin yang berbeda. Misalnya sisi client menggunakan perangkat embedded system, sedangkan service message broker berada pada laptop, maka kita perlu mengkonfigurasi message broker mosquitto terlebih dahulu agar dapat diakses oleh client-client dalam  satu network.
+
+#### Membuka Akses mosquitto.exe oleh Firewall Windows Defender
+
+Di sini konfigurasi firewall diperlukan agar layanan message broker tidak diblokir oleh firewall windows defender.
+
+![Buka service firewall dengan menuliskan firewall.cpl](../.gitbook/assets/26.png)
+
+![Pilih menu Allow an app or feature through Windows Defender Firewall](../.gitbook/assets/27.png)
+
+![Pilih button Allow another app](../.gitbook/assets/28.png)
+
+![Pilih tombol Browse untuk memilih aplikasi mosquitto](../.gitbook/assets/29.png)
+
+![Pilih file mosquitto pada C:\Program Files\mosquitto](../.gitbook/assets/30%20%281%29.png)
+
+![Setelah masuk daftar pilih tombol OK](../.gitbook/assets/31.png)
+
+Bua rule PORT inbound dan outbound pada firewall. Dimana port tersebut merupakan port default dari service message borker MQTT.
+
+#### 
+
+ 
 
