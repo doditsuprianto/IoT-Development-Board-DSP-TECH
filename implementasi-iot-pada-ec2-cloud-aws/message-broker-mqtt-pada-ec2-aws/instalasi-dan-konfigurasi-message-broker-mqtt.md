@@ -8,7 +8,7 @@ description: >-
 
 IoT Gateway dan message broker kaitannya sangat erat yang tidak dapat dipisahkan pada sebuah infrasturktur IoT, untuk lebih jelaskan dapat dilihat pada gambar di bawah ini
 
-![https://openautomationsoftware.com/open-automation-systems-blog/what-is-an-iot-gateway/](../../.gitbook/assets/10%20%284%29.png)
+![https://openautomationsoftware.com/open-automation-systems-blog/what-is-an-iot-gateway/](../../.gitbook/assets/10%20%285%29.png)
 
 Dari gambar di atas terlihat bahwa IoT gateway menjembatani sensor dan controller untuk melakukan komunikasi dengan internet, sehingga sebuah IoT gateway penyedia layanan diantara lokal koneksi parangkat IoT dan cloud/internet, perangkat IoT mampu berkomuniasi dengan perangkat IoT yang lain, dan jaringan yang lebih luas.
 

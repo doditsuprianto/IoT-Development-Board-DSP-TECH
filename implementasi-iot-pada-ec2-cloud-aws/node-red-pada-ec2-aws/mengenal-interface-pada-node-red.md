@@ -32,9 +32,9 @@ Ubah name menjadi `make request` dan hapus properti `msg.payload` serta `msg.top
 
 * Tambahkan node `debug` yang terdapat pada kategori `common`, jangan lupa diubah name dengan nama msg. Terakhir hubungkan node tersebut dengan node `movie request`. Hasil akhirnya adalah sebagai berikut
 
-![Edit debug node](../../.gitbook/assets/10%20%286%29.png)
+![Edit debug node](../../.gitbook/assets/10%20%287%29.png)
 
-![Flow lengkap](../../.gitbook/assets/11%20%282%29.png)
+![Flow lengkap](../../.gitbook/assets/11%20%283%29.png)
 
 * Langkah terakhir, silakan klik tombol `Deploy` yang terletak di pojok kanan atas sampai muncul popup `successfully deployed`. Jika sudah, klik `make request` dan amati hasilnya pada bagian `debug` \(klik icon kutu\) di jendela sebelah kanan. Untuk lebih jelasnya dapat dilihat pada gambar di bawah ini
 

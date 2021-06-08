@@ -27,7 +27,7 @@
   * [Module IoT Development Board dan Blynk](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/module-iot-development-board-dan-blynk-1.md)
   * [Module IoT Development Board dan Thingsboard](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/module-iot-development-board-dan-thingsboard.md)
 * [Membangun Aplikasi IoT \(Create from Scratch\)](membangun-aplikasi-iot-create-from-scratch/README.md)
-  * [Message Broker](membangun-aplikasi-iot-create-from-scratch/message-broker.md)
+  * [Message Broker MQTT](membangun-aplikasi-iot-create-from-scratch/message-broker-mqtt.md)
   * [Smart Device](membangun-aplikasi-iot-create-from-scratch/smart-device.md)
   * [IoT Dashboard](membangun-aplikasi-iot-create-from-scratch/iot-dashboard.md)
 * [Implementasi IoT Pada EC2 Cloud AWS](implementasi-iot-pada-ec2-cloud-aws/README.md)

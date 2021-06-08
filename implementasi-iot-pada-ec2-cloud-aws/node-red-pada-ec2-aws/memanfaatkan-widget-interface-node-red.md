@@ -71,11 +71,11 @@ Pada bagian `Name` isikan `Home` dan `Icon` diganti dengan `fa-home` dan klik to
 
 * Drag ke worksheet/flow node `switch` kemudian double klik sehingga akan menampilkan jendela seperti di bawah, sesuaikan bagian seperti `Group, Label, dan Name` seperti pada gambar di bawah ini.
 
-![Edit switch node](../../.gitbook/assets/10%20%285%29.png)
+![Edit switch node](../../.gitbook/assets/10%20%286%29.png)
 
 * Ulangi langkah sebelumnya, tetapi yang ditambahkan adalah node `text`, sesuaikan property seperti pada gambar berikut
 
-![Edit text node](../../.gitbook/assets/11%20%281%29.png)
+![Edit text node](../../.gitbook/assets/11%20%282%29.png)
 
 * Hubungkan `node switch` dan `node text`, hasil akhirnya adalah sebagai berikut. Kemudian silakan lakukan deploy dengan klik tombol `Deploy`. Untuk melihat tampilannya silakan akses Node-RED, misalnya [http://ec2-100-24-24-217.compute-1.amazonaws.com:1880/ui](http://ec2-100-24-24-217.compute-1.amazonaws.com:1880/ui)
 
