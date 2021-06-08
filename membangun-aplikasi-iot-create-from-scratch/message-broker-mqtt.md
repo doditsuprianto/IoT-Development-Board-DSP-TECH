@@ -1,5 +1,5 @@
 ---
-description: Instalasi & konfigurasi Message Broker secara lokal (laptop/PC)
+description: Instalasi & konfigurasi Message Broker Mosquitto
 ---
 
 # Message Broker MQTT
