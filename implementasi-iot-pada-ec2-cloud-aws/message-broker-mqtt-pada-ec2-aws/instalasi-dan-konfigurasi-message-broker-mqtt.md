@@ -1,3 +1,9 @@
+---
+description: >-
+  Pada sub-bab ini mempelajari proses installasi pada message broker pada sebuah
+  host atau mesin
+---
+
 # Installasi dan Konfigurasi Message Broker MQTT
 
 IoT Gateway dan message broker kaitannya sangat erat yang tidak dapat dipisahkan pada sebuah infrasturktur IoT, untuk lebih jelaskan dapat dilihat pada gambar di bawah ini
