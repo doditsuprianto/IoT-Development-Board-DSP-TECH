@@ -8,7 +8,7 @@ Berikut ini adalah langkah-langkahnya yang dapat digunakan untuk proses installa
 
 * Silakan login ke akun aws educate, [https://www.awseducate.com/educator/s/](https://www.awseducate.com/educator/s/). Jika berhasil akan diarahkan ke halaman AWS educate seperti pada gambar di bawah ini 
 
-![Halaman AWS Educate](../../.gitbook/assets/01%20%281%29.png)
+![Halaman AWS Educate](../../.gitbook/assets/01%20%282%29.png)
 
 * Pilih menu `AWS Account - AWS Educate Started Account`, selanjutnya muncul halaman seperti ditunjukkan pada gambar berikut
 
@@ -16,7 +16,7 @@ Berikut ini adalah langkah-langkahnya yang dapat digunakan untuk proses installa
 
 * Pilih `AWS Console` dan muncul halaman `AWS Management Console` seperti berikut ini
 
-![AWS Management Console](../../.gitbook/assets/03%20%281%29.png)
+![AWS Management Console](../../.gitbook/assets/03%20%282%29.png)
 
 * Selanjutkan akan diarahkan pada halaman EC2 Dashboard seperti pada tampilan di bawah ini, pilih `Launch Instance - Launch instance.`
 

@@ -29,7 +29,7 @@ Pada kesempatan kali ini kita akan melakukan installasi message broker menggunak
 
 Baris di atas digunakan untuk melakukan installasi mosquitto sebagai message broker sekaligus install mosquitto client untuk melaukan pengujian publish dan subscribe. Atau dapat melihat pada gambar berikut
 
-![User data](../../.gitbook/assets/06%20%282%29.png)
+![User data](../../.gitbook/assets/06%20%283%29.png)
 
 * Tambahkan 2 port yang perlu dibuka selain port 22 untuk ssh, misalkan port 1883 dan 8089 pada langkah `6. Configure Security Group`. Perhatikan gambar di bawah ini
 

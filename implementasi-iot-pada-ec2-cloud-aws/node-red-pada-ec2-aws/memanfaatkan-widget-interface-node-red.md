@@ -49,7 +49,7 @@ Pada praktikum yang kedua akan dibuat sebuah tampilan seolah-olah menyalakan lam
 
 ![Dashboard](../../.gitbook/assets/05%20%281%29.png)
 
-![Tab dashboard](../../.gitbook/assets/06%20%281%29.png)
+![Tab dashboard](../../.gitbook/assets/06%20%282%29.png)
 
 * Pada bagian `Tabs & Links` klik tombol `tab` sehingga akan ditambahkan tab baru di bawahnya, pada tab baru yang terbentuk yaitu `Tab 1` klik tombol `edit` sehingga akan muncul jendela `Edit dashboard tab node` seperti berikut
 
@@ -61,7 +61,7 @@ Pada bagian `Name` isikan `Home` dan `Icon` diganti dengan `fa-home` dan klik to
 
 * Selanjutnya tambahkan `Group` pada `Tab Home` tersebut dengan klik tombol `group`. Selanjutnya klik `edit` pada group yang baru ditambahkan sehingga akan muncul jendela `Edit dashboard tab node` kembali. Sesuaikan nilai-nilai seperti pada gambar berikut
 
-![Edit dashboard group node](../../.gitbook/assets/08.png)
+![Edit dashboard group node](../../.gitbook/assets/08%20%281%29.png)
 
 1. Ulangi langkah sebelumnya sehingga tampilannya menjadi seperti berikut
 

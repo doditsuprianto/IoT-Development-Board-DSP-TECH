@@ -14,7 +14,7 @@ Kita akan mencoba memanfaatkan Node-RED untuk request ke url tertentu dan menamp
 
 * Drag sebuah pallete node `inject` pada kategori `network` ke worksheet, perhatikan gambar berikut ini
 
-![Drag Node Inject ke Flow](../../.gitbook/assets/06.png)
+![Drag Node Inject ke Flow](../../.gitbook/assets/06%20%281%29.png)
 
 * Selanjutnya double klik node `inject` yang terdapat pada worksheet sehingga menampilkan jendela properties seperti berikut
 
@@ -24,11 +24,11 @@ Ubah name menjadi `make request` dan hapus properti `msg.payload` serta `msg.top
 
 * Tambahkan juga node `http request` pada worksheet, sesuaikan properties pada nilai `URL dan name`. Isikan `URL` dengan `https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json` dan sedangkan `name` diisi dengan `movie request`. Untuk lebih jelasnya dapat dilihat pada gambar berikut ini
 
-![Edit http request node](../../.gitbook/assets/08%20%281%29.png)
+![Edit http request node](../../.gitbook/assets/08%20%282%29.png)
 
 * Hubungkan node `make reqeust (inject)` dan `movie request (http request)` dengan cara klik dan drag antar ujung node, hasilnya dapat dilihat pada gambar berikut ini
 
-![Drag antar node](../../.gitbook/assets/09.png)
+![Drag antar node](../../.gitbook/assets/09%20%281%29.png)
 
 * Tambahkan node `debug` yang terdapat pada kategori `common`, jangan lupa diubah name dengan nama msg. Terakhir hubungkan node tersebut dengan node `movie request`. Hasil akhirnya adalah sebagai berikut
 
