@@ -112,7 +112,7 @@ Buka aplikasi editor Notepad++ sebagai Administrator untuk membuat user dan pass
 
 Buat teks berisi user:password misalnya **AdminMQTT:pwd123**, kemudian simpan file tanpa disertai tipe file dengan nama **password**. Dalam kasus komputer saya, letakkan file di **C:\Program Files\mosquitto**
 
-![Buat user:password](../.gitbook/assets/15%20%281%29.png)
+![Buat file password yang berisi user:password](../.gitbook/assets/15%20%281%29.png)
 
 ![Simpan file password](../.gitbook/assets/16%20%281%29.png)
 
@@ -126,15 +126,49 @@ Untuk membuktikann apak password telah di-hashing, silahkan buka kembali file **
 
 ![Hasil Hashing password Mosquitto](../.gitbook/assets/19%20%281%29.png)
 
-Sekarang kita akan mengkonfigurasi file **mosquitto.conf** yang berada di C:\Program Files\mosquitto dengan aplikasi editor Notepad++.
+Pengujian akses service message broker mosquitto dengan user dan password dengan cara mengubah konfigurasi koneksi pada MQTTBox. Isikan parameter berikut:
+
+* Host: localhost:1883 atau 192.168.0.101:1883
+* Username: AdminMQTT
+* Password: pwd123
+
+![Akses mosquitto dengan user, password dan localhost](../.gitbook/assets/20%20%281%29.png)
+
+Anda juga mengakses service message broker mosquitto menggunakan host alamat IP, dalam hal ini adalah 192.168.0.101
+
+![Akses mosquitto dengan user, password dan ip:192.168.0.101:1883](../.gitbook/assets/20a%20%281%29.png)
+
+Jika koneksi antara MQTT Client \(MQTTBox\) dan MQTT Broker \(mosquitto\), saatnya sekarang membuat entitas publisher yang dibernama **dht**. kolom payload adalahdata yang dikirk ke message broker mosquitto.
+
+![Menambahkan Publisher](../.gitbook/assets/20b.png)
+
+Subscriber adalah sisi yang meminta me-_request_ data ke publisher, tentunya melalui jembatan message broker yang bertindak sebagai manajer lalu lintas data antara subscriber dan publisher. 
+
+Nama topic antara subscriber dan publisher harus sesuai agar komunikasi keduanya bisa terjalin. Sebagai contoh nama topic subsciber adalah **dht** \(sama dengan topic pada publisher\).
+
+![Menambahkan Subscriber](../.gitbook/assets/20c.png)
+
+Ketika tombol publish dipilih, maka data pada kolom payload akan dikirim ke subscriber dengan topic dht.
+
+![Hasil komunikasi antara publisher dan subscriber](../.gitbook/assets/20d.png)
+
+### Konfigurasi Akses Service Message Broker Mosquitto Secara Remote
+
+Banyak kasus ditemui bahwa komunikasi antara Client MQTT dan Broker MQTT berada pada mesin berbeda. Misalnya sisi client menggunakan perangkat Embedded System, sedangkan Message Broker berada di laptop. 
+
+Di sini kita perlu mengkonfigurasi MQTT Message Broker Mosquitto terlebih dahulu agar dapat diakses oleh client-client secara remote dalam satu network.
+
+#### Konfigurasi File mosquitto.conf
+
+Pertama dilakukan adalah mengkonfigurasi file **mosquitto.conf** yang berada di folder **C:\Program Files\mosquitto** dengan aplikasi editor Notepad++.
 
 ![Buka file konfigurasi mosquitto.conf](../.gitbook/assets/22%20%281%29.png)
 
-Cek alamat IP pada komputer lokal Anda dengan perintah **ipconfig** pada window command yang akan bertindak sebagai IP Listener Message Broker Mosquitto. Dalam kasus laptop saya adalah 192.168.0.101.
+Cek alamat IP komputer lokal Anda dimana aIP Listener Message Broker Mosquitto berada. Gunakan perintah **ipconfig** pada window command yang akan bertindak. Dalam kasus laptop saya adalah 192.168.0.101.
 
 ![Melihat alamat IP Mosquitto](../.gitbook/assets/22a.png)
 
-Selanjutnya lakukan perubahan terhadap 4 parameter berikut pada **mosquitto.conf**:
+Selanjutnya lakukan perubahan terhadap 4 parameter pada **mosquitto.conf**:
 
 * listener 1883 192.168.0.101 
 * listener 1883 localhost 
@@ -144,20 +178,16 @@ Selanjutnya lakukan perubahan terhadap 4 parameter berikut pada **mosquitto.conf
 
 ![Salah satu contoh perubahan paramater konfigurasi mosquitto](../.gitbook/assets/23.png)
 
-Setelah hasil perubahan konfigurasi mosquitto, kita perlu menghentikan dan me-restart ulang service message broker dengan perintah pada window command sebagai berikut:
+Menghentikan dan me-restart ulang service message broker dengan command sebagai berikut:
 
 * net stop mosquitto 
 * net start mosquitto
 
 ![Stop dan start service message broker mosquitto](../.gitbook/assets/24.png)
 
-### Konfigurasi Akses Service Message Broker Mosquitto Secara Remote
+#### Membuka Akses mosquitto.exe Pada Firewall Windows Defender
 
-Bila dalam suatu kasus, komunikasi antara client dan message broker mosquitto berada pada mesin yang berbeda. Misalnya sisi client menggunakan perangkat embedded system, sedangkan service message broker berada pada laptop, maka kita perlu mengkonfigurasi message broker mosquitto terlebih dahulu agar dapat diakses oleh client-client dalam  satu network.
-
-#### Membuka Akses mosquitto.exe oleh Firewall Windows Defender
-
-Di sini konfigurasi firewall diperlukan agar layanan message broker tidak diblokir oleh firewall windows defender.
+Tujuan konfigurasi firewall agar layanan message broker mosquitto tidak diblokir oleh firewall windows defender.
 
 ![Buka service firewall dengan menuliskan firewall.cpl](../.gitbook/assets/26.png)
 
