@@ -1,2 +1,2 @@
-# Membangun Aplikasi IoT \(Create from Scratch\)
+# Membangun Aplikasi IoT "Create from Scratch"
 
