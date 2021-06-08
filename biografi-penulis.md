@@ -27,9 +27,5 @@ Dosen pada program studi Sistem Informasi di Universitas Kanjuruhan Malang. Lulu
 Web: [https://rinimyhanny.wordpress.com/](https://rinimyhanny.wordpress.com/)  
 Email: riniagustina@unikama.ac.id
 
-![](.gitbook/assets/2%20%281%29%20%281%29.jpeg)
-
-### **Tiffany Azhar Izzuddin**
-
 Lulus dari pondok pesantren Al-Umm Malang, dan sekarang berstatus sebagai mahasiswi, menyukai IoT, anime, drakor dan seputar teknologi informasi.
 
