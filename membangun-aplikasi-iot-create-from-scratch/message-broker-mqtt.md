@@ -268,7 +268,7 @@ Sebagai contoh, kita akan mengirim data string "**kirim dari andoid**", kemudian
 
 Sekarang cek kembali MQTT client pada MQTTBox. Pada bagian box Subscriber dengan topic **dht** akan diterima data string berupa tulisan "kirim dari Android".
 
-![](../.gitbook/assets/45.png)
+![](../.gitbook/assets/45a.png)
 
 Sampai di sini kita telah memahami bagaimana cara mengkomunikasikan antara MQTT Client dan MQTT Broker, bagaimana teknik instalasi dan konfigurasi message broker, baik bekerja secara lokal maupun remote, bagaimana cara kerja subscriber dan publisher, dan topic.
 
