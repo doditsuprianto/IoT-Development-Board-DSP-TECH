@@ -45,6 +45,10 @@ Beberapa library  baru dan belum pernah digunakan pada projek-projek sebelumnya 
 
 > Bagaimana teknik instalasi library baru ke dalam projek? silahkan baca kembali bagian [https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program)
 
+### Kode Program
+
+Dalam kode program telah diupayakan agar setiap baris kode disertai dengan penjelasan singkat. Sehingga dirasa tidak perlu menjelaskan maksud dari kode program tersebut berulang-ulang .
+
 ```cpp
 /*-----------------------------------------------
   IoT Smart Device Development Board
