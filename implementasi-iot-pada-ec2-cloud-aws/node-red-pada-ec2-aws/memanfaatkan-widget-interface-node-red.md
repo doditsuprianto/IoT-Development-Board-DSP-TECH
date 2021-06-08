@@ -67,13 +67,19 @@ Pada bagian `Name` isikan `Home` dan `Icon` diganti dengan `fa-home` dan klik to
 
 ![Konfigurasi dashboard](../../.gitbook/assets/09.png)
 
-1. Drag ke worksheet/flow node `switch` kemudian double klik sehingga akan menampilkan jendela seperti di bawah, sesuaikan bagian seperti `Group, Label, dan Name` seperti pada gambar di bawah ini.
+* Drag ke worksheet/flow node `switch` kemudian double klik sehingga akan menampilkan jendela seperti di bawah, sesuaikan bagian seperti `Group, Label, dan Name` seperti pada gambar di bawah ini.
 
-   ![](images/10.png)
+![Edit switch node](../../.gitbook/assets/10%20%285%29.png)
 
-2. Ulangi langkah sebelumnya, tetapi yang ditambahkan adalah node `text`, sesuaikan property seperti pada gambar berikut
+* Ulangi langkah sebelumnya, tetapi yang ditambahkan adalah node `text`, sesuaikan property seperti pada gambar berikut
 
-   ![](images/11.png)
+![Edit text node](../../.gitbook/assets/11%20%281%29.png)
 
-3. Hubungkan `node switch` dan `node text`, hasil akhirnya adalah sebagai berikut. Kemudian silakan lakukan deploy dengan klik tombol `Deploy`. Untuk melihat tampilannya silakan akses Node-RED, misalnya `http://ec2-52-91-160-126.compute-1.amazonaws.com:1880/ui`.
+* Hubungkan `node switch` dan `node text`, hasil akhirnya adalah sebagai berikut. Kemudian silakan lakukan deploy dengan klik tombol `Deploy`. Untuk melihat tampilannya silakan akses Node-RED, misalnya [http://ec2-100-24-24-217.compute-1.amazonaws.com:1880/ui](http://ec2-100-24-24-217.compute-1.amazonaws.com:1880/ui)
+
+![Deploy flow](../../.gitbook/assets/12%20%282%29.png)
+
+Hasil akhirnya adalah sebagai berikut
+
+![Hasil akhir](../../.gitbook/assets/13%20%281%29.png)
 

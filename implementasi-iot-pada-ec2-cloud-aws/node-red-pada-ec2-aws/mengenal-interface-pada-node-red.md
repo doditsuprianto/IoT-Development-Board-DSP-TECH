@@ -32,9 +32,9 @@ Ubah name menjadi `make request` dan hapus properti `msg.payload` serta `msg.top
 
 * Tambahkan node `debug` yang terdapat pada kategori `common`, jangan lupa diubah name dengan nama msg. Terakhir hubungkan node tersebut dengan node `movie request`. Hasil akhirnya adalah sebagai berikut
 
-![Edit debug node](../../.gitbook/assets/10%20%285%29.png)
+![Edit debug node](../../.gitbook/assets/10%20%286%29.png)
 
-![Flow lengkap](../../.gitbook/assets/11%20%281%29.png)
+![Flow lengkap](../../.gitbook/assets/11%20%282%29.png)
 
 * Langkah terakhir, silakan klik tombol `Deploy` yang terletak di pojok kanan atas sampai muncul popup `successfully deployed`. Jika sudah, klik `make request` dan amati hasilnya pada bagian `debug` \(klik icon kutu\) di jendela sebelah kanan. Untuk lebih jelasnya dapat dilihat pada gambar di bawah ini
 
@@ -45,5 +45,5 @@ Ubah name menjadi `make request` dan hapus properti `msg.payload` serta `msg.top
 1. Tambahkan kembali `node function` dan `node debug`, yang masing-masing fungsinya adalah untuk memfilter dimana movie yang akan tampil hanya movie dengan tahun &gt; 2000 dan untuk menampilkan data filter tersebut.
 2. Flow dan output pada debug dapat dilihat seperti berikut ini
 
-![Movie hanya tahun 2000 ke atas](../../.gitbook/assets/13%20%281%29.png)
+![Movie hanya tahun 2000 ke atas](../../.gitbook/assets/13%20%282%29.png)
 
