@@ -261,13 +261,6 @@ void setup() {
 }
 
 void loop() {
-  /*-------------------------------------------
-     Pada kalang ini merupakan demonstrasi
-     proses mengirim dan menerima data
-     secara jarak jauh menggunakan Broker MQTT
-     baik Publisher atau Subscriber
-    -------------------------------------------*/
-
   /*---------------------------------------
     Koneksi ulang ke broker jika terputus
     ---------------------------------------*/
