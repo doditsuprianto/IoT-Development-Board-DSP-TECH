@@ -49,6 +49,8 @@ Pada praktikum yang kedua akan dibuat sebuah tampilan seolah-olah menyalakan lam
 
 ![Dashboard](../../.gitbook/assets/05%20%281%29.png)
 
+Setelah ditambahkan
+
 ![Tab dashboard](../../.gitbook/assets/06%20%282%29.png)
 
 * Pada bagian `Tabs & Links` klik tombol `tab` sehingga akan ditambahkan tab baru di bawahnya, pada tab baru yang terbentuk yaitu `Tab 1` klik tombol `edit` sehingga akan muncul jendela `Edit dashboard tab node` seperti berikut
