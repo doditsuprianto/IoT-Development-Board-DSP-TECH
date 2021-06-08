@@ -83,3 +83,28 @@ Hasil akhirnya adalah sebagai berikut
 
 ![Hasil akhir](../../.gitbook/assets/13%20%281%29.png)
 
+### Tugas
+
+Buatlah sebuah dashboard website untuk memonitoring dan control pada sebuah ruang lobby, ruang kajur, dan ruang dosen. Masing-masing ruang dengan detail node yang dibutuhkan pada node dashboard sebagai berikut;
+
+1. Tab Home memiliki group Lobby, Ruang Kajur, dan Ruang Dosen.
+   * Group Lobby terdapat 2 node inject, 2 function, gauge, dan chart.
+   * Group Ruang Kajur terdapat 2 node inject, 2 function, gauge, dan chart.
+   * Group Ruang Dosen terdapat 2 node inject, 2 function, gauge, dan chart.
+
+     > Jika diperhatikan node gauge dan chart bisa otomatis berjalan, hal tersebut diaktifkan saja pada bagian otomatis pada node inject.
+     >
+     > Sedangkan nilai yang selalu muncul acak itu menggunakan node funcion, `Math.floor(Math.random()*101)`
+     >
+     > Jumlah line antara node chart pada Lobby, Ruang Kajur, dan Ruang Dosen berbeda bisa dilakukan dengan cara mengubah `Setup Outputs` pada function.
+2. Tab Room Control terdiri dari group Lampu dan AC.
+   * Group Lampu memiliki 3 switch, 3 function, dan 3 text.
+   * Group AC memiliki 3 slider dan 3 text.
+
+     > function digunakan untuk parsing boolean ke string, "nyala atau mati".
+3. Tab About hanya terdiri dari text biasa.
+
+Hasil akhirnya adalah sebagai berikut
+
+![Tugas](../../.gitbook/assets/tugas.gif)
+
