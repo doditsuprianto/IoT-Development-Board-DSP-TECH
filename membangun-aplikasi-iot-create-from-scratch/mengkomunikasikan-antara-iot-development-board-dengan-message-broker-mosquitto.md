@@ -6,6 +6,22 @@ description: >-
 
 # Mengkomunikasikan Antara IoT Development Board Dengan Message Broker Mosquitto
 
+Kelanjutan dari materi sebelumnya tentang [message broker](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-iot-create-from-scratch/instalasi-and-konfigurasi-message-broker-mqtt-mosquitto) adalah bagaimana membangun aplikasi di sisi embedded system \(IoT Development Board\) agar dapat berkomunikasi satu sama lain antara IoT Development Board dan Message Broker MQTT Mosquitto.
+
+Bagaimana mekanisme subscriber, publisher dan topic diimplementasikan pada IoT Development Board.
+
+Materi yang akan dibahas ini mengasumsikan bahwa pembaca telah menguasai dan telah mencoba beberapa projek microcontroller yang terdapat dalam bab "[Membangun Aplikasi Microcontroller dengan NodeMCU](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu)" sehingga kami tidak perlu membahas berulang-ulang untuk hal yang sama atau serupa.
+
+Ditinjau dari sisi IoT Development Board dapat dianalogikan bahwa:
+
+* Publisher merupakan sensor \(meskipun tidak selalu sensor\)
+* Subscriber merupakan actuator \(meskipun tidak selalu actuator\)
+* Laptop bisa bertindak sebagai publisher maupun subscriber tergantung kebutuhan. Namun untuk saat ini tidak kita belum membahasnya.
+
+Rancangan arsitektur pada IoT Development Board yang akan dibangun tampak sebagai berikut:
+
+![Rancangan Komunikasi IoT Development Board dan Mosquitto](../.gitbook/assets/rancangan-1.png)
+
 ```cpp
 /*-----------------------------------------------
   IoT Smart Device Development Board
@@ -23,6 +39,7 @@ description: >-
   5. https://github.com/adafruit/Adafruit-GFX-Library
   6. https://github.com/crankyoldgit/IRremoteESP8266
   7. https://github.com/kiryanenko/SimpleTimer
+  8. https://github.com/knolleary/pubsubclient
   --------------------------------------------------------*/
 
 /*------------------------
@@ -730,4 +747,8 @@ void updateOLED() {
 ![](../.gitbook/assets/2%20%282%29.jpeg)
 
 ![](../.gitbook/assets/1%20%289%29.png)
+
+{% embed url="https://youtu.be/j7YUEvLGTso" %}
+
+
 
