@@ -43,7 +43,7 @@ Beberapa library  baru dan belum pernah digunakan pada projek-projek sebelumnya 
 
 ![](../.gitbook/assets/5%20%287%29.png)
 
-> Bagaimana teknik penambahan library baru ke dalam projek? silahkan baca kembali bagian [https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program)
+> Bagaimana teknik instalasi library baru ke dalam projek? silahkan baca kembali bagian [https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led\#kode-program](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-microcontroller-dengan-nodemcu/projek-pergerakkan-led#kode-program)
 
 ```cpp
 /*-----------------------------------------------
