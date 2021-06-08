@@ -256,7 +256,21 @@ Sesuaikan dengan nama user dan password message broker dengan setting sebelumnya
 
 ![Konfigurasi Koneksi](../.gitbook/assets/3-whatsapp-image-2021-06-08-at-7.34.31-pm.jpeg)
 
+Setelah memilih tombol Save akan muncul notifikasi bahwa koneksi sukses, artinya koneksi antara MyMQTT Android dan Message Broker Mosquitto sukses terjalin.
+
+Selanjutnya pilih menu publish, yang akan mengirim data \(payload\) dari MyMQTT Android ke message broker mosquitto.
+
 ![](../.gitbook/assets/4-whatsapp-image-2021-06-08-at-7.34.31-pm.jpeg)
 
+Sebagai contoh, kita akan mengirim data string "**kirim dari andoid**", kemudian pilih tombol Publish.
+
 ![](../.gitbook/assets/5-whatsapp-image-2021-06-08-at-7.34.30-pm.jpeg)
+
+Sekarang cek kembali MQTT client pada MQTTBox. Pada bagian box Subscriber dengan topic **dht** akan diterima data string berupa tulisan "kirim dari Android".
+
+![](../.gitbook/assets/45.png)
+
+Sampai di sini kita telah memahami bagaimana cara mengkomunikasikan antara MQTT Client dan MQTT Broker, bagaimana teknik instalasi dan konfigurasi message broker, baik bekerja secara lokal maupun remote, bagaimana cara kerja subscriber dan publisher, dan topic.
+
+> Untuk mengkases message broker secara remote, pastikan bahwa perangkat antara message broker dan perangkat message client berada dalam satu network.
 
