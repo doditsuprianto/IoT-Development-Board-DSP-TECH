@@ -1,4 +1,37 @@
+---
+description: >-
+  Membangun aplikasi web sebagai IoT Dashboard yang dapat berkomunikasi melalui
+  MQTT Broker Mosquitto antara website IoT Dashboard dan Iot Development board
+---
+
 # IoT Dashboard
+
+### Pengantar
+
+Pada bagian ini kita akan mengembangkan aplikasi web. Aplikasi web bertindak sebagai IoT Dahsboard untuk memonitor data logger beberapa sensor dari IoT Development Board, antara lain:
+
+* Sensor suhu & kelembaban DHT11
+* Sensor intensitas cahaya LDR
+* Sensor jarak penghalang Ultrasonic
+
+IoT Development Board juga berisi beberapa widget untuk emngendalikan beberapa aktuator yang berada di IoT Development Board, antara lain:
+
+* Mengaktifkan dan menonaktifkan 9x LED dengan widget slider.
+* Mengaktifkan dan menonaktifkan Relay dengan widget checkbox.
+* Menaktifkan dan menonaktifkan speaker piezo dengan widget checkbox.
+* Mengatur kecepatan putar FAN dengan PWM
+
+Jika ditinjau dari konsep client-server message broker maka aplikasi web IoT Dashboard bisa bertidak sebagai subscriber maupun publisher. 
+
+* Ia akan menjadi subscriber apabila aplikasi web IoT Dashboard menampilkan data logger sensor-sensor yang berada di IoT Development board.
+* Ia akan menjadi publisher apabila aplikasi web IoT Dashoard memerintahkan aktuator-aktuator yang berada di IoT Development Board.
+
+Serupa dengan IoT Dashboard, IoT Development Board juga bisa bertindak sebagai publisher dan subscriber.
+
+* 
+### Konfigurasi Mosquitto Yang Mendukung Web Socket
+
+### Kode Program
 
 ```javascript
 <!DOCTYPE html>
