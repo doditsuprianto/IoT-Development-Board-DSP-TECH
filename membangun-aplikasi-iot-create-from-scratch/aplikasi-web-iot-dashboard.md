@@ -97,15 +97,35 @@ Adapun kode lengkapnya adalah:
 
 ![](../.gitbook/assets/10%20%288%29.png)
 
-Jika hasilnya tampak seperti dibawah, berarti websocket message broker berjalan dengan baik.
+Jika hasilnya tampak seperti dibawah ini maka berarti protokol websocket pada message broker berjalan dengan baik.
 
 ![](../.gitbook/assets/image_2021-06-13_010139.png)
 
-Setelah itu untuk perintah menghentikan atau me-restart layanan message broker dapat menggunakan perintah sebelumnya:
+Selanjutnya untuk  menghentikan atau me-restart layanan message broker dapat menggunakan perintah seperti sebelumnya:
 
 ```bash
 net stop mosquitto
 net start mosquitto
+```
+
+Berikut potongan program javascript yang diletakkan pada aplikasi web IoT Dashboard yang memanfaatkan **port 9001** dan protokol websocket \("**/ws**"\) message broker.
+
+```javascript
+/*-----------------------------------------------------
+	BAGIAN MQTT YANG TERKONEKSI DENGAN MESSAGE BROKER
+  -----------------------------------------------------*/		
+// Menentuan alamat IP dan PORT message broker
+var host = "192.168.0.101";  
+var port = 9001; 
+
+// Konstruktor koneksi antara client dan message broker
+var client = new Paho.MQTT.Client(host, port, "/ws",
+            "myclientid_" + parseInt(Math.random() * 100, 10));		
+
+// Menjalin koneksi antara client dan message broker
+client.onConnectionLost = function (responseObject) {            
+	document.getElementById("messages").innerHTML += "Koneksi Ke Broker MQTT Putus - " + responseObject.errorMessage + "<br/>";
+};
 ```
 
 ### Kode Program
