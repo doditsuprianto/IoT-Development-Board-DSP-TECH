@@ -78,7 +78,7 @@ Kemudian klik tombol CONNECT untuk memastikan koneksi dengan mosquito terjalin. 
 
 ![Konfigurasi MQTT Explorer dengan Mosquitto Lokal Server](../.gitbook/assets/11%20%284%29.png)
 
-![MQTT Explorer  Terhubung Dengan Mosquitto](../.gitbook/assets/12%20%283%29.png)
+![MQTT Explorer Terhubung Dengan Mosquitto](../.gitbook/assets/12%20%283%29.png)
 
 #### Instalasi & Konfigurasi MQTTBox
 
@@ -138,7 +138,7 @@ Anda juga mengakses service message broker mosquitto menggunakan host alamat IP,
 
 ![Akses mosquitto dengan user, password dan ip:192.168.0.101:1883](../.gitbook/assets/20a%20%281%29.png)
 
-Jika koneksi antara MQTT Client \(MQTTBox\) dan MQTT Broker \(mosquitto\), saatnya sekarang membuat entitas publisher yang dibernama **dht**. kolom payload adalahdata yang dikirk ke message broker mosquitto.
+Jika koneksi antara MQTT Client \(MQTTBox\) dan MQTT Broker \(mosquitto\), saatnya sekarang membuat entitas publisher yang dibernama **dht**. kolom payload adalah data yang dikirim ke message broker mosquitto.
 
 ![Menambahkan Publisher](../.gitbook/assets/20b.png)
 
