@@ -27,6 +27,8 @@ Rancangan arsitektur pada IoT Development Board yang akan dibangun tampak sebaga
 
 > Namun untuk saat ini tidak kita belum membahas aplikasi di sisi laptop yang menggunakan aplikasi web dan java script.
 
+Secara konsep client-server message broker, IoT Development Board akan bertindak sebagi publisher dan subscriber sekaligus. Untuk penjelasan detil tentang ini silahkan baca pada [bab berikut](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-iot-create-from-scratch/aplikasi-web-iot-dashboard#pengantar).
+
 ### Kebutuhan Library
 
 Beberapa library  baru dan belum pernah digunakan pada projek-projek sebelumnya adalah sebagai berikut:
@@ -188,11 +190,17 @@ decode_results hasil;
 // Varibale simpletimer / Timer interval
 SimpleTimer TimerDHT, TimerLDR, TimerSR04;
 
-byte suhu, hum;                     // Deklarasi variable suhu dan kelembaban
+// Deklarasi variable suhu dan kelembaban
 byte humValid, tempValid;
-unsigned int KodeTombolRemote;      // Deklarasi kode tombol remote
-WiFiClient espClient;               // Deklaasi client wifi
-PubSubClient client(espClient);     // Deklarasi MQTT Client
+
+// Deklarasi kode tombol remote
+unsigned int KodeTombolRemote;  
+
+ // Deklaasi client wifi
+WiFiClient espClient;          
+
+// Deklarasi MQTT Client
+PubSubClient client(espClient); 
 long lastReconnectAttempt = 0;
 
 /*-----------------------------------
@@ -329,8 +337,8 @@ void loop() {
     // Format data dibah menjadi sebuah bentuk array.
     // Hal ini karena dalam satu siklus waktu sensor DHT11
     // menghasilkan 2 nilai sekaligus, yaitu suhu dan kelembaban
-    dhtData["suhu"] = suhu;
-    dhtData["kelembaban"] = hum;
+    dhtData["suhu"] = tempValid;
+    dhtData["kelembaban"] = humValid;
 
     // Untuk menghemat sumberdaya maka dalam sekali transmisi data ke message broker
     // nilai suhu dan kelembaban dikirim sekaligus, sehingga digunakan serialisasi data.
@@ -423,8 +431,9 @@ int SensorJarakUltraSonic() {
   dengan sensor DHT11
   ------------------------------------*/
 void SensorDHT() {
-  suhu = 0;
-  hum = 0;
+  byte suhu = 0;
+  byte hum = 0;
+  
   int err = SimpleDHTErrSuccess;
   if ((err = dht11.read(&suhu, &hum, NULL)) != SimpleDHTErrSuccess)
   {
@@ -433,9 +442,16 @@ void SensorDHT() {
     return;
   }
 
+  // Memastikan suhu dan kelembaban valid
+  // bila bernilai 0 maka diambil dari nilai sebelumnya
+  if (suhu != 0 || hum != 0) {
+    tempValid = suhu;
+    humValid = hum;
+  }
+
   Serial.print("Sample OK: ");
-  Serial.print((int)suhu); Serial.print(" *C, ");
-  Serial.print((int)hum); Serial.println(" H");
+  Serial.print((int)tempValid); Serial.print(" *C, ");
+  Serial.print((int)humValid); Serial.println(" H");
 }
 
 /*-------------------------
@@ -742,14 +758,7 @@ void updateOLED() {
 
   display.setCursor(0, 0);    display.print("Light");
   display.setCursor(75, 0);   display.print(String(SensorLDR()));
-  display.setCursor(100, 0);  display.print("Lux");
-
-  // Memastikan suhu dan kelembaban valid
-  // bila bernilai 0 maka diambil dari nilai sebelumnya
-  if (suhu != 0 || hum != 0) {
-    tempValid = suhu;
-    humValid = hum;
-  }
+  display.setCursor(100, 0);  display.print("Lux");  
 
   display.setCursor(0, 14);   display.print("Temperature");
   display.setCursor(75, 14);  display.print(String(tempValid));
