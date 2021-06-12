@@ -63,7 +63,7 @@ Adapun library MQTT client yang akan digunakan pada aplikas web IoT Dashboard be
 <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
 ```
 
-Lakukan backup terlebih dahulu file **mosquitto.conf** yang terdapat di dalam folder **C:\Program Files\mosquitto**. Buka file mosquitto.conf dengan editor Notepad++ mode Administrator, kemudian timpa isi file  tersebut dengan konfigurasi berikut:
+Lakukan backup terlebih dahulu file **mosquitto.conf** yang terdapat di dalam folder **C:\Program Files\mosquitto**. Buka file mosquitto.conf dengan editor Notepad++ mode Administrator, kemudian timpa isi file tersebut dengan konfigurasi berikut:
 
 ```javascript
 # nama file password beserta folder lengkapnya
