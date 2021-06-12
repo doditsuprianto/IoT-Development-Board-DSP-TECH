@@ -30,7 +30,7 @@ Jika ditinjau dari konsep client-server message broker maka aplikasi web IoT Das
 
 Konsep subscriber dan publisher di atas juga berlaku sama pada aplikasi yang di embed-kan ke IoT Dashboard. Dimana dalam [kode program tersebut](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-iot-create-from-scratch/mengkomunikasikan-antara-iot-development-board-dengan-message-broker-mosquitto#kode-program) juga disertai publisher dan subscriber sekaligus.
 
-![Bertidnak sebagai publisher pada kalang void loop\(\)](../.gitbook/assets/7%20%286%29.png)
+![Bertindak sebagai publisher pada kalang void loop\(\)](../.gitbook/assets/7%20%286%29.png)
 
 ![Bertindak sebagai subscriber pada kalang void reconnect\(\)](../.gitbook/assets/8%20%284%29.png)
 
