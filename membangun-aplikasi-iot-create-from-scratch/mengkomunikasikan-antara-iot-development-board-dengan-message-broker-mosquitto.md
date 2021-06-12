@@ -31,7 +31,7 @@ Secara konsep client-server message broker, IoT Development Board akan bertindak
 
 ### Kebutuhan Library
 
-Beberapa library  baru dan belum pernah digunakan pada projek-projek sebelumnya adalah sebagai berikut:
+Beberapa library baru dan belum pernah digunakan pada projek-projek sebelumnya adalah sebagai berikut:
 
 * **ArduinoJson.h**, dapat di-dowload di [https://github.com/bblanchon/ArduinoJson](https://github.com/bblanchon/ArduinoJson). Library ini bertujuan untuk memudahkan serialisasi \(encode\) dan deserialisasi \(decode\) format data.
 
@@ -49,7 +49,7 @@ Beberapa library  baru dan belum pernah digunakan pada projek-projek sebelumnya 
 
 ### Kode Program
 
-Dalam kode program telah diupayakan agar setiap baris kode disertai dengan penjelasan singkat. Sehingga dirasa tidak perlu menjelaskan maksud dari kode program tersebut berulang-ulang .
+Dalam kode program telah diupayakan agar setiap baris kode disertai dengan penjelasan singkat. Sehingga dirasa tidak perlu menjelaskan maksud dari kode program tersebut berulang-ulang.
 
 ```cpp
 /*-----------------------------------------------
