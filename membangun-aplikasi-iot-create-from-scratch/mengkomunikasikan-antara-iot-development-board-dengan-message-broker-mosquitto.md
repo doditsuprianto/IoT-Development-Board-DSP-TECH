@@ -57,7 +57,7 @@ Dalam kode program telah diupayakan agar setiap baris kode disertai dengan penje
   https://doditsuprianto.gitbook.io/dsp-tech/
   https://github.com/doditsuprianto
   Email: doditsuprianto@gmail.com
-
+  
   Library Link & Credit:
   1. https://github.com/bblanchon/ArduinoJson
   2. https://github.com/Simsso/ShiftRegister74HC595
@@ -146,27 +146,25 @@ const char* brokerUser = "AdminMQTT";
 const char* brokerPass = "pwd123";
 const char* brokerHost = "192.168.0.101";
 
-/*----------------------------------------------------
+/*--------------------------------------------
   Daftar nama Topic MQTT sebagai Publisher:
-  1. Sebagai Publisher DHT11: Suhu & Kelembaban
-  2. Sebagai Publisher LDR: Intensitas Cahaya
-  3. Sebagai Publisher HC-SR04: Proximity Ultrasonic
-  ----------------------------------------------------*/
+  1. Publisher DHT11: Suhu & Kelembaban
+  2. Publisher LDR: Intensitas Cahaya
+  3. Publisher HC-SR04: Proximity Ultrasonic
+  --------------------------------------------*/
 const char* outTopicDHT  = "/dht";  // suhu dan kelembaban
 const char* outTopicLDR  = "/ldr";  // intensitas cahaya
 const char* outTopicSR04 = "/sr04"; // jarak penghalang dengan ultrasonic
 
-/*---------------------------------------------
+/*--------------------------------------------
   Daftar nama Topic MQTT sebagai Subscriber:
-  1. Sebagai Subscriber FAN PWM
-  2. Sebagai Subscriber Relay
-  3. Sebagai Subscriber LED
-  4. Sebagai Subscriber Buzzer / SPK Piezo
+  1. Subscriber FAN PWM
+  2. Subscriber Relay
+  3. Subscriber LED
   ---------------------------------------------*/
 const char* inTopicFAN   = "/fanpwm";
 const char* inTopicRelay = "/relay";
 const char* inTopicLED   = "/ledanim";
-const char* inTopicPiezo = "/piezo";
 
 /*------------------------------
   Inisialisasi instance/object &
@@ -313,8 +311,8 @@ void loop() {
 
   /*---------------------------------------------
     Membaca sensor suhu dan kelembaban DHT11
-    sesuai interval yang ditetapkan.
-    Kemudian mengirim datanya ke message broker
+    sesuai interval yang ditetapkan.    
+    Kemudian mengirim datanya ke message broker 
     sesuai dengan topic yang ditentukan
     ---------------------------------------------*/
   if (TimerDHT.isReady()) {
@@ -327,7 +325,7 @@ void loop() {
     updateOLED();
 
     // Format data dibah menjadi sebuah bentuk array.
-    // Hal ini karena dalam satu siklus waktu sensor DHT11
+    // Hal ini karena dalam satu siklus waktu sensor DHT11 
     // menghasilkan 2 nilai sekaligus, yaitu suhu dan kelembaban
     dhtData["suhu"] = suhu;
     dhtData["kelembaban"] = hum;
@@ -664,12 +662,9 @@ void reconnect() {
 
       Serial.println("connected");
 
-      // memastikan bahwa IoT Development Board
-      // telah meng-subscribe semua aktuator
       client.subscribe(inTopicFAN);
       client.subscribe(inTopicRelay);
       client.subscribe(inTopicLED);
-      client.subscribe(inTopicPiezo);
     } else {
       Serial.print("failed, rc=");
       Serial.print(client.state());
@@ -695,15 +690,17 @@ void callback(char* topic, byte* payload, unsigned int length) {
     StringPayload += (char)payload[i];
   }
 
-  Serial.println("TOPIC: " + String(topic));
-  Serial.println("PAYLOAD: " + String(StringPayload));
-
   // Mem-filter data berdasarkan nama topic nya masing-masing
   if (strcmp(topic, inTopicFAN) == 0) {
+
     // Topic: "/fanpwm"
+    Serial.println("Pub FAN: " + StringPayload);
     SpeedFANSub(StringPayload.toInt());
+
   } else if (strcmp(topic, inTopicRelay) == 0) {
+
     // Topic: "/relay"
+    Serial.println("Pub RELAY: " + StringPayload);
     if (StringPayload == "ON") {
       // Mengaktifkan Relay jika StringPayload = "ON"
       srChannel.set(pinRelay, HIGH);
@@ -711,16 +708,9 @@ void callback(char* topic, byte* payload, unsigned int length) {
       // Menonaktifkan Relay jika StringPayload = "OFF"
       srChannel.set(pinRelay, LOW);
     }
-  } else if (strcmp(topic, inTopicPiezo) == 0) {
-    // Topic: "/piezo"
-    if (StringPayload == "ON") {
-      // Mengaktifkan Buzz jika StringPayload = "ON"
-      srChannel.set(pinBuzz, HIGH);
-    } else {
-      // Menonaktifkan Buzz jika StringPayload = "OFF"
-      srChannel.set(pinBuzz, LOW);
-    }
+
   } else if (strcmp(topic, inTopicLED) == 0) {
+
     // Topic: "/ledanim"
     for (int i = 0; i <= 8; i++) {
       // Menset status channel shift register mulai dari 0-8 menjadi LOW

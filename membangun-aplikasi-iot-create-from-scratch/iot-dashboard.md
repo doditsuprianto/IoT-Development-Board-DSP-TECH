@@ -354,7 +354,7 @@
 						</h3>
 					  </div>
 					  <div class="card-body">								
-						<input type="checkbox" onclick="RelayONOFF(this)"> Relay ON/OFF						
+						<input type="checkbox" onclick="RelayONOFF(this)"> Relay ON/OFF
 					  </div>
 					</div>
 				  </div>
@@ -387,7 +387,7 @@
 						</h3>
 					  </div>
 					  <div class="card-body">
-						<input type="checkbox" onclick="PiezoONOFF(this)"> Speaker Buzzer ON/OFF	
+						<input type="checkbox" onclick="PiezoONOFF(this)"> Speaker Buzzer ON/OFF						
 					  </div>
 					</div>
 				  </div>
@@ -1102,7 +1102,7 @@ function PiezoONOFF(checkbox)
 		timeout: 3,
 		keepAliveInterval: 30,
 		onSuccess: function () {								
-			buzzPub = new Paho.MQTT.Message(statusBuzz);
+			var buzzPub = new Paho.MQTT.Message(statusBuzz);
 			buzzPub.destinationName = "/piezo";
 			clientPub.send(buzzPub);		
 			clientPub.disconnect();
