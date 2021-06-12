@@ -4,7 +4,7 @@ description: >-
   MQTT Broker Mosquitto antara website IoT Dashboard dan Iot Development board
 ---
 
-# IoT Dashboard
+# Aplikasi Web IoT Dashboard
 
 ### Pengantar
 
@@ -14,21 +14,43 @@ Pada bagian ini kita akan mengembangkan aplikasi web. Aplikasi web bertindak seb
 * Sensor intensitas cahaya LDR
 * Sensor jarak penghalang Ultrasonic
 
-IoT Development Board juga berisi beberapa widget untuk emngendalikan beberapa aktuator yang berada di IoT Development Board, antara lain:
+Aplikasi web IoT Dashboard juga berisi beberapa widget untuk mengendalikan beberapa aktuator yang berada di IoT Development Board, antara lain:
 
-* Mengaktifkan dan menonaktifkan 9x LED dengan widget slider.
-* Mengaktifkan dan menonaktifkan Relay dengan widget checkbox.
-* Menaktifkan dan menonaktifkan speaker piezo dengan widget checkbox.
-* Mengatur kecepatan putar FAN dengan PWM
+* Widget kontrol slider untuk mengaktifkan dan menonaktifkan 9x LED .
+* Widget kontrol chcekbox untuk mengaktifkan dan menonaktifkan Relay.
+* Widget kontrol checkbox untuk mengaktifkan dan menonaktifkan speaker piezo.
+* Widget kontrol slider untuk mengatur kecepatan putar FAN dengan mode PWM.
 
 Jika ditinjau dari konsep client-server message broker maka aplikasi web IoT Dashboard bisa bertidak sebagai subscriber maupun publisher. 
 
 * Ia akan menjadi subscriber apabila aplikasi web IoT Dashboard menampilkan data logger sensor-sensor yang berada di IoT Development board.
 * Ia akan menjadi publisher apabila aplikasi web IoT Dashoard memerintahkan aktuator-aktuator yang berada di IoT Development Board.
 
-Serupa dengan IoT Dashboard, IoT Development Board juga bisa bertindak sebagai publisher dan subscriber.
+![Posisi Subscriber dan Publisher IoT Dashboard System](../.gitbook/assets/6%20%286%29.png)
 
-* 
+Konsep subscriber dan publisher di atas juga berlaku sama pada aplikasi yang di embed-kan ke IoT Dashboard. Dimana dalam [kode program tersebut](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-iot-create-from-scratch/mengkomunikasikan-antara-iot-development-board-dengan-message-broker-mosquitto#kode-program) juga disertai publisher dan subscriber sekaligus.
+
+![Bertidnak sebagai publisher pada kalang void loop\(\)](../.gitbook/assets/7%20%286%29.png)
+
+![Bertindak sebagai subscriber pada kalang void reconnect\(\)](../.gitbook/assets/8%20%284%29.png)
+
+### Mockup Web IoT Dashboard
+
+![](../.gitbook/assets/1%20%2810%29.png)
+
+![](../.gitbook/assets/2%20%2810%29.png)
+
+![](../.gitbook/assets/3%20%2812%29.png)
+
+![](../.gitbook/assets/4%20%289%29.png)
+
+![](../.gitbook/assets/5%20%288%29.png)
+
+Serupa dengan IoT Dashboard, IoT Development Board juga bisa bertindak sebagai publisher dan subscriber. 
+
+* Aktuator-aktuator pada IoT Development Board diasumsikan bertindak sebagai subscriber yang menunggu publisher mengirim data sebagai fungsi triger \(callback function\). Dalam hal ini adalah widget event dari aplikasi web IoT Dashboard.
+* Sensor-sensor pada IoT Development Board diasumsikan bertindak sebagai publisher yang secara periodik interval tertentu mengirim data ke message broker untuk dikonsumsi oleh aplikasi web IoT Dashboard.
+
 ### Konfigurasi Mosquitto Yang Mendukung Web Socket
 
 ### Kode Program

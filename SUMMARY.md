@@ -29,7 +29,7 @@
 * [Membangun Aplikasi IoT "Create from Scratch"](membangun-aplikasi-iot-create-from-scratch/README.md)
   * [Instalasi & Konfigurasi Message Broker MQTT Mosquitto](membangun-aplikasi-iot-create-from-scratch/instalasi-and-konfigurasi-message-broker-mqtt-mosquitto.md)
   * [Mengkomunikasikan Antara IoT Development Board Dengan Message Broker Mosquitto](membangun-aplikasi-iot-create-from-scratch/mengkomunikasikan-antara-iot-development-board-dengan-message-broker-mosquitto.md)
-  * [IoT Dashboard](membangun-aplikasi-iot-create-from-scratch/iot-dashboard.md)
+  * [Aplikasi Web IoT Dashboard](membangun-aplikasi-iot-create-from-scratch/aplikasi-web-iot-dashboard.md)
 * [Implementasi IoT Pada EC2 Cloud AWS](implementasi-iot-pada-ec2-cloud-aws/README.md)
   * [Node-Red pada EC2 AWS](implementasi-iot-pada-ec2-cloud-aws/node-red-pada-ec2-aws/README.md)
     * [Pengantar Node-Red pada EC2 Cloud AWS](implementasi-iot-pada-ec2-cloud-aws/node-red-pada-ec2-aws/pengantar-node-red-pada-ec2-cloud-aws.md)
