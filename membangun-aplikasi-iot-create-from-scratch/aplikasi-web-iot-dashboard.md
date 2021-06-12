@@ -36,6 +36,8 @@ Konsep subscriber dan publisher di atas juga berlaku sama pada aplikasi yang di 
 
 ### Mockup Web IoT Dashboard
 
+Sebagai gambaran target pengembangan aplikasi web IoT Dashboard yang akan dicapai adalah sebagai berikut:
+
 ![](../.gitbook/assets/1%20%2810%29.png)
 
 ![](../.gitbook/assets/2%20%2810%29.png)
