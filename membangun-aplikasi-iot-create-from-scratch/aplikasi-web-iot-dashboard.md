@@ -55,6 +55,59 @@ Serupa dengan IoT Dashboard, IoT Development Board juga bisa bertindak sebagai p
 
 ### Konfigurasi Mosquitto Yang Mendukung Web Socket
 
+Pada bagian ini ada sedikit perubahan konfigurasi **mosquitto.conf** dari sebelumnya. Perubahan ini berkaitan dengan difungsikannya komunikasi antara aplikasi web IoT Dashboard dan message broker MQTT Mosquitto melalui protokol web socket yang bekerja secara asynchrounus. 
+
+Adapun library MQTT client yang akan digunakan pada aplikas web IoT Dashboard berbasis java script, yaitu Paho MQTT Client \(**mqttws31.min.js**\). 
+
+```javascript
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+```
+
+Lakukan backup terlebih dahulu file **mosquitto.conf** yang terdapat di dalam folder **C:\Program Files\mosquitto**. Buka file mosquitto.conf dengan editor Notepad++ mode Administrator, kemudian timpa isi file  tersebut dengan konfigurasi berikut:
+
+```javascript
+# nama file password beserta folder lengkapnya
+password_file C:\Program Files\mosquitto\password
+
+# menentukan protokol, port dan alamat broker
+# untuk mode MQTT
+protocol mqtt
+listener 1883 192.168.0.101 
+
+# menentukan protokol, port dan alamat broker
+# untuk mode webscoket
+listener 9001 192.168.0.101 
+protocol websockets
+
+# harus menggunakan user:password untuk mengakses broker
+allow_anonymous false
+```
+
+hasilnya kurang lebih tampak seperti berikut ini
+
+![](../.gitbook/assets/image_2021-06-13_004354.png)
+
+Hentikan terlebih dahulu message broker MQTT Mosquitto jika memang masih aktif. Aktifkan layanan websocket pada message broker MQTT Mosquitto untuk pertama kalinya dengan perintah console berikut:
+
+```cpp
+mosquitto -v -c mosquitto.conf
+```
+
+Adapun kode lengkapnya adalah:
+
+![](../.gitbook/assets/10%20%288%29.png)
+
+Jika hasilnya tampak seperti dibawah, berarti websocket message broker berjalan dengan baik.
+
+![](../.gitbook/assets/image_2021-06-13_010139.png)
+
+Setelah itu untuk perintah menghentikan atau me-restart layanan message broker dapat menggunakan perintah sebelumnya:
+
+```bash
+net stop mosquitto
+net start mosquitto
+```
+
 ### Kode Program
 
 ```javascript
