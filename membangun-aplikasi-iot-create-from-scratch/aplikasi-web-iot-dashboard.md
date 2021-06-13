@@ -170,7 +170,7 @@ Konfigurasi yang diperlukan adalah:
 * User : "**AdminMQTT**", user yang telah dikonfigurasi pada file mosquitto.conf.
 * Password: "**pwd123**", password yang telah dikonfigurasi pada file mosquitto.conf.
 
-![Konfigurasi koneksi message broker dengan websocket](../.gitbook/assets/13%20%284%29.png)
+![Konfigurasi MQTT Client dengan websocket](../.gitbook/assets/13%20%285%29.png)
 
 Setelah ditekan tombol Save akan tampak status koneksi antara MQTT Client dan Message Broker Mosquitto "**Connected**" berwarna hijau. Artinya koneksi dengan mode websocket pada port **9001** telah terjalin.
 
@@ -184,7 +184,35 @@ Kemudian isikan payload datanya. Setelah ditekan tombol **Publish** maka data pa
 
 ![](../.gitbook/assets/16%20%282%29.png)
 
+### Menyiapkan lingkungan pengembangan web server
+
+Bila di sisi back-end telah berjalan baik, selanjutnya kita akan membuat aplikasi web IoT Dashboard di sisi front-end. Diharapkan pembaca familier dengan bahasa pemrograman javascript, PHP, script TAG HTML, Boostrap, dan sedikit Jquery pada ekosistem web server. Namun bila Anda belum berpengalaman mohon jangan putus asa karena putus asa adalah dosa. Copy paste saja programnya dan ikuti intuisinya.
+
+Bila belum memiliki web server, direkomendasikan untuk mendowload XAMPP di laman [https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html). Kemudian install aplikasinya.
+
+![XAMPP dengan platform Windows](../.gitbook/assets/17%20%282%29.png)
+
+Setelah XAMPP diinstall, selanjutnya mengaktifkan service web server dengan cara berikut
+
+![Eksekusi aplikasi XAMPP](../.gitbook/assets/18%20%283%29.png)
+
+![Aktifasi layanan web server Apache](../.gitbook/assets/19%20%282%29.png)
+
+![Web server Apache berjalan](../.gitbook/assets/20%20%282%29.png)
+
+Bila diasumsikan aplikasi XAMPP diinstall pada C:\XAMPP \(bisa berbeda tergantung Anda meletekannya\), selanjutnya buat folder baru bernama "iot", di folder C:\xampp\htdocs\ lengkapnya adalah **C:\xampp\htdocs\ iot\**.
+
+![Membuat folder &quot;iot&quot;dimana aplikasi IoT Dashboard berada](../.gitbook/assets/21%20%281%29.png)
+
 ### Kode Program
+
+Langkah selanjutnya adalah membuat kode program IoT Dashboard dengan aplikasi editor Notepad++  \(editor lain seperti VSCode juga boleh\). Tuliskan potongan kode program di bawah ini, atau lebih cepatnya copy-paste.
+
+![Contoh potongan kode program](../.gitbook/assets/22%20%282%29.png)
+
+Simpan file dengan nama "index.php" bertipe .php
+
+![Simpan file dengan tipe .php](../.gitbook/assets/23%20%281%29.png)
 
 ```javascript
 <!DOCTYPE html>
