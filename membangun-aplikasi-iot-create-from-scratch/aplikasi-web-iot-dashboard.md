@@ -137,84 +137,6 @@ net start mosquitto
 Berikut potongan kode program javascript pada aplikasi web IoT Dashboard yang memanfaatkan **port 9001** dan protokol websocket \("**/ws**"\) message broker.
 
 ```javascript
-/*-----------------------------------------------------
-	BAGIAN MQTT YANG TERKONEKSI DENGAN MESSAGE BROKER
-  -----------------------------------------------------*/		
-// Menentuan alamat IP dan PORT message broker
-var host = "192.168.0.101";  
-var port = 9001; 
-
-// Konstruktor koneksi antara client dan message broker
-var client = new Paho.MQTT.Client(host, port, "/ws",
-            "myclientid_" + parseInt(Math.random() * 100, 10));		
-
-// Menjalin koneksi antara client dan message broker
-client.onConnectionLost = function (responseObject) {            
-	document.getElementById("messages").innerHTML += "Koneksi Ke Broker MQTT Putus - " + responseObject.errorMessage + "<br/>";
-};
-```
-
-#### Pengujian Websocket Broker MQTT
-
-Sekarang kita akan menguji apakah layanan websocket broker MQTT telah berjalan dengan sukses.
-
-Buat koneksi message broker dengan aplikasi MQTT Client MQTTBOX seperti berikut ini:
-
-![Buat koneksi MQTT Client baru](../.gitbook/assets/12%20%284%29.png)
-
-Konfigurasi yang diperlukan adalah:
-
-* MQTT Client Name : "**Broker Websocket**", &lt;nama bebas&gt;
-* Protocol : "**ws**", &lt;websocket&gt; sebelumnya adalah mqtt/tcp
-* Host : "**192.168.0.101:9001**", alamat IP message broker, 9001 adalah port websocket yang telah dikonfigurasi pada file mosquitto.conf.
-* User : "**AdminMQTT**", user yang telah dikonfigurasi pada file mosquitto.conf.
-* Password: "**pwd123**", password yang telah dikonfigurasi pada file mosquitto.conf.
-
-![Konfigurasi MQTT Client dengan websocket](../.gitbook/assets/13%20%285%29.png)
-
-Setelah ditekan tombol Save akan tampak status koneksi antara MQTT Client dan Message Broker Mosquitto "**Connected**" berwarna hijau. Artinya koneksi dengan mode websocket pada port **9001** telah terjalin.
-
-![Koneksi MQTT Client dan MQTT Broker dengan mode websocket terjalin](../.gitbook/assets/14%20%282%29.png)
-
-Seperti cara sebelumnya silahkan buat TOPIC untuk menguji publiser dan subscriber. Misalnya kita menggunakan topic "**suhu**".
-
-![Membuat topic bernama &quot;suhu&quot;](../.gitbook/assets/15%20%282%29.png)
-
-Kemudian isikan payload datanya. Setelah ditekan tombol **Publish** maka data payload akan dikirim dari publisher ke sisi subscriber yang berlangggan topic **suhu**.
-
-![](../.gitbook/assets/16%20%282%29.png)
-
-### Menyiapkan lingkungan pengembangan web server
-
-Bila di sisi back-end telah berjalan baik, selanjutnya kita akan membuat aplikasi web IoT Dashboard di sisi front-end. Diharapkan pembaca familier dengan bahasa pemrograman javascript, PHP, script TAG HTML, Boostrap, dan sedikit Jquery pada ekosistem web server. Namun bila Anda belum berpengalaman mohon jangan putus asa karena putus asa adalah dosa. Copy paste saja programnya dan ikuti intuisinya.
-
-Bila belum memiliki web server, direkomendasikan untuk mendowload XAMPP di laman [https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html). Kemudian install aplikasinya.
-
-![XAMPP dengan platform Windows](../.gitbook/assets/17%20%282%29.png)
-
-Setelah XAMPP diinstall, selanjutnya mengaktifkan service web server dengan cara berikut
-
-![Eksekusi aplikasi XAMPP](../.gitbook/assets/18%20%283%29.png)
-
-![Aktifasi layanan web server Apache](../.gitbook/assets/19%20%282%29.png)
-
-![Web server Apache berjalan](../.gitbook/assets/20%20%282%29.png)
-
-Bila diasumsikan aplikasi XAMPP diinstall pada C:\XAMPP \(bisa berbeda tergantung Anda meletekannya\), selanjutnya buat folder baru bernama "iot", di folder C:\xampp\htdocs\ lengkapnya adalah **C:\xampp\htdocs\ iot\**.
-
-![Membuat folder &quot;iot&quot;dimana aplikasi IoT Dashboard berada](../.gitbook/assets/21%20%281%29.png)
-
-### Kode Program
-
-Langkah selanjutnya adalah membuat kode program IoT Dashboard dengan aplikasi editor Notepad++  \(editor lain seperti VSCode juga boleh\). Tuliskan potongan kode program di bawah ini, atau lebih cepatnya copy-paste.
-
-![Contoh potongan kode program](../.gitbook/assets/22%20%282%29.png)
-
-Simpan file dengan nama "index.php" bertipe .php
-
-![Simpan file dengan tipe .php](../.gitbook/assets/23%20%281%29.png)
-
-```javascript
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -521,6 +443,27 @@ Simpan file dengan nama "index.php" bertipe .php
           <!-- /.col -->
         </div>
         <!-- /.row -->
+
+		<div class="row">
+		  <div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+				  <h3 class="card-title">Keypad Remote IR</h3>
+				  <div class="card-tools">
+					<button type="button" class="btn btn-tool" data-card-widget="collapse">
+					  <i class="fas fa-minus"></i>
+					</button>
+					<button type="button" class="btn btn-tool" data-card-widget="remove">
+					  <i class="fas fa-times"></i>
+					</button>
+				  </div>
+				</div>
+				<div class="card-body">	
+					<div id="kodekeypad"></div>					
+				</div>
+			</div>
+		  </div>
+		</div>
 		        
         <!-- Main row -->
         <div class="row">
@@ -662,7 +605,7 @@ Simpan file dengan nama "index.php" bertipe .php
 	BAGIAN MQTT YANG TERKONEKSI DENGAN MESSAGE BROKER
   -----------------------------------------------------*/		
 // Menentuan alamat IP dan PORT message broker
-var host = "192.168.0.101";  
+var host = "192.168.0.103";  
 var port = 9001; 
 
 // Konstruktor koneksi antara client dan message broker
@@ -680,6 +623,7 @@ var humi = 0;
 var temp = 0;
 var sr04 = 0;
 var ldr = 0;
+var keypad = "";
 
 // Mendapatkan payload dari transimisi data IoT Development Board
 // kemudian memilah dan melimpahkanya ke varibael berdasarkan TOPIC.
@@ -692,12 +636,15 @@ client.onMessageArrived = function (message) {
 		var dht = JSON.parse(message.payloadString);
 		humi = dht.kelembaban;
 		temp = dht.suhu;
+	} else if (message.destinationName == "/remoteir") {
+		keypad = message.payloadString;
 	}
 	
 	document.getElementById("hitTEMP").innerHTML = temp + " °C";
 	document.getElementById("hitHUM").innerHTML = humi + " H";
 	document.getElementById("hitLDR").innerHTML = ldr + " Lux";
 	document.getElementById("hitSR04").innerHTML = sr04 + " cm";	
+	document.getElementById("kodekeypad").innerHTML = keypad;	
 };
 
 // Option mqtt dengan mode subscribe dan qos diset 1
@@ -709,6 +656,7 @@ var options = {
         client.subscribe("/dht", {qos: 1});
 		client.subscribe("/ldr", {qos: 1});
 		client.subscribe("/sr04", {qos: 1});
+		client.subscribe("/remoteir", {qos: 1});
     },
 
     onFailure: function (message) {
@@ -1328,7 +1276,6 @@ function PiezoONOFF(checkbox)
 </script>
 </body>
 </html>
-
 ```
 
 ### Demo Projek IoT Dashboard

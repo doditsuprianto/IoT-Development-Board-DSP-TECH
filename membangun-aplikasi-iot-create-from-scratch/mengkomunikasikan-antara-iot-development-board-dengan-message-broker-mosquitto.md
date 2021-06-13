@@ -146,7 +146,7 @@ const char* wifiPass = "88888888";
   ------------------------------------------------------------------------------*/
 const char* brokerUser = "AdminMQTT";
 const char* brokerPass = "pwd123";
-const char* brokerHost = "192.168.0.101";
+const char* brokerHost = "192.168.0.103";
 
 /*----------------------------------------------------
   Daftar nama Topic MQTT sebagai Publisher:
@@ -154,9 +154,10 @@ const char* brokerHost = "192.168.0.101";
   2. Sebagai Publisher LDR: Intensitas Cahaya
   3. Sebagai Publisher HC-SR04: Proximity Ultrasonic
   ----------------------------------------------------*/
-const char* outTopicDHT  = "/dht";  // suhu dan kelembaban
-const char* outTopicLDR  = "/ldr";  // intensitas cahaya
-const char* outTopicSR04 = "/sr04"; // jarak penghalang dengan ultrasonic
+const char* outTopicDHT  = "/dht";  // pub suhu dan kelembaban
+const char* outTopicLDR  = "/ldr";  // pub intensitas cahaya
+const char* outTopicSR04 = "/sr04"; // pub jarak penghalang dengan ultrasonic
+const char* outTopicIR   = "/remoteir"; // pub remote IR
 
 /*---------------------------------------------
   Daftar nama Topic MQTT sebagai Subscriber:
@@ -194,13 +195,13 @@ SimpleTimer TimerDHT, TimerLDR, TimerSR04;
 byte humValid, tempValid;
 
 // Deklarasi kode tombol remote
-unsigned int KodeTombolRemote;  
+unsigned int KodeTombolRemote;
 
- // Deklaasi client wifi
-WiFiClient espClient;          
+// Deklaasi client wifi
+WiFiClient espClient;
 
 // Deklarasi MQTT Client
-PubSubClient client(espClient); 
+PubSubClient client(espClient);
 long lastReconnectAttempt = 0;
 
 /*-----------------------------------
@@ -282,6 +283,11 @@ void loop() {
     reconnect();
   }
   client.loop();
+
+  /*-------------------------------
+    Publish kode keypad Remote IR
+    -------------------------------*/
+  BacaKodeRemoteIR();
 
   /*--------------------------------------------------------
     pembacaan sensor cahaya sesuai interval yang ditentukan
@@ -433,7 +439,7 @@ int SensorJarakUltraSonic() {
 void SensorDHT() {
   byte suhu = 0;
   byte hum = 0;
-  
+
   int err = SimpleDHTErrSuccess;
   if ((err = dht11.read(&suhu, &hum, NULL)) != SimpleDHTErrSuccess)
   {
@@ -526,17 +532,31 @@ void runningLED(animLED al, int tunda) {
   MematikanSemuaLED();
 }
 
-/*-----------------------------------------------------------------------------------
-  Fungsi memetakan kode tombol/keypad remote IR
-  berdasarkan kode yang dicatat tsb akan menjadi dasar pengecekkan
-  pada contoh ini saya menggunakan remote USEE TV (Anda dapat menyoba yang lainnya)
-  ------------------------------------------------------------------------------------*/
+/*------------------------------------------------------
+  Fungsi memetakan kode tombol/keypad remote IR.
+  Berdasarkan kode yang dicatat tsb akan menjadi dasar
+  engecekkan ke langkah berikutnya
+  ------------------------------------------------------*/
 void BacaKodeRemoteIR() {
   if (PenerimaIR.decode(&hasil)) {
-    //unsigned int nilaitombol = hasil.value;
-    //KodeTombolRemote = String(nilaitombol);
-    KodeTombolRemote = hasil.value;
-    Serial.println("Kode Tombol: " + String(KodeTombolRemote));
+    // Kualitas remote yang buruk menyebabkan debouncing
+    // Decode kode tombol dengan lebar 8 saja yang akan diproses.
+    // Setiap remote memiliki lebar kode valid masing-masing
+    // Pastikan untuk dilakukan pemetaan kode terlebih dahulu
+    String ngatasiDebounce = String((int)hasil.value, (unsigned char)DEC);
+    if (ngatasiDebounce.length() == 8) {
+      KodeTombolRemote = hasil.value;
+      Serial.println("Kode remote: " + String(KodeTombolRemote));
+
+      /// kirim kode keypad ke message broker
+      snprintf (msg, MSG_BUFFER_SIZE, "Anda menekan keypad dengan kode: %d", KodeTombolRemote);
+      client.publish(outTopicIR, msg);
+    } else {
+      // proses pemetaan kode tombol ditampilkan pada serial monitor
+      unsigned int kodeGagal = hasil.value;
+      Serial.println("Length Decode: " + String(ngatasiDebounce.length()));
+      Serial.println("Kode remote tidak diproses: " + String(kodeGagal));
+    }
     PenerimaIR.resume();
   }
   delay(100);
@@ -758,7 +778,7 @@ void updateOLED() {
 
   display.setCursor(0, 0);    display.print("Light");
   display.setCursor(75, 0);   display.print(String(SensorLDR()));
-  display.setCursor(100, 0);  display.print("Lux");  
+  display.setCursor(100, 0);  display.print("Lux");
 
   display.setCursor(0, 14);   display.print("Temperature");
   display.setCursor(75, 14);  display.print(String(tempValid));
