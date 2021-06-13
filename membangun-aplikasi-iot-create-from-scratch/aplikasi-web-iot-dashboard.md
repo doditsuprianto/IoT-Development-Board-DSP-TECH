@@ -61,14 +61,17 @@ Sebagai gambaran target pengembangan aplikasi web IoT Dashboard yang akan dicapa
 
 ![](../.gitbook/assets/5%20%288%29.png)
 
-Serupa dengan aplikasi web IoT Dashboard, IoT Development Board juga bisa bertindak sebagai publisher dan subscriber. 
-
-* Aktuator-aktuator pada IoT Development Board diasumsikan bertindak sebagai subscriber yang menunggu publisher mengirim data sebagai fungsi triger \(callback function\). Dalam hal ini adalah widget event dari aplikasi web IoT Dashboard.
-* Sensor-sensor pada IoT Development Board diasumsikan bertindak sebagai publisher yang secara periodik interval tertentu mengirim data ke message broker untuk dikonsumsi oleh aplikasi web IoT Dashboard.
-
 ### Konfigurasi Mosquitto Yang Mendukung Web Socket
 
-Pada bagian ini ada sedikit perubahan konfigurasi **mosquitto.conf** dari sebelumnya. Perubahan ini berkaitan dengan difungsikannya komunikasi antara aplikasi web IoT Dashboard dan message broker MQTT Mosquitto melalui protokol web socket yang bekerja secara asynchrounus. 
+#### Pengantar Websocket
+
+Pada bagian ini ada sedikit perubahan konfigurasi **mosquitto.conf** berkaitan dengan difungsikannya protokol **websocket** sebagai dasar komunikasi antara aplikasi web IoT Dashboard dan message broker MQTT Mosquitto. 
+
+Latar belakang yang mendasari terciptanya websocket adalah permintaan beberapa client yang mengharuskan developer bisa membuat aplikasi berbasis web secara real time atau real-time apps. Aplikasi real time adalah dimana ketika ada perubahan data, maka saat itu juga website di browser klien juga ada perubahan.
+
+WebSocket adalah standar baru untuk komunikasi realtime pada Web dan aplikasi mobile. WebSocket dirancang untuk diterapkan di browser web dan server web, tetapi dapat digunakan oleh aplikasi client atau server. WebSocket adalah protokol yang menyediakan saluran komunikasi full-duplex melalui koneksi TCP tunggal.
+
+WebSocket merupakan bagian dari HTML5. WebSocket menghadirkan pengurangan besar dalam lalu-lintas jaringan yang tidak penting dan latency dibandingkan dengan solusi polling dan long-polling yang telah digunakan untuk mensimulasikan koneksi dua arah dengan cara menjaga dua koneksi tetap terhubung.
 
 Adapun library MQTT client yang akan digunakan pada aplikas web IoT Dashboard berbasis java script, yaitu Paho MQTT Client \(**mqttws31.min.js**\). 
 
@@ -76,7 +79,11 @@ Adapun library MQTT client yang akan digunakan pada aplikas web IoT Dashboard be
 <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
 ```
 
-Lakukan backup terlebih dahulu file **mosquitto.conf** yang terdapat di dalam folder **C:\Program Files\mosquitto**. Buka file mosquitto.conf dengan editor Notepad++ mode Administrator, kemudian timpa isi file tersebut dengan konfigurasi berikut:
+#### Konfigurasi Webscocket pada mosquitto.conf
+
+Backup file **mosquitto.conf** terlebih dahulu yang terdapat dalam folder **C:\Program Files\mosquitto**.  
+
+Edit file **mosquitto.conf** dengan aplikasi editor Notepad++ dalam mode **Administrator**. Kemudian timpa isi file-nya dengan script berikut:
 
 ```javascript
 # nama file password beserta folder lengkapnya
@@ -96,32 +103,38 @@ protocol websockets
 allow_anonymous false
 ```
 
-hasilnya kurang lebih tampak seperti berikut ini
+Dalam editor Notepad++ akan tampak seperti berikut ini:
 
 ![](../.gitbook/assets/image_2021-06-13_004354.png)
 
-Hentikan terlebih dahulu message broker MQTT Mosquitto jika memang masih aktif. Aktifkan layanan websocket pada message broker MQTT Mosquitto untuk pertama kalinya dengan perintah console berikut:
+Hentikan terlebih dahulu message broker MQTT Mosquitto jika memang masih aktif. 
+
+```javascript
+net stop mosquitto
+```
+
+Aktifkan layanan websocket pada broker MQTT Mosquitto untuk pertama kalinya dengan perintah berikut:
 
 ```cpp
 mosquitto -v -c mosquitto.conf
 ```
 
-Adapun kode lengkapnya adalah:
+Tampilan pada window command akan tampak seperti gambar di bawah:
 
 ![](../.gitbook/assets/10%20%288%29.png)
 
-Jika hasilnya tampak seperti dibawah ini maka berarti protokol websocket pada message broker berjalan dengan baik.
+Jika hasilnya tampak seperti dibawah ini maka berarti layanan komunikasi dengan websocket pada message broker mosquitto berjalan dengan baik.
 
 ![](../.gitbook/assets/image_2021-06-13_010139.png)
 
 Selanjutnya untuk  menghentikan atau me-restart layanan message broker dapat menggunakan perintah seperti sebelumnya:
 
-```bash
+```cpp
 net stop mosquitto
 net start mosquitto
 ```
 
-Berikut potongan program javascript yang diletakkan pada aplikasi web IoT Dashboard yang memanfaatkan **port 9001** dan protokol websocket \("**/ws**"\) message broker.
+Berikut potongan kode program javascript pada aplikasi web IoT Dashboard yang memanfaatkan **port 9001** dan protokol websocket \("**/ws**"\) message broker.
 
 ```javascript
 /*-----------------------------------------------------
