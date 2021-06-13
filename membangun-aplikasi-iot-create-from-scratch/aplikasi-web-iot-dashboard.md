@@ -154,6 +154,36 @@ client.onConnectionLost = function (responseObject) {
 };
 ```
 
+#### Pengujian Websocket Broker MQTT
+
+Sekarang kita akan menguji apakah layanan websocket broker MQTT telah berjalan dengan sukses.
+
+Buat koneksi message broker dengan aplikasi MQTT Client MQTTBOX seperti berikut ini:
+
+![Buat koneksi MQTT Client baru](../.gitbook/assets/12%20%284%29.png)
+
+Konfigurasi yang diperlukan adalah:
+
+* MQTT Client Name : "**Broker Websocket**", &lt;nama bebas&gt;
+* Protocol : "**ws**", &lt;websocket&gt; sebelumnya adalah mqtt/tcp
+* Host : "**192.168.0.101:9001**", alamat IP message broker, 9001 adalah port websocket yang telah dikonfigurasi pada file mosquitto.conf.
+* User : "**AdminMQTT**", user yang telah dikonfigurasi pada file mosquitto.conf.
+* Password: "**pwd123**", password yang telah dikonfigurasi pada file mosquitto.conf.
+
+![Konfigurasi koneksi message broker dengan websocket](../.gitbook/assets/13%20%284%29.png)
+
+Setelah ditekan tombol Save akan tampak status koneksi antara MQTT Client dan Message Broker Mosquitto "**Connected**" berwarna hijau. Artinya koneksi dengan mode websocket pada port **9001** telah terjalin.
+
+![Koneksi MQTT Client dan MQTT Broker dengan mode websocket terjalin](../.gitbook/assets/14%20%282%29.png)
+
+Seperti cara sebelumnya silahkan buat TOPIC untuk menguji publiser dan subscriber. Misalnya kita menggunakan topic "**suhu**".
+
+![Membuat topic bernama &quot;suhu&quot;](../.gitbook/assets/15%20%282%29.png)
+
+Kemudian isikan payload datanya. Setelah ditekan tombol **Publish** maka data payload akan dikirim dari publisher ke sisi subscriber yang berlangggan topic **suhu**.
+
+![](../.gitbook/assets/16%20%282%29.png)
+
 ### Kode Program
 
 ```javascript
