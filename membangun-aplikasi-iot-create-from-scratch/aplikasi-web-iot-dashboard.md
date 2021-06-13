@@ -8,6 +8,8 @@ description: >-
 
 ### Pengantar
 
+#### Publisher - Subscriber di sisi aplikasi web IoT Dashboard
+
 ![IoT Development Board DSP-TECH](../.gitbook/assets/board-2%20%281%29.png)
 
 Pada bagian ini kita akan mengembangkan aplikasi web IoT Dahsboard untuk memonitor data logger beberapa sensor dari IoT Development Board, antara lain:
@@ -31,6 +33,11 @@ Jika ditinjau dari konsep client-server message broker maka aplikasi web IoT Das
 Berikut gambaran konsep arsitektur komunikasi antara aplikasi web IoT Dashboard dan IoT Development Board:
 
 ![Posisi Subscriber dan Publisher IoT Dashboard System](../.gitbook/assets/6%20%286%29.png)
+
+Serupa dengan aplikasi web IoT Dashboard, IoT Development Board juga bisa bertindak sebagai publisher dan subscriber.
+
+* Aktuator-aktuator pada IoT Development Board diasumsikan bertindak sebagai subscriber yang menunggu publisher mengirim data sebagai fungsi triger \(callback function\). Dalam hal ini adalah widget event dari aplikasi web IoT Dashboard.
+* Sensor-sensor pada IoT Development Board diasumsikan bertindak sebagai publisher yang secara periodik interval tertentu mengirim data ke message broker untuk dikonsumsi oleh aplikasi web IoT Dashboard
 
 Konsep subscriber dan publisher di atas juga berlaku sama pada aplikasi yang di _embed_-kan ke IoT Development Board. Dimana dalam [kode program tersebut](https://dsp-tech.gitbook.io/internet-of-things/membangun-aplikasi-iot-create-from-scratch/mengkomunikasikan-antara-iot-development-board-dengan-message-broker-mosquitto#kode-program) juga disertai publisher dan subscriber sekaligus.
 
