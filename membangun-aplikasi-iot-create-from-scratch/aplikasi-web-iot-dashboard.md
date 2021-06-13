@@ -402,7 +402,7 @@ Berikut potongan kode program javascript pada aplikasi web IoT Dashboard yang me
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h5 class="card-title">Sensor Cahaya LDR | Sensor Jarak Ultrasonic HC-SR04</h5>
+                <h5 class="card-title"><i class="fas fa-lightbulb"></i> Sensor Cahaya LDR | <i class="fas fa-low-vision"></i> Sensor Jarak Ultrasonic HC-SR04</h5>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
@@ -448,7 +448,7 @@ Berikut potongan kode program javascript pada aplikasi web IoT Dashboard yang me
 		  <div class="col-md-12">
 			<div class="card">
 				<div class="card-header">
-				  <h3 class="card-title">Keypad Remote IR</h3>
+				  <h3 class="card-title"><i class="fas fa-gamepad"></i> Keypad Remote IR</h3>
 				  <div class="card-tools">
 					<button type="button" class="btn btn-tool" data-card-widget="collapse">
 					  <i class="fas fa-minus"></i>
@@ -459,7 +459,7 @@ Berikut potongan kode program javascript pada aplikasi web IoT Dashboard yang me
 				  </div>
 				</div>
 				<div class="card-body">	
-					<div id="kodekeypad"></div>					
+					<span class="text-warning" id="kodekeypad"></span>
 				</div>
 			</div>
 		  </div>
@@ -472,7 +472,7 @@ Berikut potongan kode program javascript pada aplikasi web IoT Dashboard yang me
             <!-- MAP & BOX PANE -->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Kendali Aktuator</h3>
+                <h3 class="card-title"><i class="fas fa-magic"></i> Kontrol Aktuator</h3>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
