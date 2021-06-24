@@ -1283,5 +1283,5 @@ Kode index.php di atas serta logo dapat di download di https://github.com/dodits
 
 Untuk menjalankan aplikasi web IoT Dashboard melalui internet browser dengan alamat http://192.168.0.101/iot, ini bila posisi antara Message Broker MQTT Mosquitto dan internet browser dalam satu mesin yang sama.
 
-Anda juga dapat mencoba membuka aplikasi web IoT Dashboard dari alamat IP berbeda namun masih dalam satu network \(atau IP tujuan telah di route dan masih terjangkau\), misalnya menggunakan smartphone
+Anda juga dapat mencoba membuka aplikasi web IoT Dashboard dari alamat IP berbeda namun masih dalam satu network \(atau IP tujuan telah di route dan masih terjangkau\), misalnya menggunakan smartphone.
 
