@@ -449,8 +449,6 @@ void MematikanSemuaLED() {
 
 ### Video Projek
 
-{% embed url="https://youtu.be/0i2VEY45\_Xc" %}
-
 ### Tugas
 
 Buatlah program untuk mengendalikan kecepatan putaran FAN secara otomatis berdasarkan jarak antara benda penghalang dengan sensor Ultrasonic HC-SR04. 

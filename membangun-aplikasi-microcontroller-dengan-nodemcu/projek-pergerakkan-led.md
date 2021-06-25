@@ -256,10 +256,6 @@ void MematikanSemuaLED() {
 
 ### Video Projek
 
-{% embed url="https://youtu.be/tdOXakp4bOw" %}
-
-{% embed url="https://youtu.be/YO\_Wirwpguk" %}
-
 ### Tugas
 
 * Buatlah animasi LED lain yang belum pernah dibuat sebelumya

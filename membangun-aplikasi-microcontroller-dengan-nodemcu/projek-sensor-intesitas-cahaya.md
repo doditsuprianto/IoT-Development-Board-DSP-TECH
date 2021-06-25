@@ -286,8 +286,6 @@ void LEDProgress() {
 
 ### Video Projek
 
-{% embed url="https://youtu.be/CkA1EpgT8Hk" %}
-
 ### Tugas
 
 * Tambahkan kode program untuk mengaktifkan relay menjadi ON/HIGH ketika status intensitas cahaya “TERANG” dan relay kembali OFF/LOW jika intensitas cahaya “GELAP” atau “SEDANG”.

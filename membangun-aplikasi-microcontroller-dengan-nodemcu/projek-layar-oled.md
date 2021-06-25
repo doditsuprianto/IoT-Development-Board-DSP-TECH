@@ -487,10 +487,6 @@ void testanimate(const uint8_t *bitmap, uint8_t w, uint8_t h) {
 
 ### Video Projek
 
-{% embed url="https://youtu.be/84xydnDMdgk" %}
-
-{% embed url="https://youtu.be/KbGnXh8gk6M" %}
-
 ### Tugas
 
 * Buat/ambil image dengan format bebas \(PNG, BMP, JPG, dll\), dengan resolusi serupa dengan OLED 0.96".

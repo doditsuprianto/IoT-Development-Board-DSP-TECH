@@ -279,8 +279,6 @@ void LEDProgress() {
 
 ![](../.gitbook/assets/img_20210524_225250471.jpg)
 
-{% embed url="https://youtu.be/mpv6xVdaeVI" %}
-
 ### Tugas
 
 * Jadikan pengukuran jarak antara sensor dan benda penghalang menjadi satuan meter

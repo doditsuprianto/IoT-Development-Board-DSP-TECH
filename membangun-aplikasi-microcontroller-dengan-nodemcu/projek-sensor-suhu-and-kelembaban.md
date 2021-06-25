@@ -370,8 +370,6 @@ void LEDProgress() {
 
 ![Hasil Pengukuran Sensor LDR dan DHT11](../.gitbook/assets/img_20210523_145046669%20%281%29.jpg)
 
-{% embed url="https://youtu.be/Tldl4BeJs-I" %}
-
 ### Tugas
 
 * Ubahlah gauge / progress bar 9x LED yang semula diperuntukkan sebagai indikator perubahan intensitas cahaya dari sensor LDR menjadi indikator perubahan suhu dari sensor DHT11.

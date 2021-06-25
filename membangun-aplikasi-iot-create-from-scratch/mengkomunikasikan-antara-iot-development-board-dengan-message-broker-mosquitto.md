@@ -803,7 +803,6 @@ void updateOLED() {
 
 ![](../.gitbook/assets/1%20%289%29.png)
 
-{% embed url="https://youtu.be/j7YUEvLGTso" %}
 
 
 

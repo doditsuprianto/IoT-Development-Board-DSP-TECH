@@ -242,8 +242,6 @@ Source Code: [https://github.com/doditsuprianto/IoT-Development-Board-DSP-TECH/b
 
 ### Video Projek
 
-{% embed url="https://youtu.be/aLISiyXrfZ0" %}
-
 ### Tugas
 
 * Tambahkan rangkaian berikut dan perhatikan apa yang terjadi?

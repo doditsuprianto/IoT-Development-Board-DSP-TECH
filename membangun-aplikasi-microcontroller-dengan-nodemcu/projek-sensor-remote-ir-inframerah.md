@@ -477,8 +477,6 @@ Berikut contoh tampilannya:
 
 ## Video Projek
 
-{% embed url="https://youtu.be/1h844w0NoAs" %}
-
 ![Status aktuator yang dikendalikan remote IR pada Layar OLED](../.gitbook/assets/img_20210526_134731821.jpg)
 
 ![Kendali kipas dengan status AKTIF](../.gitbook/assets/img_20210526_135135082.jpg)
