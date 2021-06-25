@@ -1277,10 +1277,11 @@ function PiezoONOFF(checkbox)
 </body>
 </html>
 ```
+Kode index.php di atas serta logo dapat di download di https://github.com/doditsuprianto/IoT-Development-Board-DSP-TECH/blob/master/iot.zip
 
 ### Demo Projek IoT Dashboard
 
 Untuk menjalankan aplikasi web IoT Dashboard melalui internet browser dengan alamat http://192.168.0.101/iot, ini bila posisi antara Message Broker MQTT Mosquitto dan internet browser dalam satu mesin yang sama.
 
-Anda juga dapat mencoba membuka aplikasi web IoT Dashboard dari alamat IP berbeda namun masih dalam satu network \(atau IP tujuan telah di route dan masih terjangkau\), misalnya menggunakan smartphone ```TETAPI```
+Anda juga dapat mencoba membuka aplikasi web IoT Dashboard dari alamat IP berbeda namun masih dalam satu network \(atau IP tujuan telah di route dan masih terjangkau\), misalnya menggunakan smartphone
 
