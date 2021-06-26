@@ -19,13 +19,17 @@ dapat mendukung pembuatan program perangkat IoT, silakan mengikuti langkah di ba
 yang terletak di sebelah pojok kiri bawah dan pilih `Extensions` dan cara yang paling cepat dengan kombinasi tombol `shift +
   command + X` (Mac OS). Perhatikan gambar di bawah ini
   
+
   ![Extensions](../images/03.png)
+
 
 + Pada isian textbox `Extensions` isikan `platformio`, selanjutnya lakukan installasi sampai proses installasi berhasil yang
 ditunjukkan dengan muncul icon Alien yang terdapat pada toolbar sebelah kiri. Lebih jelasnya dapat dilihat pada gambar
   di bawah ini
   
+
   ![PlatformIO](../images/04.png)
+
 
   > PlatformIO membantu kita untuk membuat program yang dipasang pada sebuah perangkat IoT, dukungan ratusan board dan management
   > library juga dapat dilakukan. Selain dapat dipasang di `Visual Studio Code`, editor lain sebut saja `Atom` juga bisa menggunakan
@@ -34,18 +38,24 @@ ditunjukkan dengan muncul icon Alien yang terdapat pada toolbar sebelah kiri. Le
 + Buka `PlatformIO` dengan klik icon Alien atau secara langsung ketika installasi PlatformIO dilakukan akan diarahkan ke
 halaman utama `PlatformIO`, selanjutnya pilih `New Project` seperti gambar berikut
   
+
   ![](../images/05.png)
+
 
 + Kemudian akan muncul `Project Wizard` dengan isian Nama project, board yang digunakan, framework, dan lokasi project. Silakan
 diisikan nama project misalkan `workshop-iot`, pada bagian Board diisikan atau pilih `Espressif ESP8266 ESP-12E`, sementara
   pada bagian Framework tetap menggunakan `Arduino` dan pada bagian `Location` hilangkan check jika ingin project tersebut
   akan disimpan pada direktori yang berbeda. Langkah ini bisa dilihat pada gambar di bawah ini
 
+
   ![](../images/06.png)
+
 
 + Buka file `platformio.ini `dan tambahkan konfigurasi seperti berikut
 
+
   ![](../images/07.png)
+
 
   ```
   ; PlatformIO Project Configuration File
@@ -89,7 +99,9 @@ diisikan nama project misalkan `workshop-iot`, pada bagian Board diisikan atau p
 + Selanjutnya tambahkan kode program pada file `main.cpp`, `main.cpp` adalah program utama yang akan diupload ke perangkat IoT,
 tampilan dari `main.cpp` dapat dilihat pada gambar berikut
 
+
   ![](../images/08.png)
+
 
   ```cpp
   #include <Arduino.h>
