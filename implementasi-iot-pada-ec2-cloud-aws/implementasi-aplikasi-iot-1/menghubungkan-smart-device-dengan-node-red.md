@@ -1,15 +1,26 @@
 # Menghubungkan Smart Device dengan Node-RED
 
-Setelah kode program berhasil dijalankan, yang selanjutnya buat flows dengan melakukan design pada Node-RED yang kurang
-akan menghasilkan tampilan seperti pada gambar berikut
+Setelah kode program berhasil dijalankan pada ujicoba [sebelumnya](pengembangan-aplikasi-publisher-subscriber-pada-smart-device-mcu.md), 
+yang selanjutnya buat flows dengan melakukan design pada Node-RED yang kurang akan menghasilkan tampilan dashboard 
+seperti pada gambar berikut
 
-![](../images/monitoring.png)
+![](../images/workshop.gif)
 
-Sedangkan untuk desgin buatlah tampilan yang menyerupai tampilan di bawah ini
+> Dashboard yang dihasilkan akan dijalankan pada EC2, sehingga untuk proses pembuatan flows juga menggunakan EC2 yang sebelumnya
+> telah dikonfigurasi. Silakan masuk ke EC2 atau masuk halaman AWS management console jika belum dijalankan service untuk 
+> Node-RED tersebut
 
-![](../images/flows.png)
+Kemudian yang perlu dilakukan adalah membuat sebuah flow pada Node-RED editor seperti pada gambar berikut
 
-> Jika terjadi kesulitan untuk membuat tampilan, file flows.json dapat didapatkan di [sini](../images/flows.json).
+![](../images/workshop2.gif)
+
+Dari tampilan di atas layout pada dashboard terdapat spesifikasi sebagai berikut
++ Layout terdiri dari 3 tab yaitu `Monitoring, Controlling, dan Contact`.
++ `Monitoring` adalah sebuah menu untuk menampilkan data-data sensor seperti DHT11, LDR, dan Ultrasonic.
++ `Controlling` adalah sebuah untuk melakukan control aktuator seperti LED, Buzzer, dan Relay.
++ `Contact` adalah menu utnuk menampilkan teks biasa.
+
+> Jika terjadi kesulitan untuk membuat tampilan, file `flows.json` dapat didapatkan di [sini](../images/flows.json).
 > 
 Setelah file *.json berhasil didownlad perlu dilakukan import ke dalam Node-RED, cara yang dapat dilakukan import yaitu
 sebagai berikut
@@ -23,3 +34,6 @@ sebagai berikut
   ![Browser file](../images/02.png)
 
 + Jika selesai dilakukan, seharusnya akan menapilkan node-node pada lembar kerja Node-RED. 
+
+> Silakan cek hasil deploy Node-RED pada browser Anda, jika tidak terjadi error dan masalah seharusnya dapat menampilkan
+> tampilan dashbaord seperti pada panduan di atas.

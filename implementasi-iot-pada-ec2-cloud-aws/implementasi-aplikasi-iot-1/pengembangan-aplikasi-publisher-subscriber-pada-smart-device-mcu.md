@@ -5,6 +5,9 @@ selanjutkan akan coba diimpelementasikan menggunakan AWS EC2 sebagai message bro
 menggunakan Arduino IDE, pada kesempatan kali ini akan coba menggunakan alternative yang lain yaitu menggunakan `Visual Studio Code`. 
 Silakan buat project kemudian beberapa yang perlu dikonfirmasi yaitu pada file `platform.io` dan penyesuaian file `main.cpp`.
 
+> Ujicoba yang akan dilakukan adalah dengan memasang kode program pada perangkat IoT, untuk pengiriman data pada message
+> broker diarahkan ke message broker yang terdapat di EC2 yang sebelumnya telah dilakukan.
+
 > Jika memang belum dipasang pada laptop/komputer Visual Studio Code silakan dilakukan installasi terlebih dahlulu dengan
 melakukan download pada [https://code.visualstudio.com/download](https://code.visualstudio.com/download), pilih sesuai
 > dengan sistem operasi misalkan Windows, Linux, ataupun Mac Os.
