@@ -4,9 +4,7 @@ Setelah kode program berhasil dijalankan pada ujicoba [sebelumnya](pengembangan-
 yang selanjutnya buat flows dengan melakukan design pada Node-RED yang kurang akan menghasilkan tampilan dashboard 
 seperti pada gambar berikut
 
-
-![](../images/workshop.gif)
-
+![Hasil Tampilan Dashboard](../images/workshop.gif)
 
 > Dashboard yang dihasilkan akan dijalankan pada EC2, sehingga untuk proses pembuatan flows juga menggunakan EC2 yang sebelumnya
 > telah dikonfigurasi. Silakan masuk ke EC2 atau masuk halaman AWS management console jika belum dijalankan service untuk 
@@ -14,9 +12,7 @@ seperti pada gambar berikut
 
 Kemudian yang perlu dilakukan adalah membuat sebuah flow pada Node-RED editor seperti pada gambar berikut
 
-
-![](../images/workshop2.gif)
-
+![Flow pada Node-RED](../images/workshop2.gif)
 
 Dari tampilan di atas layout pada dashboard terdapat spesifikasi sebagai berikut
 + Layout terdiri dari 3 tab yaitu `Monitoring, Controlling, dan Contact`.
