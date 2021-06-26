@@ -39,7 +39,7 @@ ditunjukkan dengan muncul icon Alien yang terdapat pada toolbar sebelah kiri. Le
 halaman utama `PlatformIO`, selanjutnya pilih `New Project` seperti gambar berikut
   
 
-  ![](../images/05.png)
+  ![Create Project](../images/05.png)
 
 
 + Kemudian akan muncul `Project Wizard` dengan isian Nama project, board yang digunakan, framework, dan lokasi project. Silakan
@@ -48,13 +48,13 @@ diisikan nama project misalkan `workshop-iot`, pada bagian Board diisikan atau p
   akan disimpan pada direktori yang berbeda. Langkah ini bisa dilihat pada gambar di bawah ini
 
 
-  ![](../images/06.png)
+  ![Project Wizard](../images/06.png)
 
 
 + Buka file `platformio.ini `dan tambahkan konfigurasi seperti berikut
 
 
-  ![](../images/07.png)
+  ![platform.ini](../images/07.png)
 
 
   ```
@@ -100,7 +100,7 @@ diisikan nama project misalkan `workshop-iot`, pada bagian Board diisikan atau p
 tampilan dari `main.cpp` dapat dilihat pada gambar berikut
 
 
-  ![](../images/08.png)
+  ![main.cpp](../images/08.png)
 
 
   ```cpp
@@ -966,7 +966,7 @@ tampilan dari `main.cpp` dapat dilihat pada gambar berikut
   dapat ditemukan pada toolbar paling bawah seperti pada gambar berikut
 
 
-  ![](../images/09.png)
+  ![Build](../images/09.png)
 
 
   > Beberapa fungsi dan istilah yang sering digunakan seperti
