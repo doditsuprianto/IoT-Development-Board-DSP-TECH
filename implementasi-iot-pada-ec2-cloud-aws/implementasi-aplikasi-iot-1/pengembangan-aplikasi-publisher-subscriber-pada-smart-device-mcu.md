@@ -950,15 +950,15 @@ tampilan dari `main.cpp` dapat dilihat pada gambar berikut
   ```
 
 + Terakhir, jika tidak terjadi error silakan `Build` menggunakan icon check atau langsung lakukan upload dengan klik
-  icon forward maka otomatis dilakukan build terlebih dahlulu kemudian upload. Fungsi-fungsi Build, Upload, Serial Monitor dapat ditemukan pada toolbar paling bawah
-  seperti pada gambar berikut
+  icon forward maka otomatis dilakukan build terlebih dahlulu kemudian upload. Fungsi-fungsi `Build, Upload, Serial Monitor` 
+  dapat ditemukan pada toolbar paling bawah seperti pada gambar berikut
 
 
   ![](../images/09.png)
 
 
   > Beberapa fungsi dan istilah yang sering digunakan seperti
-  > + Build adalah proses kompilasi menjadi byte code sebelum dilakukan upload ke perangkat IoT
-  > + Upload adalah proses upload atau menanamkan kode program ke dalam perangkat IoT
-  > + Serial Monitor adalah digunakan untuk melihat proses yang terjadi pada perangkat IoT (debugging), perangkat IoT harus
+  > + `Build` adalah proses kompilasi menjadi byte code sebelum dilakukan upload ke perangkat IoT
+  > + `Upload` adalah proses upload atau menanamkan kode program ke dalam perangkat IoT
+  > + `Serial Monitor` adalah digunakan untuk melihat proses yang terjadi pada perangkat IoT (debugging), perangkat IoT harus
   > terhubung pada laptop/komputer menggunakan interfacing USB/RS232 dan yang lain.
