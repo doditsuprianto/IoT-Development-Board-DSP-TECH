@@ -953,7 +953,9 @@ tampilan dari `main.cpp` dapat dilihat pada gambar berikut
   icon forward maka otomatis dilakukan build terlebih dahlulu kemudian upload. Fungsi-fungsi Build, Upload, Serial Monitor dapat ditemukan pada toolbar paling bawah
   seperti pada gambar berikut
 
+
   ![](../images/09.png)
+
 
   > Beberapa fungsi dan istilah yang sering digunakan seperti
   > + Build adalah proses kompilasi menjadi byte code sebelum dilakukan upload ke perangkat IoT

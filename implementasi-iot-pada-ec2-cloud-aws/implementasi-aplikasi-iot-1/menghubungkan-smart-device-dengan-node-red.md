@@ -26,12 +26,12 @@ Setelah file *.json berhasil didownlad perlu dilakukan import ke dalam Node-RED,
 sebagai berikut
 + Klik menu di bagian pojok kanan atas, kemudian pilih `Import`. Dapat dilihat pada gambar di bawah ini
 
-    ![Proses import](../images/01.png)
+  ![Proses import](../images/01.png)
 
 + Akan muncul sebuah dialog import node, pilih `select a file to import` untuk mencari file *.json di komputer Anda. 
   Jika sudah menemukan file *.json bisa klik tombol `import`. Untuk lebih jelasnya bisa melihat tampilan berikut ini
   
-    ![Browser file](../images/02.png)
+  ![Browser file](../images/02.png)
 
 + Jika selesai dilakukan, seharusnya akan menapilkan node-node pada lembar kerja Node-RED. 
 
