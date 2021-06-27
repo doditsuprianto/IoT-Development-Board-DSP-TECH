@@ -121,3 +121,18 @@ Terakhir, silakan buka browser Anda dan ketika alamat ip atau DNS diikuti dengan
 
 ![Tampilan Node-RED](../../.gitbook/assets/screen-shot-2021-06-07-at-21.31.29.png)
 
+> Ketika instance dimatikan atau direstart maka Node-Red harus dinyalan kembali, berikut ini adalah perintah yang digunakan
+> agar Node-Red tetap berjalan ketika instance restart.
+>
+
+```shell
+sudo npm install -g --unsafe-perm pm2
+pm2 start `which node-red` -- -v
+pm2 save
+pm2 startup
+sudo env PATH=$PATH:/usr/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
+```
+
+Silakan restart instance Anda, seharusnya Node-Red sudah berjalan dan tidak perlu menjalankan kembali. `pm2` adalah modul
+manajemen aplikasi yang berjalan pada nodejs.
+
