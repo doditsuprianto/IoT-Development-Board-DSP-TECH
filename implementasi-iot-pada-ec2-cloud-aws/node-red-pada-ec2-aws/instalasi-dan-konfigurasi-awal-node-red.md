@@ -122,7 +122,7 @@ Terakhir, silakan buka browser Anda dan ketika alamat ip atau DNS diikuti dengan
 ![Tampilan Node-RED](../../.gitbook/assets/screen-shot-2021-06-07-at-21.31.29.png)
 
 > Ketika instance dimatikan atau direstart maka Node-Red harus dinyalan kembali, berikut ini adalah perintah yang digunakan
-> agar Node-Red tetap berjalan ketika instance restart.
+> agar Node-Red otomatis dijalankan ketika instance restart.
 >
 
 ```shell
