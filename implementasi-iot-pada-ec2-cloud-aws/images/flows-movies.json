@@ -1,0 +1,102 @@
+[
+    {
+        "id": "89caf5e3.858a88",
+        "type": "tab",
+        "label": "Latihan Praktikum 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "718b2174.b324e",
+        "type": "http request",
+        "z": "89caf5e3.858a88",
+        "name": "movie request",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 360,
+        "y": 360,
+        "wires": [
+            [
+                "c36d3434.55edb8",
+                "ec99bb0e.504318"
+            ]
+        ]
+    },
+    {
+        "id": "a8ead4a1.ae0d38",
+        "type": "inject",
+        "z": "89caf5e3.858a88",
+        "name": "make request",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "718b2174.b324e"
+            ]
+        ]
+    },
+    {
+        "id": "c36d3434.55edb8",
+        "type": "debug",
+        "z": "89caf5e3.858a88",
+        "name": "msg output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ec99bb0e.504318",
+        "type": "function",
+        "z": "89caf5e3.858a88",
+        "name": "parsing",
+        "func": "var len = msg.payload.length;\nvar movies = [];\nfor(i in msg.payload){\n    m = msg.payload[i];\n    if(m.year > 2000){\n        movie = {};\n        movie[\"title\"]=m.title;\n        movie[\"year\"]=m.year;\n        \n        cast = []\n        for(j in m.cast){\n            cast.push(m.cast[j]);\n        }\n        movie[\"cast\"]=cast;\n        \n        genres = []\n        for(k in m.genres){\n            genres.push(m.genres[k]);\n        }\n        movie[\"genres\"]=genres;\n        \n        movies.push(movie);\n    }\n}\nnode.warn(\"movies filter: \"+movies.length);\nmsg.payload = movies;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 350,
+        "y": 220,
+        "wires": [
+            [
+                "2add25b.afe76da"
+            ]
+        ]
+    },
+    {
+        "id": "2add25b.afe76da",
+        "type": "debug",
+        "z": "89caf5e3.858a88",
+        "name": "mgs parsing",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 220,
+        "wires": []
+    }
+]
