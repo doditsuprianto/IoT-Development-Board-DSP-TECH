@@ -53,6 +53,11 @@ Setelah ditambahkan
 
 ![Tab dashboard](../../.gitbook/assets/06%20%282%29.png)
 
+> Terdapat 3 buah tab yaitu `Layout, Site, dan Theme`.
+> + `Layout` digunakan untuk melakukan konfigurasi sistem menu pada dashboard yang akan kita buat.
+> + `Site` digunakan untuk mengkonfigurasi atau membuat deskripsi pada tampilan dashboard, misalkan judul dashboard.
+> + `Theme` digunakan untuk mengatur warna atau tema tampilan dashboard.
+
 * Pada bagian `Tabs & Links` klik tombol `tab` sehingga akan ditambahkan tab baru di bawahnya, pada tab baru yang terbentuk yaitu `Tab 1` klik tombol `edit` sehingga akan muncul jendela `Edit dashboard tab node` seperti berikut
 
 ![Edit dashboard tab node](../../.gitbook/assets/07%20%282%29.png)
@@ -110,3 +115,8 @@ Hasil akhirnya adalah sebagai berikut
 
 ![Tugas](../../.gitbook/assets/tugas.gif)
 
+> Dicoba terlebih dahulu untuk menyelesaikan pertanyaan di atas, tetapi jika memang sudah tidak punya banyak waktu silakan
+> menggunakan file flows-smart-room.json yang terlampir.
+>
+> Import file flow tersebut dengan cara klik icon pojok kanan atas sebelah deploy, kemudian lakukan import dengan cara
+> klik tombol `select a file to import`. Proses ini nanti akan dijelaskan secara detail pada bab selanjutnya.
