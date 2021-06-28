@@ -53,6 +53,11 @@ Setelah ditambahkan
 
 ![Tab dashboard](../../.gitbook/assets/06%20%282%29.png)
 
+> Terdapat 3 buah tab yaitu `Layout, Site, dan Theme`.
+> + `Layout` digunakan untuk melakukan konfigurasi sistem menu pada dashboard yang akan kita buat.
+> + `Site` digunakan untuk mengkonfigurasi atau membuat deskripsi pada tampilan dashboard, misalkan judul dashboard.
+> + `Theme` digunakan untuk mengatur warna atau tema tampilan dashboard.
+
 * Pada bagian `Tabs & Links` klik tombol `tab` sehingga akan ditambahkan tab baru di bawahnya, pada tab baru yang terbentuk yaitu `Tab 1` klik tombol `edit` sehingga akan muncul jendela `Edit dashboard tab node` seperti berikut
 
 ![Edit dashboard tab node](../../.gitbook/assets/07%20%282%29.png)
