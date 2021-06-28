@@ -24,7 +24,11 @@ Walaupun beberapa protokol yang dapat disupport oleh Node-RED, akan tetapi pada 
 
 ![Properterties - mqtt out](../../.gitbook/assets/03%20%281%29.png)
 
-> Pada bagian `Name` isikan `Mqtt Server AWS`, `Server` diisikan `broker.sinaungoding.com` dan `port` isikan `1883`. Untuk `node mqtt out` kira-kira seperti berikut
+> Pada bagian `Name` isikan `Mqtt Server AWS`, `Server` diisikan `broker.sinaungoding.com` dan `port` isikan `1883`. 
+> Karena menggunakan sebuah message broker dengan alamat yang sama, agar datanya tidak tertukar dengan perangkat yang lain
+> silakan disesuaikan nama topik yang unik untuk setiap perangkat. Misalkan dengan menggabungkan dengan email Anda, misalkan
+> `lepengdados@gmail.com/dht` yang artinya untuk kebutuhan sensor DHT.
+> Untuk `node mqtt out` kira-kira seperti berikut
 
 ![Properties - node mqtt out](../../.gitbook/assets/04.png)
 

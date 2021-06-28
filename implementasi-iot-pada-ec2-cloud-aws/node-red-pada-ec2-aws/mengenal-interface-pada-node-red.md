@@ -48,7 +48,7 @@ Ubah name menjadi `make request` dan hapus properti `msg.payload` serta `msg.top
 ![Movie hanya tahun 2000 ke atas](../../.gitbook/assets/13%20%282%29.png)
 
 > Dicoba terlebih dahulu untuk menyelesaikan pertanyaan di atas, tetapi jika memang sudah tidak punya banyak waktu silakan
-> menggunakan file [flow](../images/flows-movies.json) yang terlampir.
+> menggunakan file flows-movies.json yang terlampir.
 >
 > Import file flow tersebut dengan cara klik icon pojok kanan atas sebelah deploy, kemudian lakukan import dengan cara
 > klik tombol `select a file to import`. Proses ini nanti akan dijelaskan secara detail pada bab selanjutnya.
