@@ -126,6 +126,17 @@ Untuk membuktikann apak password telah di-hashing, silahkan buka kembali file **
 
 ![Hasil Hashing password Mosquitto](../.gitbook/assets/19%20%281%29.png)
 
+Konfigurasi pada file mosquitto.conf yang semula 
+```c++
+#allow_anonymous false 
+```
+
+menjadi
+
+```c++
+allow_anonymous false
+```
+
 Pengujian akses service message broker mosquitto dengan user dan password dengan cara mengubah konfigurasi koneksi pada MQTTBox. Isikan parameter berikut:
 
 * Host: localhost:1883 atau 192.168.0.101:1883
