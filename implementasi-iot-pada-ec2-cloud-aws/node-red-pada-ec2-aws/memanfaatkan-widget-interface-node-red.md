@@ -120,3 +120,5 @@ Hasil akhirnya adalah sebagai berikut
 >
 > Import file flow tersebut dengan cara klik icon pojok kanan atas sebelah deploy, kemudian lakukan import dengan cara
 > klik tombol `select a file to import`. Proses ini nanti akan dijelaskan secara detail pada bab selanjutnya.
+
+![Import flow](../images/10.png)
