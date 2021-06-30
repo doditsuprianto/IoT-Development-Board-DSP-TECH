@@ -20,24 +20,28 @@ Dari tampilan di atas layout pada dashboard terdapat spesifikasi sebagai berikut
 + `Controlling` adalah sebuah untuk melakukan control aktuator seperti LED, Buzzer, dan Relay.
 + `Contact` adalah menu utnuk menampilkan teks biasa.
 
-> Jika terjadi kesulitan untuk membuat tampilan, file `flows.json` dapat didapatkan di [sini](../images/flows.json).
+[comment]: <> (> Jika terjadi kesulitan untuk membuat tampilan, file `flows.json` dapat didapatkan di [sini]&#40;../images/flows.json&#41;.)
 
-Setelah file *.json berhasil didownlad perlu dilakukan import ke dalam Node-RED, cara yang dapat dilakukan import yaitu
-sebagai berikut
-+ Klik menu di bagian pojok kanan atas, kemudian pilih `Import`. Dapat dilihat pada gambar di bawah ini
+[comment]: <> (Setelah file *.json berhasil didownlad perlu dilakukan import ke dalam Node-RED, cara yang dapat dilakukan import yaitu)
+
+[comment]: <> (sebagai berikut)
+
+[comment]: <> (+ Klik menu di bagian pojok kanan atas, kemudian pilih `Import`. Dapat dilihat pada gambar di bawah ini)
 
 
-  ![Proses import](../images/01.png)
+[comment]: <> (  ![Proses import]&#40;../images/01.png&#41;)
 
 
-+ Akan muncul sebuah dialog import node, pilih `select a file to import` untuk mencari file *.json di komputer Anda. 
-  Jika sudah menemukan file *.json bisa klik tombol `import`. Untuk lebih jelasnya bisa melihat tampilan berikut ini
+[comment]: <> (+ Akan muncul sebuah dialog import node, pilih `select a file to import` untuk mencari file *.json di komputer Anda. )
+
+[comment]: <> (  Jika sudah menemukan file *.json bisa klik tombol `import`. Untuk lebih jelasnya bisa melihat tampilan berikut ini)
   
 
-  ![Browser file](../images/02.png)
+[comment]: <> (  ![Browser file]&#40;../images/02.png&#41;)
 
 
-+ Jika selesai dilakukan, seharusnya akan menapilkan node-node pada lembar kerja Node-RED. 
+[comment]: <> (+ Jika selesai dilakukan, seharusnya akan menapilkan node-node pada lembar kerja Node-RED. )
 
-> Silakan cek hasil deploy Node-RED pada browser Anda, jika tidak terjadi error dan masalah seharusnya dapat menampilkan
-> tampilan dashbaord seperti pada panduan di atas.
+[comment]: <> (> Silakan cek hasil deploy Node-RED pada browser Anda, jika tidak terjadi error dan masalah seharusnya dapat menampilkan)
+
+[comment]: <> (> tampilan dashbaord seperti pada panduan di atas.)
