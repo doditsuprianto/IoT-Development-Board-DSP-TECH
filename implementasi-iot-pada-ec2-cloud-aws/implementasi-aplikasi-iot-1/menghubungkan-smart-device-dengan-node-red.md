@@ -23,7 +23,9 @@ Dari tampilan di atas layout pada dashboard terdapat spesifikasi sebagai berikut
 > Jika terjadi kesulitan untuk membuat tampilan, file `flows.json` dapat didapatkan di [sini](../images/flows.json).
 
 Setelah file *.json berhasil didownlad perlu dilakukan import ke dalam Node-RED, cara yang dapat dilakukan import yaitu
+
 sebagai berikut
+
 + Klik menu di bagian pojok kanan atas, kemudian pilih `Import`. Dapat dilihat pada gambar di bawah ini
 
 
@@ -31,6 +33,7 @@ sebagai berikut
 
 
 + Akan muncul sebuah dialog import node, pilih `select a file to import` untuk mencari file *.json di komputer Anda. 
+
   Jika sudah menemukan file *.json bisa klik tombol `import`. Untuk lebih jelasnya bisa melihat tampilan berikut ini
   
 
@@ -40,4 +43,5 @@ sebagai berikut
 + Jika selesai dilakukan, seharusnya akan menapilkan node-node pada lembar kerja Node-RED. 
 
 > Silakan cek hasil deploy Node-RED pada browser Anda, jika tidak terjadi error dan masalah seharusnya dapat menampilkan
+
 > tampilan dashbaord seperti pada panduan di atas.
