@@ -17,7 +17,7 @@ Pemrograman socket adalah cara menghubungkan dua node pada jaringan untuk berkom
 
 Cara kerja socket dapat dijelaskan sebagai berikut: Panggilan sistem **socket()** membuat socket baru. Di sisi server, **bind()** digunakan untuk mengasosiasikan socket dengan salah satu alamat IP server dan nomor port yang akan didengarkan. Ketika ini selesai, socket diaktifkan dengan panggilan sistem **Listen()**.
 
-[![Arsitektur SOCKET TCP](https://www.it.uu.se/education/course/homepage/dsp/vt19/images/module-2/tcp-socket.png)](https://www.it.uu.se/education/course/homepage/dsp/vt19/images/module-2/tcp-socket.png "Arsitektur SOCKET TCP")]
+![Arsitektur Coket TCP](https://www.it.uu.se/education/course/homepage/dsp/vt19/images/module-2/tcp-socket.png "Arsitektur Coket TCP")
 
 Panggilan sistem **accept()** memblokir hingga klien terhubung (menggunakan **connect()** pada akhirnya). Setelah ini, data dapat dikirim dan diterima menggunakan dalam contoh ini **send()** dan **recv()** **(write()** dan **read()** juga akan berfungsi).
 
