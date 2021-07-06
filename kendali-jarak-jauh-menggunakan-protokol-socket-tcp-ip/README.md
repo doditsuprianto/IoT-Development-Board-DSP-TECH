@@ -12,12 +12,12 @@ Diasumsikan bahwa Anda telah memahami konsep dasar jaringan komputer, termasuk r
 
 Anda diharapkan telah menguasai bahasa pemrograman C#, Java dan Android, karena kita tidak mungkin membahas setiap bahasa pemrograman dalam tutorial ini.
 
-## Pemrograman Socket TCPPemrograman Socket TCP
+## Pemrograman Socket TCP
 Pemrograman socket adalah cara menghubungkan dua node pada jaringan untuk berkomunikasi satu sama lain. Satu socket (node) mendengarkan pada port tertentu di sebuah IP, sementara socket lainnya menjangkau yang lain untuk membentuk koneksi. Server membentuk socket listener (pendengar) sementara klien menjangkau server.
 
 Cara kerja socket dapat dijelaskan sebagai berikut: Panggilan sistem **socket()** membuat socket baru. Di sisi server, **bind()** digunakan untuk mengasosiasikan socket dengan salah satu alamat IP server dan nomor port yang akan didengarkan. Ketika ini selesai, socket diaktifkan dengan panggilan sistem **Listen()**.
 
-![Arsitektur Coket TCP](https://www.it.uu.se/education/course/homepage/dsp/vt19/images/module-2/tcp-socket.png "Arsitektur Coket TCP")
+![Arsitektur Socket TCP](https://www.it.uu.se/education/course/homepage/dsp/vt19/images/module-2/tcp-socket.png)
 
 Panggilan sistem **accept()** memblokir hingga klien terhubung (menggunakan **connect()** pada akhirnya). Setelah ini, data dapat dikirim dan diterima menggunakan dalam contoh ini **send()** dan **recv()** **(write()** dan **read()** juga akan berfungsi).
 
