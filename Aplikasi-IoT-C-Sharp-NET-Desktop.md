@@ -795,7 +795,7 @@ Sebelum melangkah lebih jauh, kita perlu menambahkan beberapa library ke dalam p
 
 - Library LiveCharts untuk menangani visualisasi grafis. 
 - Library M2MQTT untuk menangani komunikasi MQTT
-- Library Newton.JSON untuk menangani data format JSON
+- Library Newtonsoft.JSON untuk menangani data format JSON
 
 Sama seperti pada lingkungan pengembangan pemrograman modern lainnya, Visual Studio juga menyediakan koneksi repository seperti git atau npm. Di sini menggunakan NuGet.org.
 
