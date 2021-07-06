@@ -819,7 +819,7 @@ Untuk mengetahui apakah semua library terinstall dengan baik dan benar, silahkan
 
 Sekarang kita kembali ke tabPage Actuator. Di sini kita akan menambahkan beberapa control, antara lain
 
-![](../.gitbook/assets/TB1.png)
+![](../.gitbook/assets/TB1.jpg)
 
 Adapun rancangan yang dibuat adalah sebagai berikut
 
@@ -836,7 +836,7 @@ Adapun rancangan yang dibuat adalah sebagai berikut
 
 Pilih terlebih dahulu tabPage2 atau tabPage “Sensor LDR & Ultrasonic”. Di dalamnya terdapat dua groupBox dimana setiap groupBox berisi dua chart cartesian yang akan memvisualisasikan data intensitas cahaya dalam satuan LUX yang diterima dari sensor LDR dan data jarak penghalang dalam satuan cm yang diterima dari sensor Ultrasonic HC-SR04.
 
-![](../.gitbook/assets/TB2.png)
+![](../.gitbook/assets/TB2.jpg)
 
 ![](../.gitbook/assets/CS14.png)
 
@@ -854,7 +854,7 @@ Pilih terlebih dahulu tabPage2 atau tabPage “Sensor LDR & Ultrasonic”. Di da
 
 Perancangan berikutnya adalah tabPage“Sensor DHT11 (Suhu & Kelembaban)”. Di sini kita akan menambahkan dua groupBox, dimana setiap groupBox berisi chart **SolidGauge** dari liveCharts. Kedua SolidGauge akan memvisualisasikan nilai suhu dan kelembaban yang diterima dari sensor DHT11.
 
-![](../.gitbook/assets/TB3.png)
+![](../.gitbook/assets/TB3.jpg)
 
 ![](../.gitbook/assets/CS19.png)
 
