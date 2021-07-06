@@ -1286,18 +1286,18 @@ Anda juga dapat mencoba membuka aplikasi web IoT Dashboard dari alamat IP berbed
 
 {% embed url="https://youtu.be/Nj5rwss2hmQ" %}
 
-![](../.gitbook/assets/IoTDashboard1.jpg)
+![](../.gitbook/assets/IoTDashboard1.jpeg)
 
-![](../.gitbook/assets/IoTDashboard2.jpg)
+![](../.gitbook/assets/IoTDashboard2.jpeg)
 
-![](../.gitbook/assets/IoTDashboard3.jpg)
+![](../.gitbook/assets/IoTDashboard3.jpeg)
 
-![](../.gitbook/assets/IoTDashboard4.jpg)
+![](../.gitbook/assets/IoTDashboard4.jpeg)
 
-![](../.gitbook/assets/IoTDashboard5.jpg)
+![](../.gitbook/assets/IoTDashboard5.jpeg)
 
-![](../.gitbook/assets/IoTDashboard6.jpg)
+![](../.gitbook/assets/IoTDashboard6.jpeg)
 
-![](../.gitbook/assets/IoTDashboard7.jpg)
+![](../.gitbook/assets/IoTDashboard7.jpeg)
 
 
