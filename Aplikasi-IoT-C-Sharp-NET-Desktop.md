@@ -759,19 +759,19 @@ Setelah sukses menginstalasi, langkah selanjutnya bisa mengikuti tahapannya beri
 
 Buka menu **File > New Project**
 
-![](../.gitbook/assets/CS1.png)
+![](../.gitbook/assets/CS1.jpg)
 
 Tentukan jenis bahasa pemrogramannya menjadi C#, tentukan nama projek dan lokasi dimana file akan ditempatkan seperti tampak ilustrasi di bawah ini, kemudian klik tombol OK.
 
-![](../.gitbook/assets/CS2.png)
+![](../.gitbook/assets/CS2.jpg)
 
 Setelah itu akan muncul satu window form bernama form1. Dari window form1 tersebut kita akan menambahkan beberapa control/widget yang diperlukan. 
 
 Pertama adalah kita menambahkan sebuah TabControl dengan tiga TabPage di dalamnya. Untuk menambahkan control atau widget dengan cara men-drag-drop widget dari toolbox ke window form.
 
-![](../.gitbook/assets/CS3.png)
+![](../.gitbook/assets/CS3.jpg)
 
-![](../.gitbook/assets/CS4.png)
+![](../.gitbook/assets/CS4.jpg)
 
 Ubah **Property Text** pada masing-masing tabPage, dengan memilih salah satu tabPage. Klik pada body tabPage, kemudian ubah Property Text-nya. Hal ini akan mengubah title masing-masing tabPage. Lakukan cara yang sama untuk semua tabPage.
 
@@ -779,15 +779,15 @@ Ubah **Property Text** pada masing-masing tabPage, dengan memilih salah satu tab
 - Text tabPage2 = “Sensor LDR & Ultrasonic”
 - Text tabPage3 = “Sensor DHT11 (Suhu & Kelembaban)”
 
-![](../.gitbook/assets/CS5.png)
+![](../.gitbook/assets/CS5.jpg)
 
 Ganti nama Form yang semula “Form1” menjadi “frmIoTDashboard”
 
-![](../.gitbook/assets/CS6.png)
+![](../.gitbook/assets/CS6.jpg)
 
 Bila ada permintaan konfirmasi, pilih **Yes**.
 
-![](../.gitbook/assets/CS7.png)
+![](../.gitbook/assets/CS7.jpg)
 
 ### Kebutuhan Library
 
@@ -801,19 +801,19 @@ Sama seperti pada lingkungan pengembangan pemrograman modern lainnya, Visual Stu
 
 Buka menu **Project > Manage Nuget Package**.
 
-![](../.gitbook/assets/CS8.png)
+![](../.gitbook/assets/CS8.jpg)
 
 Pilih kata kunci **newtonsoft** pada field pencarian, pilih library **Newtonsoft.Json**, terakhir klik pada tombol Install. Lakukan hal yang sama untuk dua library lainnya sesuai gambar ilustrasi di bawah ini
 
-![](../.gitbook/assets/CS9.png)
+![](../.gitbook/assets/CS9.jpg)
 
-![](../.gitbook/assets/CS10.png)
+![](../.gitbook/assets/CS10.jpg)
 
-![](../.gitbook/assets/CS11.png)
+![](../.gitbook/assets/CS11.jpg)
 
 Untuk mengetahui apakah semua library terinstall dengan baik dan benar, silahkan pilih tab **Installed**.
 
-![](../.gitbook/assets/CS12.png)
+![](../.gitbook/assets/CS12.jpg)
 
 ### Tab Page “Actuator
 
@@ -823,7 +823,7 @@ Sekarang kita kembali ke tabPage Actuator. Di sini kita akan menambahkan beberap
 
 Adapun rancangan yang dibuat adalah sebagai berikut
 
-![](../.gitbook/assets/CS13.png)
+![](../.gitbook/assets/CS13.jpg)
 
 - CheckBox Relay bertujuan untuk mengaktifkan dan menonaktifkan Relay pada IoT Smart Development Board
 - CheckBox Buzzer bertujuan untuk mengaktifkan dan menonaktifkan Buzzer/Speaker pada IoT Smart Development Board
@@ -838,17 +838,17 @@ Pilih terlebih dahulu tabPage2 atau tabPage “Sensor LDR & Ultrasonic”. Di da
 
 ![](../.gitbook/assets/TB2.jpg)
 
-![](../.gitbook/assets/CS14.png)
+![](../.gitbook/assets/CS14.jpg)
 
-![](../.gitbook/assets/CS15.png)
+![](../.gitbook/assets/CS15.jpg)
 
 > **Note**. Jika control LiveChart tidak tampak pada Window Toolbox maka simpan terlebih dahulu projek Anda, kemudian tutup dan buka kembali visual studio projek Anda.
 
-![](../.gitbook/assets/CS16.png)
+![](../.gitbook/assets/CS16.jpg)
 
-![](../.gitbook/assets/CS17.png)
+![](../.gitbook/assets/CS17.jpg)
 
-![](../.gitbook/assets/CS18.png)
+![](../.gitbook/assets/CS18.jpg)
 
 ### Tab Page “Sensor DHT11 (Suhu & Kelembaban)”
 
@@ -856,11 +856,11 @@ Perancangan berikutnya adalah tabPage“Sensor DHT11 (Suhu & Kelembaban)”. Di 
 
 ![](../.gitbook/assets/TB3.jpg)
 
-![](../.gitbook/assets/CS19.png)
+![](../.gitbook/assets/CS19.jpg)
 
-![](../.gitbook/assets/CS20.png)
+![](../.gitbook/assets/CS20.jpg)
 
-![](../.gitbook/assets/CS21.png)
+![](../.gitbook/assets/CS21.jpg)
 
 ### Control “Timer”
 
@@ -874,14 +874,14 @@ Di sini dibutuhkan tiga timer, antara lain:
 
 Untuk menambahkan control timer, cukup *drag-drop* control timer ke form windows. Kemudian beri nama dengan **timerLDR**, **timerSR04**, dan **timerDHT**. Sedangkan pengaturan interval dan kapan aktifasi timer akan dilakukan secara kode program.
 
-![](../.gitbook/assets/CS22.png)
+![](../.gitbook/assets/CS22.jpg)
 
 Kode Program C#.NET
 Untuk memulai memprogram C# Winform. Pilih control CheckBox **cbRelay** dua kali, atau kilik sekali kemudian perhatikan pada window event khusunya event CheckedChange. Dari situ akan diarahkan ke mode coding.
 
-![](../.gitbook/assets/CS23.png)
+![](../.gitbook/assets/CS23.jpg)
 
-![](../.gitbook/assets/CS24.png)
+![](../.gitbook/assets/CS24.jpg)
 
 Dengan cara yang hampir serupa akan berlaku pada semua event control yang memang dibutuhkan. Anda tinggal memperhatikan nama setiap event yang terdapat dalam contoh sudah dapat menebak event apa yang diperlukan.
 
@@ -1243,10 +1243,10 @@ Download Source Code IoT dan C# Desktop Winform: https://github.com/doditsuprian
 ## Demo Video Projek
 
 
-![](../.gitbook/assets/CS25.png)
+![](../.gitbook/assets/CS25.jpg)
 
-![](../.gitbook/assets/CS26.png)
+![](../.gitbook/assets/CS26.jpg)
 
-![](../.gitbook/assets/CS27.png)
+![](../.gitbook/assets/CS27.jpg)
 
-![](../.gitbook/assets/CS28.png)
+![](../.gitbook/assets/CS28.jpg)
