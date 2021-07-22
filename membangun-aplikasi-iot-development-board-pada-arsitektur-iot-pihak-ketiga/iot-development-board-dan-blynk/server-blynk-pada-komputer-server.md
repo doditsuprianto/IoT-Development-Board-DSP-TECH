@@ -97,27 +97,27 @@ Tampilan di bawah ini merupakan user yang telah terdaftar dalam Server IoT Blynk
 
 Buka aplikasi Play Store Android dengan menuliskan "blynk" pada textbox pencarian.
 
-![](../images/maidbpaipk13.jpg)
+![](../images/maidbpaipk13.png)
 
-![](../images/maidbpaipk14.jpg)
+![](../images/maidbpaipk14.png)
 
-![](../images/maidbpaipk15.jpg)
+![](../images/maidbpaipk15.png)
 
 Buat akun baru dengan memilih "**Create New Account**".
 
-![](../images/maidbpaipk16.jpg)
+![](../images/maidbpaipk16.png)
 
 Kemudian ubah alamat IP dimana Blynk Server berada. Secara default, server akan mengarah ke alamat IP Cloud Server Blynk.
 
-![](../images/maidbpaipk17.jpg)
+![](../images/maidbpaipk17.png)
 
 Pilih tombol selektor menjadi "**CUSTOM**", tuliskan alamat IP Server IoT Blynk, misal alamat **54.87.223.252**, dan Port defaultnya adalah **9443**. Setelah itu pilih tombol "**OK**".
 
-![](../images/maidbpaipk18.jpg)
+![](../images/maidbpaipk18.png)
 
 Pada halaman berikutnya tulis email user dan passwordnya, kemudian klik tombol "**Sign Up**".
 
-![](../images/maidbpaipk19.jpg)
+![](../images/maidbpaipk19.png)
 
 Setelah akun Blynk terbentuk maka data tersebut akan disimpan di dalam server Blynk. Untuk mengetahuinya silahkan buka dashboard blynk dari browser internet dengan alamat, misal **https:// 54.87.223.252:9443/admin**. Dapat dilihat bahwa user list dengan akun email **doditsuprianto@gmail.com** telah berhasil ditambahkan.
 
