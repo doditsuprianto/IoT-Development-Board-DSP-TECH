@@ -37,7 +37,9 @@
       "adsense": {
         "client": "ca-pub-4968797830346325",
         "slot": "2095778473",
-        "format": "auto"                
+        "format": "auto",
+        "location": ".page-inner section",
+        "position": "top"
       }
     }
 }
