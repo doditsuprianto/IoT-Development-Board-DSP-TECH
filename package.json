@@ -22,5 +22,15 @@
   "bugs": {
     "url": "https://github.com/doditsuprianto/IoT-Development-Board-DSP-TECH/issues"
   },
-  "homepage": "https://github.com/doditsuprianto/IoT-Development-Board-DSP-TECH#readme"
+  "homepage": "https://github.com/doditsuprianto/IoT-Development-Board-DSP-TECH#readme",
+
+
+  "plugins": ["sitemap"],
+    "pluginsConfig": {
+        "sitemap": {
+            "hostname": "https://iotboard.dsptech.info/internet-of-things/",
+            
+        }
+    }
+
 }
