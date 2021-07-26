@@ -92,37 +92,3 @@ java -jar server-0.41.16-java8.jar -dataFolder server_data &
 Tampilan di bawah ini merupakan user yang telah terdaftar dalam Server IoT Blynk. User yang dimaksud adalah user yang memiliki asosiasi dengan device. Satu user bisa memiliki beberapa device. Namun saat ini belum ada user yang terdaftar kecuali **Admin**. Hal ini akan kita bahas dibagian selanjutnya.
 
 ![](../images/maidbpaipk11.jpg)
-
-## Instalasi Client Blynk pada Android
-
-Buka aplikasi Play Store Android dengan menuliskan "blynk" pada textbox pencarian.
-
-![](../images/maidbpaipk13.png)
-
-![](../images/maidbpaipk14.png)
-
-![](../images/maidbpaipk15.png)
-
-Buat akun baru dengan memilih "**Create New Account**".
-
-![](../images/maidbpaipk16.png)
-
-Kemudian ubah alamat IP dimana Blynk Server berada. Secara default, server akan mengarah ke alamat IP Cloud Server Blynk.
-
-![](../images/maidbpaipk17.png)
-
-Pilih tombol selektor menjadi "**CUSTOM**", tuliskan alamat IP Server IoT Blynk, misal alamat **54.87.223.252**, dan Port defaultnya adalah **9443**. Setelah itu pilih tombol "**OK**".
-
-![](../images/maidbpaipk18.png)
-
-Pada halaman berikutnya tulis email user dan passwordnya, kemudian klik tombol "**Sign Up**".
-
-![](../images/maidbpaipk19.png)
-
-Setelah akun Blynk terbentuk maka data tersebut akan disimpan di dalam server Blynk. Untuk mengetahuinya silahkan buka dashboard blynk dari browser internet dengan alamat, misal **https:// 54.87.223.252:9443/admin**. Dapat dilihat bahwa user list dengan akun email **doditsuprianto@gmail.com** telah berhasil ditambahkan.
-
-![](../images/maidbpaipk12.jpg)
-
-> Note.
-- Instalasi dan konfigurasi Server IoT Blynk cukup sampai di sini. Kita akan membuat tampilan Dashboard IoT yang dapat memonitor dan mengendalikan device dengan memanfaatkan widget blynk pada Android akan dibahas pada bab selanjutnya.
-- Bagaimana mengembangkan kode program di sisi device IoT Development Board yang terkoneksi dengan server IoT Blynk? juga akan dibahas pada bab selanjutnya.

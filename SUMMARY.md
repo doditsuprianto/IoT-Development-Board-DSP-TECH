@@ -28,7 +28,9 @@
     * [Pendahuluan IoT Dashboard Pihak Ketiga](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-blynk/pendahuluan-iot-dashboard-pihak-ketiga.md)
     * [Server Blynk Pada Komputer Server](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-blynk/server-blynk-pada-komputer-server.md)
     * [Server Blynk Pada Raspberry Pi 3 (atau di atasnya)](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-blynk/server-blynk-pada-raspberry-pi-3B.md)
+    * [Instalasi Client Blynk pada Android](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-blynk/instalasi-client-blynk-pada-android.md)
     * [Monitoring & Controlling Blynk Android](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-blynk/monitoring-dan-controlling-blynk-android.md)
+    * [Kode Program IoT Dev. Board Untuk Blynk](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-blynk/kode-program-iot-dev-board-untuk-blynk.md)
   * [Module IoT Development Board dan Thingsboard](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-thingsboard/README.md)
 * [Membangun Aplikasi IoT "Create from Scratch"](membangun-aplikasi-iot-create-from-scratch/README.md)
   * [Instalasi & Konfigurasi Message Broker MQTT Mosquitto](membangun-aplikasi-iot-create-from-scratch/instalasi-and-konfigurasi-message-broker-mqtt-mosquitto.md)
@@ -52,4 +54,3 @@
     * [Menghubungkan Smart Device dengan Node-RED](implementasi-iot-pada-ec2-cloud-aws/implementasi-aplikasi-iot-1/menghubungkan-smart-device-dengan-node-red.md)
 * [Referensi](referensi.md)
 * [Biografi Penulis](biografi-penulis.md)
-
