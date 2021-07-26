@@ -30,9 +30,9 @@
         "sitemap": {
             "hostname": "https://iotboard.dsptech.info/internet-of-things/"            
         }
-    }
+    },
 
-    "plugins": ["adsense"],
+  "plugins": ["adsense"],
     "pluginsConfig": {
       "adsense": {
         "client": "ca-pub-4968797830346325",
