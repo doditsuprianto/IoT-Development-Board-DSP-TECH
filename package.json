@@ -23,23 +23,26 @@
     "url": "https://github.com/doditsuprianto/IoT-Development-Board-DSP-TECH/issues"
   },
   "homepage": "https://github.com/doditsuprianto/IoT-Development-Board-DSP-TECH#readme",
-
-
-  "plugins": ["sitemap"],
-    "pluginsConfig": {
-        "sitemap": {
-            "hostname": "https://iotboard.dsptech.info/internet-of-things/"            
-        }
+  "plugins": [
+    "sitemap",
+    "adsense"
+  ],
+  "pluginsConfig": {
+    "sitemap": 
+    {
+      "hostname": "https://iotboard.dsptech.info/internet-of-things/"
     },
-
-  "plugins": ["adsense"],
-    "pluginsConfig": {
-      "adsense": {
-        "client": "ca-pub-4968797830346325",
-        "slot": "2095778473",
-        "format": "auto",
-        "location": ".page-inner section",
-        "position": "top"
+    "ads": 
+    
+      {
+          "client": "pub-4968797830346325",
+          "slot": "2095778473",
+          "format": "auto",
+          "location": ".page-inner section"
       }
-    }
+    
+  },
+  "dependencies": {
+    "gitbook-plugin-google-adsense": "^0.1.0"
+  }
 }
