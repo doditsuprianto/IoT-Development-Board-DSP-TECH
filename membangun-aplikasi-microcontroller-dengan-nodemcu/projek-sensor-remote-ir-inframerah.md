@@ -40,7 +40,7 @@ Dengan remote IR Anda dapat mengendalikan berbagai jenis aktuator, misalnya meng
 
 Untuk model remote IR yang lain tampak seperti berikut:
 
-![](../.gitbook/assets/remoteputih.jpg)
+![](../.gitbook/assets/remoteputihrev.jpg)
 
 Adapun mapping kode keypad remote di atas adalah sebagai berikut:
 
