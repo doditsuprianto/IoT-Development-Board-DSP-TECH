@@ -38,6 +38,14 @@ Setiap remote memiliki kode tombol berbeda-beda, oleh karena itu diperlukan pros
 
 Dengan remote IR Anda dapat mengendalikan berbagai jenis aktuator, misalnya menggerakan motor robot mobil, meangkatifkan relay, membuka slot pintu, menghidupkan LED dan lain-lain sesuai kebutuhan projek.
 
+Untuk model remote IR yang lain tampak seperti berikut:
+
+![](../.gitbook/assets/remoteputihrev.jpg)
+
+Adapun mapping kode keypad remote di atas adalah sebagai berikut:
+
+![](../.gitbook/assets/tabelkeypadremoteputih.JPG)
+
 ## Tujuan
 
 Projek bertujuan untuk memprogram MCU agar remote IR dapat mengendalikan perangkat secara jarak jauh. Dengan langkah-langkah sebagai berikut:
@@ -274,26 +282,13 @@ void updateOLED() {
   menjadi dasar pengecekkan
   ----------------------------------------------*/
 void BacaKodeRemoteIR() {
-  if (PenerimaIR.decode(&hasil)) {
-    // Kualitas remote yang buruk menyebabkan debouncing
-    // Decode kode tombol dengan lebar 8 saja yang akan diproses.
-    // Setiap remote memiliki lebar kode valid masing-masing
-    // Pastikan untuk dilakukan pemetaan kode terlebih dahulu
-    String ngatasiDebounce = String((int)hasil.value, (unsigned char)DEC);    
-    if (ngatasiDebounce.length() == 8) {
-      KodeTombolRemote = hasil.value;
-      Serial.println("Kode remote: " + String(KodeTombolRemote));
-
-      // Mengendalikan aktuator dari remote IR
-      AktuatorByRemote();
-    } else {
-      // proses pemetaan kode tombol ditampilkan pada serial monitor
-      unsigned int kodeGagal = hasil.value;
-      Serial.println("Length Decode: " + String(ngatasiDebounce.length()));
-      Serial.println("Kode remote tidak diproses: " + String(kodeGagal));
-    }
-    PenerimaIR.resume();
+  if (PenerimaIR.decode(&hasil)) {    
+    KodeTombolRemote = hasil.value;
+    Serial.println("Kode remote: " + String(KodeTombolRemote));
+    AktuatorByRemote();
+    PenerimaIR.resume();    
   }
+
   delay(100);
 }
 
@@ -311,6 +306,9 @@ void MematikanSemuaLED() {
   Mengendalikan LED dengan Remote IR
   -----------------------------------*/
 void AktuatorByRemote() {
+  // PENTING: Kode keypad seusaikan dengan remote IR masing-masing
+  // karena beda merk dan jenis akan memiliki kode yang berbeda
+
   strKeypad = "";
   /*----------------
       KONTROL LED

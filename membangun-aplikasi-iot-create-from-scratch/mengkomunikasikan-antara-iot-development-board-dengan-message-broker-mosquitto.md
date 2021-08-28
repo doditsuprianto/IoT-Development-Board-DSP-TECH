@@ -695,8 +695,12 @@ void KoneksiWIFI() {
 void reconnect() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
-    // Attempt to connect
-    if (client.connect("ESP8266Client", brokerUser, brokerPass)) {
+    
+    // Men-generate ID CLient Broker
+    String clientId = "DSPTECH-";
+    clientId += String(random(0xffff), HEX);
+    
+    if (client.connect(clientId.c_str(), brokerUser, brokerPass)) {
 
       Serial.println("connected");
 
