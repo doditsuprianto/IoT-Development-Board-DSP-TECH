@@ -248,3 +248,15 @@ Contoh dashboard Thingsboard dengan akun sysadmin:
 ![](../images/tb40.jpg)
 
 ![](../images/tb41.jpg)
+
+Contoh dashboard Thingsboard dengan akun **tenant**:
+
+![](../images/tb42.jpg)
+
+![](../images/tb43.jpg)
+
+Contoh dashboard dengan akun **customer**:
+
+![](../images/tb44.jpg)
+
+![](../images/tb45.jpg)
