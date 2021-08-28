@@ -32,6 +32,8 @@
     * [Monitoring & Controlling Blynk Android](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-blynk/monitoring-dan-controlling-blynk-android.md)
     * [Kode Program IoT Dev. Board Untuk Blynk](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-blynk/kode-program-iot-dev-board-untuk-blynk.md)
   * [Module IoT Development Board dan Thingsboard](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-thingsboard/README.md)
+    * [Instalasi Thingsboard pada Ubuntu](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-thingsboard/instalasi-thingsboard-pada-ubuntu.md)
+    * [Manajemen Dan Konfigurasi Thingsboard](membangun-aplikasi-iot-development-board-pada-arsitektur-iot-pihak-ketiga/iot-development-board-dan-thingsboard/manajemen-dan-konfigurasi-thingsboard.md)
 * [Membangun Aplikasi IoT "Create from Scratch"](membangun-aplikasi-iot-create-from-scratch/README.md)
   * [Instalasi & Konfigurasi Message Broker MQTT Mosquitto](membangun-aplikasi-iot-create-from-scratch/instalasi-and-konfigurasi-message-broker-mqtt-mosquitto.md)
   * [Mengkomunikasikan Antara IoT Development Board Dengan Message Broker Mosquitto](membangun-aplikasi-iot-create-from-scratch/mengkomunikasikan-antara-iot-development-board-dengan-message-broker-mosquitto.md)
